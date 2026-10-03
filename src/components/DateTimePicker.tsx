@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties, type RefObject } from "react";
 import { cn } from "../lib/cn";
 
 export interface DateTimePickerProps {
@@ -38,7 +38,7 @@ const MINUTES = Array.from({ length: 60 }, (_, i) => i);
 interface WheelProps {
   items: (string | number)[];
   selectedIndex: number;
-  wheelRef: React.RefObject<HTMLDivElement | null>;
+  wheelRef: RefObject<HTMLDivElement | null>;
   onScroll: () => void;
 }
 

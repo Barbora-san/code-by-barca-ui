@@ -1,135 +1,98 @@
 # code-by-barca-ui
 
-UI knihovna pro [code-by-barca.cz](https://code-by-barca.cz) – tmavý „geeky“ vzhled se žlutým akcentem.
-React + TypeScript, **bez nutnosti Tailwindu** (styly jsou hotové CSS s prefixem `cbb-`).
+Čistá UI knihovna pro [code-by-barca.cz](https://code-by-barca.cz): jednotlivé komponenty a lišty, žádné celé části stránek.
+Tmavý „geeky“ vzhled se žlutým akcentem. React + TypeScript, **bez závislosti na Tailwindu** (styly jsou hotové CSS s prefixem `cbb-`).
 
 ```bash
-npm i code-by-barca-ui
-# nebo
-yarn add code-by-barca-ui
+npm i code-by-barca-ui     # nebo: yarn add code-by-barca-ui
 ```
-
-## Použití
 
 ```tsx
 import "code-by-barca-ui/styles.css";
-import { Hero, Typewriter, Button, Section, SectionHeading, SkillCard } from "code-by-barca-ui";
+import { Button, Badge, Toaster, toast } from "code-by-barca-ui";
 
-export default function Home() {
+export default function App() {
   return (
     <div className="cbb-root">
-      <Hero
-        badge="Otevřena novým nápadům"
-        title="Barbora"
-        titleMuted="Šanderová"
-        tagline={<>I'm a <Typewriter words={["Designer", "Developer"]} /></>}
-        actions={<Button size="lg" glow href="#projects">Ukázka mé práce</Button>}
-        scrollHref="#about"
-      />
-      <Section tone="alt">
-        <SectionHeading eyebrow="// Skills" title="Dovednosti &" accent="Technologie" />
-      </Section>
+      <Button glow onClick={() => toast.success("Uloženo")}>Uložit</Button>
+      <Toaster />
     </div>
   );
 }
 ```
 
-### Next.js (interní odkazy přes `next/link`)
+Třída `cbb-root` je volitelná (nastaví černé pozadí, bílý text a font). Knihovna je označená `"use client"`, takže funguje v Next.js App Routeru.
+
+## Komponenty
+
+| Skupina | Komponenty |
+| --- | --- |
+| **Moje (portfolio)** | `SkillCard`, `SkillLevelBar`, `ProjectCard`, `Timeline`, `InfoRow`, `SocialLinks`, `ContactForm`, `DateTimePicker`, `Typewriter`, `SectionHeading`, `Reveal`, `CodeBlock`, `LazyImage`, `Lightbox`, `CookieBanner`, `Card` s `glow` a `corners` |
+| Základy | `Button`, `Badge`, `Tag`, `Chip`, `Kbd`, `Divider` |
+| Formuláře | `Input`, `Textarea`, `Select`, `Checkbox`, `Radio`, `Switch`, `Slider`, `TagInput`, `InputOTP`, `FileUpload`, `Toggle`, `ToggleGroup` |
+| Zobrazení | `Card`, `StatCard`, `Avatar`, `AvatarGroup`, `Skeleton`, `Progress`, `EmptyState` |
+| Zpětná vazba | `Alert`, `AlertBar` (lišta), `Toaster` + `showToast`, `NotificationBadge`, `NotificationPopover` |
+| Popupy a msg box | `Dialog`, `AlertDialog`, `messageBox.alert()` / `messageBox.confirm()` (Promise), `Sheet` |
+| Plovoucí | `Tooltip`, `Popover`, `HoverCard`, `Dropdown`, `ContextMenu` |
+| Navigace a lišty | `Navbar`, `Sidebar`, `Menubar`, `Tabs`, `Breadcrumb`, `Pagination`, `Stepper`, `Accordion`, `Collapsible`, `ScrollProgress`, `SearchBar`, `SearchAutocomplete` |
+| Filtrování | `useFilter`, `FilterBar`, `FilterPills`, `FilterDropdown` |
+| Data a layout | `Table`, `Calendar`, `Carousel`, `Resizable`, `ScrollArea`, `FAB` |
+
+## Filtr (`useFilter` + `FilterBar`)
+
+```tsx
+const filters = [
+  { key: "status", label: "Status", getValue: (p) => p.status },                       // jedna volba
+  { key: "category", label: "Kategorie", multiple: true, getValue: (p) => p.category }, // více voleb
+  { key: "tags", label: "Tagy", multiple: true, getValue: (p) => p.tags },
+];
+const sorts = [
+  { value: "new", label: "Nejnovější", compare: (a, b) => +new Date(b.date) - +new Date(a.date) },
+  { value: "title", label: "Podle názvu", compare: (a, b) => a.title.localeCompare(b.title, "cs") },
+];
+
+const f = useFilter({ items: projects, searchText: (p) => `${p.title} ${p.tags.join(" ")}`, filters, sorts });
+
+<FilterBar filter={f} sticky={80} />
+{f.filtered.map((p) => <ProjectCard key={p.id} {...p} />)}
+```
+
+Hledá bez ohledu na diakritiku, všechna slova musí sedět, počty u voleb se počítají podle ostatních aktivních filtrů.
+`filters` a `sorts` definuj mimo komponentu (nebo v `useMemo`), ať se zbytečně nepřepočítávají.
+
+## Next.js
 
 ```tsx
 "use client";
 import Link from "next/link";
 import { CbbProvider } from "code-by-barca-ui";
 
-export default function Providers({ children }) {
+export function Providers({ children }) {
   return <CbbProvider linkComponent={Link}>{children}</CbbProvider>;
 }
 ```
 
-Komponenty s `href` pak pro interní cesty použijí `next/link`, externí odkazy (`https:`, `mailto:`, `#kotva`) zůstávají obyčejné `<a>`.
-Knihovna je označená `"use client"`, takže funguje v App Routeru.
+Odkazy s interní cestou (`/projekty`) pak půjdou přes `next/link`, externí (`https:`, `mailto:`, `#kotva`) zůstanou obyčejné `<a>`.
 
-### Přebarvení
-
-Vše se řídí CSS proměnnými – stačí je přepsat:
+## Přebarvení
 
 ```css
-:root {
-  --cbb-accent: #22d3ee;
-  --cbb-accent-hover: #67e8f9;
-  --cbb-bg: #050505;
-}
+:root { --cbb-accent: #22d3ee; --cbb-accent-hover: #67e8f9; --cbb-bg: #050505; }
 ```
 
-### Tailwind (volitelné)
-
-```js
-// tailwind.config.js
-module.exports = {
-  presets: [require("code-by-barca-ui/tailwind-preset")],
-};
-// pak: className="bg-cbb-surface text-cbb-accent rounded-cbb-lg"
-```
-
-## Komponenty
-
-| Skupina | Komponenty |
-| --- | --- |
-| Základ | `Button`, `Badge`, `Tag`, `Card` (`CardMedia`, `CardBody`), `Reveal` |
-| Sekce | `Hero`, `Typewriter`, `Section`, `SectionHeading`, `Timeline` |
-| Obsah | `SkillCard`, `SkillLevelBar`, `ProjectCard`, `CodeBlock`, `LazyImage`, `Skeleton*` |
-| Formuláře | `Input`, `Textarea`, `Select`, `Field`, `ContactForm` (validace + honeypot), `DateTimePicker`, `FilterPills`, `FilterDropdown` |
-| Překryvy | `Modal`, `Lightbox` (+ `useLightbox`), `ToastProvider` / `useToast`, `CookieBanner` |
-| Layout | `Navbar`, `Footer`, `InfoRow`, `SocialLinks` |
-| Hooky | `useScrollReveal`, `useLockBodyScroll`, `useEscape` |
-| Ikony | `ChevronRightIcon`, `MailIcon`, `GithubIcon`, … (inline SVG, bez závislosti) |
-
-### DateTimePicker
-
-```tsx
-const [when, setWhen] = useState<string>(new Date().toISOString());
-<DateTimePicker value={when} onChange={setWhen} />   // onChange dostává ISO řetězec
-```
-
-Klik na název měsíce přepne kalendář na kolečka měsíc/rok (po 2 s nečinnosti se vrátí na dny).
-Hodiny a minuty se vybírají scrollem (scroll-snap). Texty jdou přepsat přes `locale`, `monthNames`, `weekdayNames`.
-
-### ContactForm
-
-```tsx
-<ContactForm onSubmit={async (v) => { await fetch("/api/contact", { method: "POST", body: JSON.stringify(v) }); }} />
-```
-
-Když je vyplněné skryté pole (honeypot), `onSubmit` se nezavolá. Při chybě (throw) zůstanou data ve formuláři.
-
-### CookieBanner
-
-```tsx
-<CookieBanner policyHref="/GDPR" hideOnPaths={["/admin"]} />
-```
-
-Souhlas čti přes `getCookieConsent()` (`"necessary" | "all" | null`), změnu poslouchej na události `cookie-consent-change`.
-Znovuotevření z patičky: `window.dispatchEvent(new Event(COOKIE_OPEN_EVENT))`.
+Volitelně Tailwind preset: `presets: [require("code-by-barca-ui/tailwind-preset")]` → `bg-cbb-surface text-cbb-accent rounded-cbb-lg`.
 
 ## Vývoj a publikace
 
 ```bash
 npm install
 npm run typecheck
-npm run build        # tsup → dist/ (ESM + CJS + .d.ts) a dist/styles.css
+npm run build        # tsup → dist/ (ESM + CJS + .d.ts) + dist/styles.css
+npm run demo         # sestaví a spustí dokumentační stránku (demo/)
 npm pack --dry-run   # co přesně se publikuje
-npm login
-npm publish          # (publishConfig.access = public)
+npm login && npm publish
 ```
 
-Před prvním publikováním:
-
-1. Ověř, že je název `code-by-barca-ui` na npm volný (`npm view code-by-barca-ui`). Pokud ne, použij scope: `@code-by-barca/ui` a změň `name` v `package.json`.
-2. Uprav `repository.url` na skutečný repozitář.
-3. Verze: `npm version patch|minor|major`.
-
-`npm run dev` spouští build ve watch režimu; ukázková stránka je v `demo/`.
-
-## Licence
+Před prvním publikováním ověř volné jméno (`npm view code-by-barca-ui`), případně použij scope `@code-by-barca/ui`, a uprav `repository.url`.
 
 MIT © Barbora Šanderová

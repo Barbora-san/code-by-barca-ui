@@ -99,11 +99,15 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(function 
   );
 });
 
-export interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement>, ControlExtras {}
+export interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement>, ControlExtras {
+  /** Zkratka místo `<option>` potomků. */
+  options?: { value: string; label: ReactNode; disabled?: boolean }[];
+  placeholder?: string;
+}
 
 /** Nativní `<select>` ve stylu knihovny (pro jednoduché formuláře; pro filtry viz FilterDropdown). */
 export const Select = forwardRef<HTMLSelectElement, SelectProps>(function Select(
-  { label, hint, error, wrapperClassName, className, id, children, ...rest },
+  { label, hint, error, wrapperClassName, className, id, children, options, placeholder, ...rest },
   ref
 ) {
   const auto = useId();
@@ -117,6 +121,16 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(function Select
         aria-invalid={error ? true : undefined}
         {...rest}
       >
+        {placeholder && (
+          <option value="" disabled>
+            {placeholder}
+          </option>
+        )}
+        {options?.map((o) => (
+          <option key={o.value} value={o.value} disabled={o.disabled}>
+            {o.label}
+          </option>
+        ))}
         {children}
       </select>
       <ChevronDownIcon size={16} className="cbb-select__chevron" />

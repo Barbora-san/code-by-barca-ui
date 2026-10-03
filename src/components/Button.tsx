@@ -2,7 +2,7 @@ import { forwardRef, type ButtonHTMLAttributes, type ReactNode } from "react";
 import { cn } from "../lib/cn";
 import { isExternalHref, useLinkComponent } from "../lib/link";
 
-export type ButtonVariant = "primary" | "outline" | "soft" | "ghost" | "danger";
+export type ButtonVariant = "primary" | "secondary" | "outline" | "soft" | "ghost" | "destructive" | "link";
 export type ButtonSize = "sm" | "md" | "lg";
 
 export interface ButtonProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, "color"> {

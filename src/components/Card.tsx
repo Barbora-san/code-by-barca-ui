@@ -10,6 +10,14 @@ export interface CardProps extends HTMLAttributes<HTMLElement> {
   flush?: boolean;
   /** Světlejší povrch (#1a1a1a) – pro karty uvnitř karet. */
   raised?: boolean;
+  /** Stín pod kartou. */
+  shadow?: boolean;
+  /** Padding jako u formulářové karty. */
+  form?: boolean;
+  /** Žlutá záře při hoveru (jako u karet dovedností). */
+  glow?: boolean;
+  /** „Geeky“ rohové závorky v levém horním a pravém dolním rohu. */
+  corners?: boolean;
 }
 
 export function Card({
@@ -17,6 +25,10 @@ export function Card({
   interactive,
   flush,
   raised,
+  shadow,
+  form,
+  glow,
+  corners,
   className,
   children,
   ...rest
@@ -28,6 +40,10 @@ export function Card({
         interactive && "cbb-card--interactive",
         flush && "cbb-card--flush",
         raised && "cbb-card--raised",
+        shadow && "cbb-card--shadow",
+        form && "cbb-card--form",
+        glow && "cbb-card--glow",
+        corners && "cbb-card--corners",
         className
       )}
       {...rest}

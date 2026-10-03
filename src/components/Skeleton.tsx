@@ -5,10 +5,24 @@ export interface SkeletonProps extends HTMLAttributes<HTMLDivElement> {
   width?: CSSProperties["width"];
   height?: CSSProperties["height"];
   rounded?: "sm" | "md" | "full";
+  /** Zkratka: `circle` = kulatý 40px, `text` = řádek textu, `rect` = obdélník. */
+  variant?: "circle" | "text" | "rect";
 }
 
 /** Pulzující placeholder – základní stavební kámen. */
-export function Skeleton({ width, height, rounded = "sm", className, style, ...rest }: SkeletonProps) {
+export function Skeleton({ width, height, rounded = "sm", variant, className, style, ...rest }: SkeletonProps) {
+  if (variant === "circle") {
+    width = width ?? 40;
+    height = height ?? 40;
+    rounded = "full";
+  } else if (variant === "text") {
+    height = height ?? 14;
+    width = width ?? "100%";
+  } else if (variant === "rect") {
+    height = height ?? 120;
+    width = width ?? "100%";
+    rounded = "md";
+  }
   return (
     <div
       aria-hidden="true"

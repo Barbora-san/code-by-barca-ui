@@ -1,103 +1,116 @@
-import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import { useEffect, useSyncExternalStore, type ReactNode } from "react";
 import { cn } from "../lib/cn";
 import { AlertTriangleIcon, CheckCircleIcon, InfoIcon, XCircleIcon, XIcon } from "./Icons";
 
-export type ToastType = "success" | "error" | "info" | "warning";
+export type ToastVariant = "default" | "success" | "error" | "info" | "warning";
 
-interface ToastItem {
-  id: number;
-  message: ReactNode;
-  type: ToastType;
-}
-
-interface ToastApi {
-  show: (message: ReactNode, type?: ToastType, duration?: number) => number;
-  success: (message: ReactNode, duration?: number) => number;
-  error: (message: ReactNode, duration?: number) => number;
-  info: (message: ReactNode, duration?: number) => number;
-  warning: (message: ReactNode, duration?: number) => number;
-  dismiss: (id: number) => void;
-}
-
-const ToastContext = createContext<ToastApi | null>(null);
-
-/** `const toast = useToast(); toast.success("Uloženo")` – musí být uvnitř `<ToastProvider>`. */
-export function useToast(): ToastApi {
-  const ctx = useContext(ToastContext);
-  if (!ctx) throw new Error("useToast musí být použit uvnitř <ToastProvider>.");
-  return ctx;
-}
-
-const ICONS = {
-  success: CheckCircleIcon,
-  error: XCircleIcon,
-  info: InfoIcon,
-  warning: AlertTriangleIcon,
-} as const;
-
-export interface ToastProviderProps {
-  children: ReactNode;
-  /** Výchozí doba zobrazení v ms (0 = nezmizí samo). */
+export interface ToastOptions {
+  variant?: ToastVariant;
+  title: ReactNode;
+  description?: ReactNode;
+  /** Doba zobrazení v ms (0 = nezmizí samo). Výchozí 4000. */
   duration?: number;
-  position?: "top-right" | "bottom-right" | "bottom-center";
+  action?: { label: ReactNode; onClick: () => void };
 }
 
-export function ToastProvider({ children, duration: defaultDuration = 3500, position = "bottom-right" }: ToastProviderProps) {
-  const [toasts, setToasts] = useState<ToastItem[]>([]);
-  const counter = useRef(0);
-  const timers = useRef(new Map<number, ReturnType<typeof setTimeout>>());
+interface ToastItem extends ToastOptions {
+  id: number;
+}
 
-  const dismiss = useCallback((id: number) => {
-    const t = timers.current.get(id);
-    if (t) clearTimeout(t);
-    timers.current.delete(id);
-    setToasts((prev) => prev.filter((x) => x.id !== id));
-  }, []);
+// --- malý globální store: showToast() funguje odkudkoli, bez provideru ----------
+let items: ToastItem[] = [];
+let counter = 0;
+const listeners = new Set<() => void>();
+const timers = new Map<number, ReturnType<typeof setTimeout>>();
+const emit = () => listeners.forEach((l) => l());
 
-  const show = useCallback(
-    (message: ReactNode, type: ToastType = "info", duration = defaultDuration) => {
-      const id = ++counter.current;
-      setToasts((prev) => [...prev, { id, message, type }]);
-      if (duration > 0) timers.current.set(id, setTimeout(() => dismiss(id), duration));
-      return id;
+export function dismissToast(id: number) {
+  const t = timers.get(id);
+  if (t) clearTimeout(t);
+  timers.delete(id);
+  items = items.filter((x) => x.id !== id);
+  emit();
+}
+
+/** Zobrazí toast (potřebuje někde v aplikaci `<Toaster />`). Vrací jeho id. */
+export function showToast(options: ToastOptions): number {
+  const id = ++counter;
+  items = [...items, { ...options, variant: options.variant ?? "default", id }].slice(-5);
+  emit();
+  const duration = options.duration ?? 4000;
+  if (duration > 0) timers.set(id, setTimeout(() => dismissToast(id), duration));
+  return id;
+}
+
+/** Zkratky: `toast.success("Uloženo")`. */
+export const toast = {
+  show: showToast,
+  dismiss: dismissToast,
+  success: (title: ReactNode, o?: Omit<ToastOptions, "title" | "variant">) => showToast({ ...o, title, variant: "success" }),
+  error: (title: ReactNode, o?: Omit<ToastOptions, "title" | "variant">) => showToast({ ...o, title, variant: "error" }),
+  info: (title: ReactNode, o?: Omit<ToastOptions, "title" | "variant">) => showToast({ ...o, title, variant: "info" }),
+  warning: (title: ReactNode, o?: Omit<ToastOptions, "title" | "variant">) => showToast({ ...o, title, variant: "warning" }),
+};
+
+const subscribe = (cb: () => void) => {
+  listeners.add(cb);
+  return () => {
+    listeners.delete(cb);
+  };
+};
+const getSnapshot = () => items;
+const getServerSnapshot = () => items;
+
+const ICONS = { default: null, success: CheckCircleIcon, error: XCircleIcon, info: InfoIcon, warning: AlertTriangleIcon } as const;
+
+export interface ToasterProps {
+  position?: "top-right" | "top-center" | "bottom-right" | "bottom-center" | "bottom-left";
+}
+
+/** Vykresluje toasty. Dej ho jednou do kořene aplikace. */
+export function Toaster({ position = "bottom-right" }: ToasterProps) {
+  const list = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+
+  // po odpojení vyčistit časovače, ať neběží zbytečně
+  useEffect(
+    () => () => {
+      if (listeners.size === 0) {
+        timers.forEach(clearTimeout);
+        timers.clear();
+      }
     },
-    [defaultDuration, dismiss]
-  );
-
-  useEffect(() => {
-    const map = timers.current;
-    return () => map.forEach(clearTimeout);
-  }, []);
-
-  const api = useMemo<ToastApi>(
-    () => ({
-      show,
-      dismiss,
-      success: (m, d) => show(m, "success", d),
-      error: (m, d) => show(m, "error", d),
-      info: (m, d) => show(m, "info", d),
-      warning: (m, d) => show(m, "warning", d),
-    }),
-    [show, dismiss]
+    []
   );
 
   return (
-    <ToastContext.Provider value={api}>
-      {children}
-      <div className={cn("cbb-toasts", `cbb-toasts--${position}`)} aria-live="polite">
-        {toasts.map((t) => {
-          const Icon = ICONS[t.type];
-          return (
-            <div key={t.id} role={t.type === "error" ? "alert" : "status"} className={cn("cbb-toast", `cbb-toast--${t.type}`)}>
-              <Icon size={18} />
-              <div className="cbb-toast__msg">{t.message}</div>
-              <button type="button" onClick={() => dismiss(t.id)} aria-label="Zavřít oznámení">
-                <XIcon size={14} />
-              </button>
+    <div className={cn("cbb-toasts", `cbb-toasts--${position}`)} aria-live="polite">
+      {list.map((t) => {
+        const Icon = ICONS[t.variant ?? "default"];
+        return (
+          <div key={t.id} role={t.variant === "error" ? "alert" : "status"} className={cn("cbb-toast", `cbb-toast--${t.variant ?? "default"}`)}>
+            {Icon && <Icon size={18} className="cbb-toast__icon" />}
+            <div className="cbb-toast__msg">
+              <p className="cbb-toast__title">{t.title}</p>
+              {t.description && <p className="cbb-toast__desc">{t.description}</p>}
             </div>
-          );
-        })}
-      </div>
-    </ToastContext.Provider>
+            {t.action && (
+              <button
+                type="button"
+                className="cbb-toast__action"
+                onClick={() => {
+                  t.action?.onClick();
+                  dismissToast(t.id);
+                }}
+              >
+                {t.action.label}
+              </button>
+            )}
+            <button type="button" className="cbb-toast__close" onClick={() => dismissToast(t.id)} aria-label="Zavřít oznámení">
+              <XIcon size={14} />
+            </button>
+          </div>
+        );
+      })}
+    </div>
   );
 }

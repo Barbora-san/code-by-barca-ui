@@ -1,7 +1,7 @@
 import type { HTMLAttributes, ReactNode } from "react";
 import { cn } from "../lib/cn";
 
-export type BadgeVariant = "accent" | "outline" | "muted" | "success" | "danger" | "info";
+export type BadgeVariant = "default" | "secondary" | "outline" | "destructive" | "success" | "info" | "warning";
 
 export interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
   variant?: BadgeVariant;
@@ -11,7 +11,7 @@ export interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
 }
 
 /** Pill štítek – kategorie projektu, stav, počet… */
-export function Badge({ variant = "accent", dot, icon, className, children, ...rest }: BadgeProps) {
+export function Badge({ variant = "default", dot, icon, className, children, ...rest }: BadgeProps) {
   return (
     <span className={cn("cbb-badge", `cbb-badge--${variant}`, className)} {...rest}>
       {dot && <span className="cbb-badge__dot" />}
