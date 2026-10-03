@@ -1,73 +1,181 @@
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { createRoot } from "react-dom/client";
 import {
-  Navbar, Hero, Typewriter, Button, Section, SectionHeading, SkillCard, ProjectCard, FilterPills,
-  FilterDropdown, ContactForm, DateTimePicker, Badge, Timeline, InfoRow, SocialLinks, Footer,
-  CodeBlock, ToastProvider, useToast, Modal, MailIcon, MapPinIcon, GithubIcon, SkeletonGrid, CookieBanner, Select,
+  Sidebar, Sheet, Button, Tabs, CodeBlock, Badge, ScrollProgress, Toaster, MessageBoxHost, CbbProvider, SearchAutocomplete,
+  GithubIcon, MenuIcon, ArrowDownIcon, CheckIcon, SparklesIcon, FolderIcon, type SidebarGroup,
 } from "../src";
 import "../src/styles.css";
+import "./demo.css";
+import { CATEGORIES } from "./docs";
+import { DocBlock } from "./ui";
+import { Showcase } from "./showcase";
+import pkg from "../package.json";
 
-function CodeIcon() {
-  return (<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6" /></svg>);
-}
+const REPO = "https://github.com/Barbora-san/code-by-barca-ui";
+const ZIP = `${REPO}/archive/refs/heads/main.zip`;
+const logo = <>code<span className="cbb-accent">.</span>by<span className="cbb-accent">.</span>barca <span className="demo-ui">UI</span></>;
 
-function App() {
-  const [filter, setFilter] = useState("all");
-  const [multi, setMulti] = useState<string[]>(["react"]);
-  const [date, setDate] = useState<string>("2026-09-30T14:30:00.000Z");
-  const [modal, setModal] = useState(false);
-  const toast = useToast();
+const INSTALL = {
+  npm: "npm install code-by-barca-ui",
+  yarn: "yarn add code-by-barca-ui",
+  pnpm: "pnpm add code-by-barca-ui",
+};
+const USAGE = `// 1) styly – jednou v kořeni aplikace
+import "code-by-barca-ui/styles.css";
+
+// 2) komponenty
+import { Button, Toaster, toast } from "code-by-barca-ui";
+
+export default function App() {
   return (
     <div className="cbb-root">
-      <Navbar brand={<>code<span className="cbb-accent">.</span>by<span className="cbb-accent">.</span>barca</>} items={[{ label: "O mně", href: "#about", active: true }, { label: "Dovednosti", href: "#skills" }, { label: "Projekty", href: "#projects" }]} cta={<Button size="sm" href="#contact">Kontakt</Button>} />
-      <Hero badge="Otevřena novým nápadům" title="Barbora" titleMuted="Šanderová"
-        tagline={<>I'm a&nbsp;<Typewriter words={["Designer", "Developer"]} /></>}
-        description="Vytváření digitálních zážitků s precizností a kreativitou"
-        actions={<><Button size="lg" glow href="#projects">Ukázka mé práce</Button><Button size="lg" variant="outline" href="#contact">Kontaktujte mě</Button></>}
-        scrollHref="#about" />
-      <Section id="skills" tone="alt" glow="left">
-        <SectionHeading eyebrow="// Skills" title="Dovednosti &" accent="Technologie" description="Propojování designu a vývoje" />
-        <div className="cbb-grid cbb-grid--3">
-          <SkillCard index={0} icon={<CodeIcon />} title="React" description="Komponenty a hooky." level={3} tools={["Next.js", "TypeScript", "Tailwind", "Vite"]} onClick={() => toast.success("Detail dovednosti")} />
-          <SkillCard index={1} icon={<CodeIcon />} title="Figma" description="Prototypy a design systémy." level={2} tools={["Auto layout"]} />
-          <SkillCard index={2} icon={<CodeIcon />} title="Node.js" description="API a služby." level={4} tools={["Express"]} />
-        </div>
-      </Section>
-      <Section id="projects" glow="right" grid>
-        <SectionHeading align="left" eyebrow="// Portfolio" title="Hotové" accent="Projekty" action={<Button variant="soft" size="sm" onClick={() => setModal(true)}>Zobrazit vše</Button>} />
-        <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginBottom: 32 }}>
-          <FilterPills value={filter} onChange={setFilter} options={[{ value: "all", label: "All" }, { value: "web", label: "Web Design" }, { value: "dev", label: "Web Development" }]} />
-          <FilterDropdown multiple label="Tech" value={multi} onChange={setMulti} options={[{ value: "react", label: "React", count: 4 }, { value: "next", label: "Next.js", count: 2 }, { value: "figma", label: "Figma", count: 3 }]} />
-        </div>
-        <div className="cbb-grid cbb-grid--3">
-          <ProjectCard category="Web Design" year="2026" title="Code by Barca" description="Osobní portfolio v geeky stylu." tags={["Next.js", "Tailwind", "FastAPI", "Mongo"]} href="#p1" />
-          <ProjectCard category="Software" year="2025" title="Cinema Space" description="Rezervační systém kina." tags={["React"]} onClick={() => {}} />
-          <SkeletonGrid count={1} variant="project" />
-        </div>
-      </Section>
-      <Section id="contact" tone="alt" glow="center">
-        <SectionHeading eyebrow="// Get In Touch" title="Vytvořme spolu" accent="něco skvělého" />
-        <div className="cbb-grid cbb-grid--2" style={{ gap: 64 }}>
-          <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
-            <ContactForm onSubmit={async () => { await new Promise((r) => setTimeout(r, 300)); }} />
-            <DateTimePicker value={date} onChange={setDate} />
-            <Select label="Typ projektu" defaultValue="web"><option value="web">Web</option><option value="app">Aplikace</option></Select>
-          </div>
-          <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-            <InfoRow icon={<MailIcon size={20} />} label="Email" value="barcasan.san@icloud.com" href="mailto:barcasan.san@icloud.com" />
-            <InfoRow icon={<MapPinIcon size={20} />} label="Lokace" value="Broumov, Náchod" href="https://maps.google.com" />
-            <SocialLinks links={[{ label: "GitHub", href: "https://github.com/Barbora-san", icon: <GithubIcon size={20} /> }]} />
-            <Badge dot variant="success">Volná kapacita</Badge>
-            <Timeline entries={[{ period: "2024 — dnes", title: "Freelance", subtitle: "Web & design", description: "Tvorba webů." }]} />
-            <CodeBlock language="tsx" code={`import { Button } from "code-by-barca-ui";\n<Button glow>Ahoj</Button>`} />
-          </div>
-        </div>
-      </Section>
-      <Footer columns={[{ title: "code-by-barca", content: <p>Osobní portfolio.</p> }, { title: "Odkazy", links: [{ label: "Projekty", href: "#projects" }] }]} bottom="© 2026 Barbora Šanderová" bottomLinks={[{ label: "GDPR", href: "/GDPR" }, { label: "Nastavení cookies", onClick: () => {} }]} />
-      <Modal open={modal} onClose={() => setModal(false)} title="Všechny projekty" description="Ukázkový modal.">Obsah</Modal>
-      <CookieBanner />
+      <Button glow onClick={() => toast.success("Uloženo")}>Uložit</Button>
+      <Toaster />
     </div>
+  );
+}`;
+const NEXT = `"use client";
+import Link from "next/link";
+import { CbbProvider } from "code-by-barca-ui";
+
+export function Providers({ children }) {
+  return <CbbProvider linkComponent={Link}>{children}</CbbProvider>;
+}`;
+const THEME = `:root {
+  --cbb-accent: #22d3ee;       /* hlavní barva */
+  --cbb-accent-hover: #67e8f9;
+  --cbb-bg: #050505;           /* pozadí */
+  --cbb-radius-lg: 20px;
+}`;
+const TW = `// tailwind.config.js (volitelné)
+module.exports = {
+  presets: [require("code-by-barca-ui/tailwind-preset")],
+};
+// pak: bg-cbb-surface, text-cbb-accent, rounded-cbb-lg …`;
+
+const total = CATEGORIES.reduce((n, c) => n + c.docs.length, 0);
+
+function App() {
+  const [active, setActive] = useState("uvod");
+  const [mobileNav, setMobileNav] = useState(false);
+  const [collapsed, setCollapsed] = useState(false);
+
+  // scroll-spy: aktivní položka v panelu podle toho, co je vidět
+  useEffect(() => {
+    const els = Array.from(document.querySelectorAll<HTMLElement>("[data-spy]"));
+    const obs = new IntersectionObserver(
+      (entries) => {
+        const vis = entries.filter((e) => e.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+        if (vis[0]) setActive((vis[0].target as HTMLElement).id);
+      },
+      { rootMargin: "-80px 0px -65% 0px" }
+    );
+    els.forEach((el) => obs.observe(el));
+    return () => obs.disconnect();
+  }, []);
+
+  // přímý odkaz (#button) po načtení doskočí na kotvu
+  useEffect(() => {
+    const id = decodeURIComponent(location.hash.slice(1));
+    if (id) requestAnimationFrame(() => document.getElementById(id)?.scrollIntoView());
+  }, []);
+
+  const go = (id: string) => { setMobileNav(false); setActive(id); history.replaceState(null, "", `#${id}`); document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" }); };
+
+  const groups: SidebarGroup[] = useMemo(() => [
+    { title: "Začínáme", items: [
+      { label: "Úvod", icon: <SparklesIcon size={16} />, active: active === "uvod", onClick: () => go("uvod") },
+      { label: "Instalace", icon: <ArrowDownIcon size={16} />, active: active === "instalace", onClick: () => go("instalace") },
+      { label: "Ukázkový web", icon: <FolderIcon size={16} />, active: active === "showcase", onClick: () => go("showcase") },
+    ] },
+    ...CATEGORIES.map((c) => ({
+      title: c.title,
+      items: c.docs.map((d) => ({ label: d.name, active: active === d.id, onClick: () => go(d.id) })),
+    })),
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  ], [active]);
+
+  const searchItems = useMemo(() => CATEGORIES.flatMap((c) => c.docs.map((d) => ({ id: d.id, label: d.name, category: c.title }))), []);
+
+  const nav = <Sidebar groups={groups} header={logo} collapsed={collapsed} onCollapsedChange={setCollapsed} footer={<span className="demo-muted" style={{ fontSize: 12 }}>v{pkg.version} · {total} komponent</span>} aria-label="Komponenty" />;
+
+  return (
+    <CbbProvider>
+      <div className="cbb-root demo-root">
+        <ScrollProgress />
+        <Toaster />
+        <MessageBoxHost />
+
+        <aside className={`demo-side ${collapsed ? "is-collapsed" : ""}`}>{nav}</aside>
+        <Sheet open={mobileNav} side="left" onClose={() => setMobileNav(false)} title="Komponenty">
+          <Sidebar groups={groups} aria-label="Komponenty (mobil)" className="demo-side-mobile" />
+        </Sheet>
+
+        <div className="demo-main">
+          <div className="demo-topbar">
+            <Button variant="ghost" size="sm" aria-label="Otevřít menu" className="demo-burger" onClick={() => setMobileNav(true)}><MenuIcon size={18} /></Button>
+            <div className="demo-search"><SearchAutocomplete items={searchItems} shortcut placeholder="Hledat komponentu…" onSelect={(id) => go(id)} /></div>
+            <Button variant="outline" size="sm" href={REPO} target="_blank" rel="noopener noreferrer" leftIcon={<GithubIcon size={16} />}>GitHub</Button>
+          </div>
+
+          <main className="demo-content">
+            {/* ───────── Úvod ───────── */}
+            <section id="uvod" data-spy className="demo-hero">
+              <Badge icon={<SparklesIcon size={14} />}>v{pkg.version} · open source</Badge>
+              <h1>code<span className="cbb-accent">.</span>by<span className="cbb-accent">.</span>barca <span className="cbb-accent">UI</span></h1>
+              <p className="demo-lead">Čistá UI knihovna pro <a className="cbb-link" href="https://code-by-barca.cz">code-by-barca.cz</a> – tmavý „geeky“ vzhled se žlutým akcentem. {total} komponent v Reactu a TypeScriptu, <strong>bez závislosti na Tailwindu</strong>, s přístupnou klávesnicí a podporou Next.js.</p>
+              <div className="demo-hero__actions">
+                <Button size="lg" glow href={ZIP} leftIcon={<ArrowDownIcon size={18} />}>Stáhnout (.zip)</Button>
+                <Button size="lg" variant="outline" href={REPO} target="_blank" rel="noopener noreferrer" leftIcon={<GithubIcon size={18} />}>Zobrazit na GitHubu</Button>
+              </div>
+              <ul className="demo-features">
+                {["Bez Tailwindu – hotové CSS s prefixem cbb-", "Přebarvení přes CSS proměnné", "Next.js App Router (use client)", "Klávesnice a čtečky obrazovky", "Respektuje prefers-reduced-motion", "Tree-shaking, ESM i CJS"].map((t) => <li key={t}><CheckIcon size={16} />{t}</li>)}
+              </ul>
+            </section>
+
+            {/* ───────── Instalace ───────── */}
+            <section id="instalace" data-spy className="demo-section">
+              <h2 className="demo-h2">Instalace</h2>
+              <p className="demo-muted">Balíček se připravuje k publikaci na npm. Až bude venku, nainstaluješ ho jedním příkazem:</p>
+              <Tabs tabs={Object.entries(INSTALL).map(([k, v]) => ({ value: k, label: k, content: <CodeBlock language="bash" code={v} /> }))} />
+              <h3 className="demo-h3">Použití</h3>
+              <CodeBlock language="tsx" code={USAGE} />
+              <p className="demo-note">Třída <code className="demo-code">cbb-root</code> je volitelná – nastaví tmavé pozadí, bílý text a font.</p>
+              <div className="demo-grid2">
+                <div><h3 className="demo-h3">Next.js</h3><CodeBlock language="tsx" code={NEXT} /></div>
+                <div><h3 className="demo-h3">Přebarvení</h3><CodeBlock language="css" code={THEME} /></div>
+              </div>
+              <h3 className="demo-h3">Tailwind preset <Badge variant="secondary">volitelné</Badge></h3>
+              <CodeBlock language="js" code={TW} />
+              <h3 className="demo-h3">Než je na npm</h3>
+              <p className="demo-muted">Stáhni zip, rozbal a v adresáři knihovny spusť:</p>
+              <CodeBlock language="bash" code={"npm install\nnpm run build\n# v projektu pak:\nnpm install ../cesta/k/code-by-barca-ui"} />
+            </section>
+
+            {/* ───────── Ukázkový web ───────── */}
+            <section id="showcase" data-spy className="demo-section">
+              <h2 className="demo-h2">Ukázkový web</h2>
+              <p className="demo-muted">Celá ukázka je poskládaná jen z komponent knihovny – klikej, filtruj, otevírej dialogy a obrázky. Kód každé komponenty najdeš níže.</p>
+              <Showcase />
+            </section>
+
+            {/* ───────── Kategorie ───────── */}
+            {CATEGORIES.map((c) => (
+              <div key={c.id} id={c.id} className="demo-category">
+                <h2 className="demo-h2">{c.title}</h2>
+                {c.docs.map((d) => <DocBlock key={d.id} doc={d} category={c.title} />)}
+              </div>
+            ))}
+
+            <footer className="demo-footer">
+              <span>© {new Date().getFullYear()} Barbora Šanderová · MIT</span>
+              <a className="cbb-link" href={REPO} target="_blank" rel="noopener noreferrer">GitHub</a>
+            </footer>
+          </main>
+        </div>
+      </div>
+    </CbbProvider>
   );
 }
 
-createRoot(document.getElementById("root")!).render(<ToastProvider><App /></ToastProvider>);
+createRoot(document.getElementById("root")!).render(<App />);

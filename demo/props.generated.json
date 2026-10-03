@@ -1,0 +1,4104 @@
+{
+ "types": {
+  "ButtonProps": [
+   {
+    "name": "variant",
+    "type": "\"primary\" | \"secondary\" | \"outline\" | \"soft\" | \"ghost\" | \"destructive\" | \"link\"",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "size",
+    "type": "\"sm\" | \"md\" | \"lg\"",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "loading",
+    "type": "boolean",
+    "required": false,
+    "doc": "Zobrazí spinner a tlačítko zablokuje."
+   },
+   {
+    "name": "leftIcon",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "rightIcon",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "fullWidth",
+    "type": "boolean",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "glow",
+    "type": "boolean",
+    "required": false,
+    "doc": "Svítící stín při hoveru (jako na hero CTA)."
+   },
+   {
+    "name": "href",
+    "type": "string",
+    "required": false,
+    "doc": "Pokud je zadán `href`, vykreslí se odkaz místo `<button>`."
+   },
+   {
+    "name": "target",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "rel",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "BadgeProps": [
+   {
+    "name": "variant",
+    "type": "\"secondary\" | \"outline\" | \"destructive\" | \"default\" | \"success\" | \"info\" | \"warning\"",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "dot",
+    "type": "boolean",
+    "required": false,
+    "doc": "Malá tečka před textem (např. stav „volný“)."
+   },
+   {
+    "name": "icon",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "TagProps": [
+   {
+    "name": "interactive",
+    "type": "boolean",
+    "required": false,
+    "doc": "Zvýrazní se při hoveru v akcentové barvě."
+   }
+  ],
+  "DividerProps": [
+   {
+    "name": "label",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Text uprostřed čáry (např. „NEBO“)."
+   },
+   {
+    "name": "orientation",
+    "type": "\"horizontal\" | \"vertical\"",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "ChipProps": [
+   {
+    "name": "onRemove",
+    "type": "() => void",
+    "required": false,
+    "doc": "Když je zadáno, ukáže se křížek pro odebrání."
+   },
+   {
+    "name": "removeLabel",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "icon",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "TypewriterProps": [
+   {
+    "name": "words",
+    "type": "string[]",
+    "required": true,
+    "doc": "Slova, která se střídavě píšou a mažou."
+   },
+   {
+    "name": "typingSpeed",
+    "type": "number",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "deletingSpeed",
+    "type": "number",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "pause",
+    "type": "number",
+    "required": false,
+    "doc": "Pauza po dopsání slova (ms)."
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "RevealProps": [
+   {
+    "name": "as",
+    "type": "\"symbol\" | \"object\" | \"form\" | \"slot\" | \"style\" | \"title\" | \"link\" | \"a\" | \"abbr\" | \"address\" | \"area\" | \"article\" | \"aside\" | \"audio\" | \"b\" | \"base\" | \"bdi\" | \"bdo\" | \"big\" | \"blockquote\" | \"body\" | \"br\" | \"button\" | \"canvas\" | \"caption\" | \"center\" | \"cite\" | \"code\" | \"col\" | \"colgroup\" | \"data\" | \"datalist\" | \"dd\" | \"del\" | \"details\" | \"dfn\" | \"dialog\" | \"div\" | \"dl\" | \"dt\" | \"em\" | \"embed\" | \"fieldset\" | \"figcaption\" | \"figure\" | \"footer\" | \"h1\" | \"h2\" | \"h3\" | \"h4\" | \"h5\" | \"h6\" | \"head\" | \"header\" | \"hgroup\" | \"hr\" | \"html\" | \"i\" | \"iframe\" | \"img\" | \"input\" | \"ins\" | \"kbd\" | \"keygen\" | \"label\" | \"legend\" | \"li\" | \"main\" | \"map\" | \"mark\" | \"menu\" | \"menuitem\" | \"meta\" | \"meter\" | \"nav\" | \"noindex\" | \"noscript\" | \"ol\" | \"optgroup\" | \"option\" | \"output\" | \"p\" | \"param\" | \"picture\" | \"pre\" | \"progress\" | \"q\" | \"rp\" | \"rt\" | \"ruby\" | \"s\" | \"samp\" | \"search\" | \"script\" | \"section\" | \"select\" | \"small\" | \"source\" | \"span\" | \"strong\" | \"sub\" | \"summary\" | \"sup\" | \"table\" | \"template\" | \"tbody\" | \"td\" | \"textarea\" | \"tfoot\" | \"th\" | \"thead\" | \"time\" | \"tr\" | \"track\" | \"u\" | \"ul\" | \"var\" | \"video\" | \"wbr\" | \"webview\" | \"svg\" | \"animate\" | \"animateMotion\" | \"animateTransform\" | \"circle\" | \"clipPath\" | \"defs\" | \"desc\" | \"ellipse\" | \"feBlend\" | \"feColorMatrix\" | \"feComponentTransfer\" | \"feComposite\" | \"feConvolveMatrix\" | \"feDiffuseLighting\" | \"feDisplacementMap\" | \"feDistantLight\" | \"feDropShadow\" | \"feFlood\" | \"feFuncA\" | \"feFuncB\" | \"feFuncG\" | \"feFuncR\" | \"feGaussianBlur\" | \"feImage\" | \"feMerge\" | \"feMergeNode\" | \"feMorphology\" | \"feOffset\" | \"fePointLight\" | \"feSpecularLighting\" | \"feSpotLight\" | \"feTile\" | \"feTurbulence\" | \"filter\" | \"foreignObject\" | \"g\" | \"image\" | \"line\" | \"linearGradient\" | \"marker\" | \"mask\" | \"metadata\" | \"mpath\" | \"path\" | \"pattern\" | \"polygon\" | \"polyline\" | \"radialGradient\" | \"rect\" | \"set\" | \"stop\" | \"switch\" | \"text\" | \"textPath\" | \"tspan\" | \"use\" | \"view\" | ComponentClass<any, any> | FunctionComponent<any>",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "index",
+    "type": "number",
+    "required": false,
+    "doc": "Pořadí v mřížce – dopočítá zpoždění (stagger), max 8 kroků."
+   },
+   {
+    "name": "step",
+    "type": "number",
+    "required": false,
+    "doc": "Zpoždění jednoho kroku v ms (výchozí 80)."
+   },
+   {
+    "name": "rootMargin",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "SectionHeadingProps": [
+   {
+    "name": "eyebrow",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Mono štítek nad nadpisem, např. „// About Me“."
+   },
+   {
+    "name": "title",
+    "type": "ReactNode",
+    "required": true,
+    "doc": "Běžná část nadpisu."
+   },
+   {
+    "name": "accent",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Část nadpisu ve žluté barvě (vykreslí se za `title`)."
+   },
+   {
+    "name": "description",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "align",
+    "type": "\"center\" | \"left\"",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "action",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Volitelný prvek vpravo (např. tlačítko „Zobrazit vše“)."
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "FieldProps": [
+   {
+    "name": "label",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "hint",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "error",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "htmlFor",
+    "type": "string",
+    "required": false,
+    "doc": "Id ovládacího prvku (pro `label htmlFor`). Když ho nezadáš, vygeneruje se."
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "children",
+    "type": "ReactNode",
+    "required": true,
+    "doc": ""
+   }
+  ],
+  "InputProps": [
+   {
+    "name": "label",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "hint",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "error",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "wrapperClassName",
+    "type": "string",
+    "required": false,
+    "doc": "Třída pro obalující `.cbb-field`."
+   }
+  ],
+  "TextareaProps": [
+   {
+    "name": "label",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "hint",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "error",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "wrapperClassName",
+    "type": "string",
+    "required": false,
+    "doc": "Třída pro obalující `.cbb-field`."
+   }
+  ],
+  "SelectProps": [
+   {
+    "name": "options",
+    "type": "{ value: string; label: ReactNode; disabled?: boolean; }[]",
+    "required": false,
+    "doc": "Zkratka místo `<option>` potomků."
+   },
+   {
+    "name": "placeholder",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "label",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "hint",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "error",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "wrapperClassName",
+    "type": "string",
+    "required": false,
+    "doc": "Třída pro obalující `.cbb-field`."
+   }
+  ],
+  "CheckboxProps": [
+   {
+    "name": "checked",
+    "type": "boolean",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "onChange",
+    "type": "(checked: boolean) => void",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "label",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "description",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "indeterminate",
+    "type": "boolean",
+    "required": false,
+    "doc": "Částečně zaškrtnuto (např. „vybrat vše“)."
+   }
+  ],
+  "RadioProps": [
+   {
+    "name": "options",
+    "type": "RadioOption[]",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "value",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "onChange",
+    "type": "(value: string) => void",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "name",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "orientation",
+    "type": "\"horizontal\" | \"vertical\"",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "disabled",
+    "type": "boolean",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "aria-label",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "RadioOption": [
+   {
+    "name": "value",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "label",
+    "type": "ReactNode",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "description",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "disabled",
+    "type": "boolean",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "SwitchProps": [
+   {
+    "name": "checked",
+    "type": "boolean",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "onChange",
+    "type": "(checked: boolean) => void",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "label",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "description",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "SliderProps": [
+   {
+    "name": "value",
+    "type": "number",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "onChange",
+    "type": "(value: number) => void",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "label",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "min",
+    "type": "number",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "max",
+    "type": "number",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "step",
+    "type": "number",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "showValue",
+    "type": "boolean",
+    "required": false,
+    "doc": "Zobrazí aktuální hodnotu vpravo od popisku."
+   },
+   {
+    "name": "formatValue",
+    "type": "(value: number) => ReactNode",
+    "required": false,
+    "doc": "Formát zobrazené hodnoty (např. `v => v + \" %\"`)."
+   }
+  ],
+  "TagInputProps": [
+   {
+    "name": "tags",
+    "type": "string[]",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "onChange",
+    "type": "(tags: string[]) => void",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "placeholder",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "maxTags",
+    "type": "number",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "label",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "allowDuplicates",
+    "type": "boolean",
+    "required": false,
+    "doc": "Povolit duplicity (výchozí ne, porovnává se bez ohledu na velikost písmen)."
+   },
+   {
+    "name": "disabled",
+    "type": "boolean",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "InputOTPProps": [
+   {
+    "name": "value",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "onChange",
+    "type": "(value: string) => void",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "length",
+    "type": "number",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "separator",
+    "type": "boolean",
+    "required": false,
+    "doc": "Pomlčka uprostřed (u 6 číslic 3 + 3)."
+   },
+   {
+    "name": "pattern",
+    "type": "RegExp",
+    "required": false,
+    "doc": "Povolené znaky – výchozí jen číslice."
+   },
+   {
+    "name": "onComplete",
+    "type": "(value: string) => void",
+    "required": false,
+    "doc": "Zavolá se, když je kód kompletní."
+   },
+   {
+    "name": "disabled",
+    "type": "boolean",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "invalid",
+    "type": "boolean",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "aria-label",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "FileUploadProps": [
+   {
+    "name": "accept",
+    "type": "string",
+    "required": false,
+    "doc": "Např. `.png,.jpg,.pdf` nebo `image/*`."
+   },
+   {
+    "name": "maxSize",
+    "type": "string | number",
+    "required": false,
+    "doc": "Číslo v bajtech, nebo text `\"10MB\"`, `\"500KB\"`."
+   },
+   {
+    "name": "multiple",
+    "type": "boolean",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "label",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "hint",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "onUpload",
+    "type": "(files: File[]) => void",
+    "required": false,
+    "doc": "Dostane jen platné soubory."
+   },
+   {
+    "name": "disabled",
+    "type": "boolean",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "DateTimePickerProps": [
+   {
+    "name": "value",
+    "type": "null | string",
+    "required": false,
+    "doc": "ISO řetězec (např. `2026-09-30T14:30:00.000Z`). Bez hodnoty se použije aktuální čas."
+   },
+   {
+    "name": "onChange",
+    "type": "(iso: string) => void",
+    "required": true,
+    "doc": "Dostane ISO řetězec (`toISOString()`)."
+   },
+   {
+    "name": "locale",
+    "type": "string",
+    "required": false,
+    "doc": "Locale pro zobrazení (výchozí `cs-CZ`)."
+   },
+   {
+    "name": "monthNames",
+    "type": "string[]",
+    "required": false,
+    "doc": "Názvy měsíců v kolečku měsíc/rok (výchozí česky)."
+   },
+   {
+    "name": "weekdayNames",
+    "type": "string[]",
+    "required": false,
+    "doc": "Zkratky dnů od pondělí."
+   },
+   {
+    "name": "placeholder",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "yearRange",
+    "type": "number",
+    "required": false,
+    "doc": "Kolik let před a po aktuálním roce nabídnout (výchozí 5)."
+   },
+   {
+    "name": "disabled",
+    "type": "boolean",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "id",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "name",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "ContactFormProps": [
+   {
+    "name": "onSubmit",
+    "type": "(values: ContactFormValues) => void | Promise<void>",
+    "required": true,
+    "doc": "Zavolá se po validaci. Vrať promise – při chybě (throw) zůstanou data ve formuláři.\nKdyž je vyplněný honeypot, `onSubmit` se NEvolá (formulář se tváří jako odeslaný)."
+   },
+   {
+    "name": "labels",
+    "type": "Partial<ContactFormLabels>",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "successMessage",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Zpráva po úspěšném odeslání (nahradí formulář)."
+   },
+   {
+    "name": "errorMessage",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Zpráva při chybě odeslání."
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "ContactFormValues": [
+   {
+    "name": "name",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "email",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "message",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   }
+  ],
+  "ContactFormLabels": [
+   {
+    "name": "name",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "email",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "message",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "submit",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "sending",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "honeypot",
+    "type": "string",
+    "required": true,
+    "doc": "Popisek honeypot pole (viditelný jen robotům / čtečkám)."
+   },
+   {
+    "name": "required",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "invalidEmail",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   }
+  ],
+  "ToggleProps": [
+   {
+    "name": "pressed",
+    "type": "boolean",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "onChange",
+    "type": "(pressed: boolean) => void",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "size",
+    "type": "\"sm\" | \"md\"",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "ToggleGroupProps": [
+   {
+    "name": "items",
+    "type": "ToggleGroupItem[]",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "value",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "onChange",
+    "type": "(value: string) => void",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "aria-label",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "ToggleGroupItem": [
+   {
+    "name": "value",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "label",
+    "type": "ReactNode",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "disabled",
+    "type": "boolean",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "CardProps": [
+   {
+    "name": "as",
+    "type": "\"symbol\" | \"object\" | \"form\" | \"slot\" | \"style\" | \"title\" | \"link\" | \"a\" | \"abbr\" | \"address\" | \"area\" | \"article\" | \"aside\" | \"audio\" | \"b\" | \"base\" | \"bdi\" | \"bdo\" | \"big\" | \"blockquote\" | \"body\" | \"br\" | \"button\" | \"canvas\" | \"caption\" | \"center\" | \"cite\" | \"code\" | \"col\" | \"colgroup\" | \"data\" | \"datalist\" | \"dd\" | \"del\" | \"details\" | \"dfn\" | \"dialog\" | \"div\" | \"dl\" | \"dt\" | \"em\" | \"embed\" | \"fieldset\" | \"figcaption\" | \"figure\" | \"footer\" | \"h1\" | \"h2\" | \"h3\" | \"h4\" | \"h5\" | \"h6\" | \"head\" | \"header\" | \"hgroup\" | \"hr\" | \"html\" | \"i\" | \"iframe\" | \"img\" | \"input\" | \"ins\" | \"kbd\" | \"keygen\" | \"label\" | \"legend\" | \"li\" | \"main\" | \"map\" | \"mark\" | \"menu\" | \"menuitem\" | \"meta\" | \"meter\" | \"nav\" | \"noindex\" | \"noscript\" | \"ol\" | \"optgroup\" | \"option\" | \"output\" | \"p\" | \"param\" | \"picture\" | \"pre\" | \"progress\" | \"q\" | \"rp\" | \"rt\" | \"ruby\" | \"s\" | \"samp\" | \"search\" | \"script\" | \"section\" | \"select\" | \"small\" | \"source\" | \"span\" | \"strong\" | \"sub\" | \"summary\" | \"sup\" | \"table\" | \"template\" | \"tbody\" | \"td\" | \"textarea\" | \"tfoot\" | \"th\" | \"thead\" | \"time\" | \"tr\" | \"track\" | \"u\" | \"ul\" | \"var\" | \"video\" | \"wbr\" | \"webview\" | \"svg\" | \"animate\" | \"animateMotion\" | \"animateTransform\" | \"circle\" | \"clipPath\" | \"defs\" | \"desc\" | \"ellipse\" | \"feBlend\" | \"feColorMatrix\" | \"feComponentTransfer\" | \"feComposite\" | \"feConvolveMatrix\" | \"feDiffuseLighting\" | \"feDisplacementMap\" | \"feDistantLight\" | \"feDropShadow\" | \"feFlood\" | \"feFuncA\" | \"feFuncB\" | \"feFuncG\" | \"feFuncR\" | \"feGaussianBlur\" | \"feImage\" | \"feMerge\" | \"feMergeNode\" | \"feMorphology\" | \"feOffset\" | \"fePointLight\" | \"feSpecularLighting\" | \"feSpotLight\" | \"feTile\" | \"feTurbulence\" | \"filter\" | \"foreignObject\" | \"g\" | \"image\" | \"line\" | \"linearGradient\" | \"marker\" | \"mask\" | \"metadata\" | \"mpath\" | \"path\" | \"pattern\" | \"polygon\" | \"polyline\" | \"radialGradient\" | \"rect\" | \"set\" | \"stop\" | \"switch\" | \"text\" | \"textPath\" | \"tspan\" | \"use\" | \"view\" | ComponentClass<any, any> | FunctionComponent<any>",
+    "required": false,
+    "doc": "Element, který se vykreslí (výchozí `div`)."
+   },
+   {
+    "name": "interactive",
+    "type": "boolean",
+    "required": false,
+    "doc": "Hover efekt – akcentový okraj + jemné zvětšení."
+   },
+   {
+    "name": "flush",
+    "type": "boolean",
+    "required": false,
+    "doc": "Ořízne obsah (užitečné pro karty s obrázkem)."
+   },
+   {
+    "name": "raised",
+    "type": "boolean",
+    "required": false,
+    "doc": "Světlejší povrch (#1a1a1a) – pro karty uvnitř karet."
+   },
+   {
+    "name": "shadow",
+    "type": "boolean",
+    "required": false,
+    "doc": "Stín pod kartou."
+   },
+   {
+    "name": "form",
+    "type": "boolean",
+    "required": false,
+    "doc": "Padding jako u formulářové karty."
+   },
+   {
+    "name": "glow",
+    "type": "boolean",
+    "required": false,
+    "doc": "Žlutá záře při hoveru (jako u karet dovedností)."
+   },
+   {
+    "name": "corners",
+    "type": "boolean",
+    "required": false,
+    "doc": "„Geeky“ rohové závorky v levém horním a pravém dolním rohu."
+   }
+  ],
+  "StatCardProps": [
+   {
+    "name": "label",
+    "type": "ReactNode",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "value",
+    "type": "ReactNode",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "change",
+    "type": "string",
+    "required": false,
+    "doc": "Změna, např. `+8.2%` nebo `-3.1%` – znaménko určí barvu."
+   },
+   {
+    "name": "trend",
+    "type": "\"up\" | \"down\" | \"neutral\"",
+    "required": false,
+    "doc": "Vlastní směr, když text změny nezačíná + / -."
+   },
+   {
+    "name": "icon",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "hint",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "AvatarProps": [
+   {
+    "name": "src",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "alt",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "initials",
+    "type": "string",
+    "required": false,
+    "doc": "Zobrazí se, když chybí / nenačte se obrázek. Bez toho se použije první písmeno `alt`."
+   },
+   {
+    "name": "size",
+    "type": "\"sm\" | \"md\" | \"lg\"",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "status",
+    "type": "\"online\" | \"away\" | \"busy\" | \"offline\"",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "AvatarGroupProps": [
+   {
+    "name": "avatars",
+    "type": "Omit<AvatarProps, \"className\" | \"size\">[]",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "max",
+    "type": "number",
+    "required": false,
+    "doc": "Kolik avatarů zobrazit, zbytek se sloučí do „+N“."
+   },
+   {
+    "name": "size",
+    "type": "\"sm\" | \"md\" | \"lg\"",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "SkeletonProps": [
+   {
+    "name": "width",
+    "type": "string | number | string & {}",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "height",
+    "type": "string | number | string & {}",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "rounded",
+    "type": "\"sm\" | \"md\" | \"full\"",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "variant",
+    "type": "\"circle\" | \"rect\" | \"text\"",
+    "required": false,
+    "doc": "Zkratka: `circle` = kulatý 40px, `text` = řádek textu, `rect` = obdélník."
+   }
+  ],
+  "ProgressProps": [
+   {
+    "name": "value",
+    "type": "number",
+    "required": false,
+    "doc": "0–100. Bez hodnoty je indikátor neurčitý (animovaný)."
+   },
+   {
+    "name": "label",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "showValue",
+    "type": "boolean",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "variant",
+    "type": "\"destructive\" | \"default\" | \"success\"",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "size",
+    "type": "\"sm\" | \"md\"",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "SkillCardProps": [
+   {
+    "name": "title",
+    "type": "ReactNode",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "description",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "icon",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Ikona uvnitř žlutého čtverce (např. `<CodeIcon />`)."
+   },
+   {
+    "name": "level",
+    "type": "number",
+    "required": false,
+    "doc": "Úroveň 1–4 (viz SkillLevelBar)."
+   },
+   {
+    "name": "levels",
+    "type": "readonly string[]",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "tools",
+    "type": "string[]",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "maxTools",
+    "type": "number",
+    "required": false,
+    "doc": "Kolik nástrojů zobrazit, zbytek se sloučí do „+N“."
+   },
+   {
+    "name": "index",
+    "type": "number",
+    "required": false,
+    "doc": "Pořadí v mřížce pro postupné najíždění."
+   },
+   {
+    "name": "detailLabel",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "href",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "onClick",
+    "type": "() => void",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "SkillLevelBarProps": [
+   {
+    "name": "level",
+    "type": "number",
+    "required": true,
+    "doc": "Aktuální úroveň 1–N (počet segmentů = počet `levels`)."
+   },
+   {
+    "name": "levels",
+    "type": "readonly string[]",
+    "required": false,
+    "doc": "Popisky úrovní zleva doprava."
+   },
+   {
+    "name": "hideLabels",
+    "type": "boolean",
+    "required": false,
+    "doc": "Skryje popisky pod lištou."
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "ProjectCardProps": [
+   {
+    "name": "title",
+    "type": "ReactNode",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "description",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "image",
+    "type": "string",
+    "required": false,
+    "doc": "URL náhledového obrázku (16:9)."
+   },
+   {
+    "name": "imageAlt",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "media",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Vlastní náhled místo obrázku (např. `<LazyImage />`)."
+   },
+   {
+    "name": "category",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "year",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Rok / datum vpravo nahoře (mono písmo)."
+   },
+   {
+    "name": "tags",
+    "type": "string[]",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "maxTags",
+    "type": "number",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "href",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "onClick",
+    "type": "() => void",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "TimelineEntry": [
+   {
+    "name": "period",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "title",
+    "type": "ReactNode",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "subtitle",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "description",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "InfoRowProps": [
+   {
+    "name": "icon",
+    "type": "ReactNode",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "label",
+    "type": "ReactNode",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "value",
+    "type": "ReactNode",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "href",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "SocialLink": [
+   {
+    "name": "label",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "href",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "icon",
+    "type": "ReactNode",
+    "required": true,
+    "doc": ""
+   }
+  ],
+  "CodeBlockProps": [
+   {
+    "name": "code",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "language",
+    "type": "string",
+    "required": false,
+    "doc": "Jen popisek v hlavičce – knihovna nezvýrazňuje syntaxi (žádná těžká závislost)."
+   },
+   {
+    "name": "showLineNumbers",
+    "type": "boolean",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "copyLabel",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "copiedLabel",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "LazyImageProps": [
+   {
+    "name": "src",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "alt",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "placeholderColor",
+    "type": "string",
+    "required": false,
+    "doc": "Barva podkladu, než se obrázek načte."
+   },
+   {
+    "name": "wrapperClassName",
+    "type": "string",
+    "required": false,
+    "doc": "Třída pro obalující `div` (rozměry, poměr stran…)."
+   },
+   {
+    "name": "errorText",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "rootMargin",
+    "type": "string",
+    "required": false,
+    "doc": "Jak brzy před vjezdem do viewportu začít stahovat."
+   }
+  ],
+  "EmptyStateProps": [
+   {
+    "name": "icon",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "title",
+    "type": "ReactNode",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "description",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "action",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Tlačítko `{ label, onClick }`, nebo vlastní prvek."
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "AlertProps": [
+   {
+    "name": "variant",
+    "type": "\"success\" | \"info\" | \"warning\" | \"error\"",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "title",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "description",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "icon",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Vlastní ikona, nebo `null` pro žádnou."
+   },
+   {
+    "name": "dismissible",
+    "type": "boolean",
+    "required": false,
+    "doc": "Zobrazí křížek; vrací se `onDismiss`."
+   },
+   {
+    "name": "onDismiss",
+    "type": "() => void",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "action",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Tlačítko / odkaz vpravo."
+   }
+  ],
+  "AlertBarProps": [
+   {
+    "name": "children",
+    "type": "ReactNode",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "variant",
+    "type": "\"success\" | \"info\" | \"warning\" | \"error\" | \"brand\"",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "position",
+    "type": "\"static\" | \"top\" | \"bottom\"",
+    "required": false,
+    "doc": "`static` = v toku stránky, `top` / `bottom` = přilepená k okraji okna."
+   },
+   {
+    "name": "icon",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "action",
+    "type": "{ label: ReactNode; href?: string; onClick?: () => void; }",
+    "required": false,
+    "doc": "Odkaz / akce na konci lišty."
+   },
+   {
+    "name": "dismissible",
+    "type": "boolean",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "storageKey",
+    "type": "string",
+    "required": false,
+    "doc": "Když zadáš, zavření se zapamatuje v localStorage (lišta se už neukáže)."
+   },
+   {
+    "name": "onDismiss",
+    "type": "() => void",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "ToastOptions": [
+   {
+    "name": "variant",
+    "type": "\"default\" | \"success\" | \"info\" | \"warning\" | \"error\"",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "title",
+    "type": "ReactNode",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "description",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "duration",
+    "type": "number",
+    "required": false,
+    "doc": "Doba zobrazení v ms (0 = nezmizí samo). Výchozí 4000."
+   },
+   {
+    "name": "action",
+    "type": "{ label: ReactNode; onClick: () => void; }",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "ToasterProps": [
+   {
+    "name": "position",
+    "type": "\"top-right\" | \"top-center\" | \"bottom-right\" | \"bottom-center\" | \"bottom-left\"",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "NotificationBadgeProps": [
+   {
+    "name": "children",
+    "type": "ReactNode",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "count",
+    "type": "number",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "dot",
+    "type": "boolean",
+    "required": false,
+    "doc": "Jen tečka bez čísla."
+   },
+   {
+    "name": "max",
+    "type": "number",
+    "required": false,
+    "doc": "Nad tuto hodnotu se zobrazí „99+“."
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "NotificationPopoverProps": [
+   {
+    "name": "notifications",
+    "type": "NotificationItem[]",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "onMarkAllRead",
+    "type": "() => void",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "onDismiss",
+    "type": "(id: string) => void",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "onNotificationClick",
+    "type": "(id: string) => void",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "title",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "emptyLabel",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "markAllLabel",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "NotificationItem": [
+   {
+    "name": "id",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "title",
+    "type": "ReactNode",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "description",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "time",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Např. „před 2 minutami“."
+   },
+   {
+    "name": "read",
+    "type": "boolean",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "DialogProps": [
+   {
+    "name": "open",
+    "type": "boolean",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "onClose",
+    "type": "() => void",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "title",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "description",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "closeOnBackdrop",
+    "type": "boolean",
+    "required": false,
+    "doc": "Zavřít kliknutím na pozadí (výchozí true)."
+   },
+   {
+    "name": "size",
+    "type": "\"sm\" | \"md\" | \"lg\" | \"xl\"",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "footer",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "children",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "ModalProps": [
+   {
+    "name": "open",
+    "type": "boolean",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "onClose",
+    "type": "() => void",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "title",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "description",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "closeOnBackdrop",
+    "type": "boolean",
+    "required": false,
+    "doc": "Zavřít kliknutím na pozadí (výchozí true)."
+   },
+   {
+    "name": "size",
+    "type": "\"sm\" | \"md\" | \"lg\" | \"xl\"",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "footer",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "children",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "AlertDialogProps": [
+   {
+    "name": "open",
+    "type": "boolean",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "onClose",
+    "type": "() => void",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "title",
+    "type": "ReactNode",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "description",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "variant",
+    "type": "\"destructive\" | \"default\" | \"success\" | \"info\" | \"warning\" | \"error\"",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "icon",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Vlastní ikona, nebo `null` pro žádnou."
+   },
+   {
+    "name": "confirmLabel",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "cancelLabel",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "`null` = jen jedno tlačítko (informační okno)."
+   },
+   {
+    "name": "onConfirm",
+    "type": "() => void",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "dismissible",
+    "type": "boolean",
+    "required": false,
+    "doc": "Zavře se i kliknutím mimo okno / Escapem (výchozí true)."
+   },
+   {
+    "name": "children",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "MessageBoxOptions": [
+   {
+    "name": "title",
+    "type": "ReactNode",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "message",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "variant",
+    "type": "\"destructive\" | \"default\" | \"success\" | \"info\" | \"warning\" | \"error\"",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "okLabel",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "cancelLabel",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "SheetProps": [
+   {
+    "name": "open",
+    "type": "boolean",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "onClose",
+    "type": "() => void",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "title",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "description",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "side",
+    "type": "\"left\" | \"top\" | \"bottom\" | \"right\"",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "footer",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "children",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "LightboxProps": [
+   {
+    "name": "open",
+    "type": "boolean",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "onClose",
+    "type": "() => void",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "items",
+    "type": "LightboxItem[]",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "initialIndex",
+    "type": "number",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "LightboxItem": [
+   {
+    "name": "src",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "alt",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "caption",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "TooltipProps": [
+   {
+    "name": "content",
+    "type": "ReactNode",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "children",
+    "type": "ReactNode",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "side",
+    "type": "\"left\" | \"top\" | \"bottom\" | \"right\"",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "align",
+    "type": "\"center\" | \"start\" | \"end\"",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "delay",
+    "type": "number",
+    "required": false,
+    "doc": "Zpoždění zobrazení v ms."
+   },
+   {
+    "name": "disabled",
+    "type": "boolean",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "PopoverProps": [
+   {
+    "name": "trigger",
+    "type": "ReactNode",
+    "required": true,
+    "doc": "Prvek, na který se klikne (tlačítko…)."
+   },
+   {
+    "name": "children",
+    "type": "ReactNode",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "open",
+    "type": "boolean",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "defaultOpen",
+    "type": "boolean",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "onOpenChange",
+    "type": "(open: boolean) => void",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "side",
+    "type": "\"left\" | \"top\" | \"bottom\" | \"right\"",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "align",
+    "type": "\"center\" | \"start\" | \"end\"",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "anchorClassName",
+    "type": "string",
+    "required": false,
+    "doc": "Třída obalu kolem triggeru."
+   }
+  ],
+  "HoverCardProps": [
+   {
+    "name": "trigger",
+    "type": "ReactNode",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "children",
+    "type": "ReactNode",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "side",
+    "type": "\"left\" | \"top\" | \"bottom\" | \"right\"",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "align",
+    "type": "\"center\" | \"start\" | \"end\"",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "openDelay",
+    "type": "number",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "closeDelay",
+    "type": "number",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "DropdownProps": [
+   {
+    "name": "trigger",
+    "type": "ReactNode",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "items",
+    "type": "MenuItem[]",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "side",
+    "type": "\"left\" | \"top\" | \"bottom\" | \"right\"",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "align",
+    "type": "\"center\" | \"start\" | \"end\"",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "ContextMenuProps": [
+   {
+    "name": "items",
+    "type": "MenuItem[]",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "children",
+    "type": "ReactNode",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "disabled",
+    "type": "boolean",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "MenuItem": [
+   {
+    "name": "label",
+    "type": "ReactNode",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "icon",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "shortcut",
+    "type": "string",
+    "required": false,
+    "doc": "Klávesová zkratka jen jako text (např. `⌘N`)."
+   },
+   {
+    "name": "onSelect",
+    "type": "() => void",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "variant",
+    "type": "\"destructive\" | \"default\"",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "disabled",
+    "type": "boolean",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "separator",
+    "type": "boolean",
+    "required": false,
+    "doc": "Místo položky vykreslí oddělovač."
+   }
+  ],
+  "MenuListProps": [
+   {
+    "name": "items",
+    "type": "MenuItem[]",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "onClose",
+    "type": "() => void",
+    "required": true,
+    "doc": "Zavolá se po výběru položky nebo Escapu / Tabu."
+   },
+   {
+    "name": "autoFocus",
+    "type": "boolean",
+    "required": false,
+    "doc": "Při Escape vrátit focus na trigger."
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "NavbarProps": [
+   {
+    "name": "brand",
+    "type": "ReactNode",
+    "required": true,
+    "doc": "Logo / název vlevo."
+   },
+   {
+    "name": "brandHref",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "items",
+    "type": "NavItem[]",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "cta",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "CTA vpravo (např. `<Button size=\"sm\">Kontakt</Button>`)."
+   },
+   {
+    "name": "extras",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Vpravo vedle CTA, např. přepínač jazyka."
+   },
+   {
+    "name": "fixed",
+    "type": "boolean",
+    "required": false,
+    "doc": "Pevně přilepená nahoře (výchozí true)."
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "NavItem": [
+   {
+    "name": "label",
+    "type": "ReactNode",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "href",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "active",
+    "type": "boolean",
+    "required": false,
+    "doc": "Označí položku jako aktuální (`aria-current=\"page\"`)."
+   }
+  ],
+  "SidebarProps": [
+   {
+    "name": "groups",
+    "type": "SidebarGroup[]",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "header",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "footer",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "collapsed",
+    "type": "boolean",
+    "required": false,
+    "doc": "Zúžená verze jen s ikonami."
+   },
+   {
+    "name": "onCollapsedChange",
+    "type": "(collapsed: boolean) => void",
+    "required": false,
+    "doc": "Když zadáš, zobrazí se tlačítko pro sbalení."
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "aria-label",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "SidebarItem": [
+   {
+    "name": "label",
+    "type": "ReactNode",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "icon",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "href",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "onClick",
+    "type": "() => void",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "active",
+    "type": "boolean",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "badge",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Číslo / text vpravo (počet zpráv…)."
+   },
+   {
+    "name": "disabled",
+    "type": "boolean",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "SidebarGroup": [
+   {
+    "name": "title",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "items",
+    "type": "SidebarItem[]",
+    "required": true,
+    "doc": ""
+   }
+  ],
+  "MenubarProps": [
+   {
+    "name": "menus",
+    "type": "MenubarMenu[]",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "MenubarMenu": [
+   {
+    "name": "label",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "items",
+    "type": "MenuItem[]",
+    "required": true,
+    "doc": ""
+   }
+  ],
+  "TabsProps": [
+   {
+    "name": "tabs",
+    "type": "TabItem[]",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "value",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "defaultValue",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "onChange",
+    "type": "(value: string) => void",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "variant",
+    "type": "\"underline\" | \"pills\"",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "TabItem": [
+   {
+    "name": "value",
+    "type": "string",
+    "required": false,
+    "doc": "Když chybí, použije se index."
+   },
+   {
+    "name": "label",
+    "type": "ReactNode",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "content",
+    "type": "ReactNode",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "icon",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "disabled",
+    "type": "boolean",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "BreadcrumbProps": [
+   {
+    "name": "items",
+    "type": "BreadcrumbItem[]",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "separator",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "BreadcrumbItem": [
+   {
+    "name": "label",
+    "type": "ReactNode",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "href",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "icon",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "PaginationProps": [
+   {
+    "name": "currentPage",
+    "type": "number",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "totalPages",
+    "type": "number",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "onPageChange",
+    "type": "(page: number) => void",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "siblingCount",
+    "type": "number",
+    "required": false,
+    "doc": "Kolik stránek ukázat vedle aktuální."
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "StepperProps": [
+   {
+    "name": "steps",
+    "type": "StepperStep[]",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "currentStep",
+    "type": "number",
+    "required": true,
+    "doc": "Index aktuálního kroku (od 0)."
+   },
+   {
+    "name": "onStepClick",
+    "type": "(index: number) => void",
+    "required": false,
+    "doc": "Když zadáš, dají se kliknutím vybrat už dokončené kroky."
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "AccordionProps": [
+   {
+    "name": "items",
+    "type": "AccordionItem[]",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "multiple",
+    "type": "boolean",
+    "required": false,
+    "doc": "Může být otevřených víc položek najednou."
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "AccordionItem": [
+   {
+    "name": "title",
+    "type": "ReactNode",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "content",
+    "type": "ReactNode",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "defaultOpen",
+    "type": "boolean",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "disabled",
+    "type": "boolean",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "CollapsibleProps": [
+   {
+    "name": "trigger",
+    "type": "ReactNode",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "children",
+    "type": "ReactNode",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "open",
+    "type": "boolean",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "defaultOpen",
+    "type": "boolean",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "onOpenChange",
+    "type": "(open: boolean) => void",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "ScrollProgressProps": [
+   {
+    "name": "position",
+    "type": "\"top\" | \"bottom\"",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "height",
+    "type": "number",
+    "required": false,
+    "doc": "Výška lišty v px."
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "SearchBarProps": [
+   {
+    "name": "value",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "onChange",
+    "type": "(value: string) => void",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "clearLabel",
+    "type": "string",
+    "required": false,
+    "doc": "Popisek tlačítka pro smazání (a11y)."
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "SearchAutocompleteProps": [
+   {
+    "name": "items",
+    "type": "AutocompleteItem[]",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "onSelect",
+    "type": "(id: string, item: AutocompleteItem) => void",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "placeholder",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "shortcut",
+    "type": "boolean",
+    "required": false,
+    "doc": "Globální zkratka ⌘K / Ctrl+K zaostří pole (výchozí true)."
+   },
+   {
+    "name": "emptyLabel",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "limit",
+    "type": "number",
+    "required": false,
+    "doc": "Maximum zobrazených výsledků."
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "AutocompleteItem": [
+   {
+    "name": "id",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "label",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "category",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "keywords",
+    "type": "string",
+    "required": false,
+    "doc": "Další text, ve kterém se hledá (synonyma)."
+   }
+  ],
+  "CookieBannerProps": [
+   {
+    "name": "texts",
+    "type": "Partial<CookieBannerTexts>",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "policyHref",
+    "type": "string",
+    "required": false,
+    "doc": "Odkaz na zásady zpracování údajů."
+   },
+   {
+    "name": "storageKey",
+    "type": "string",
+    "required": false,
+    "doc": "Klíč v localStorage (výchozí `cookie_consent`)."
+   },
+   {
+    "name": "position",
+    "type": "\"bottom\" | \"bottom-right\" | \"bottom-left\"",
+    "required": false,
+    "doc": "Umístění lišty."
+   },
+   {
+    "name": "onAccept",
+    "type": "() => void",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "onReject",
+    "type": "() => void",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "onChange",
+    "type": "(consent: CookieConsent) => void",
+    "required": false,
+    "doc": "Zavolá se po jakékoliv volbě."
+   },
+   {
+    "name": "reloadOnRevoke",
+    "type": "boolean",
+    "required": false,
+    "doc": "Při odvolání „all → necessary“ stránku znovu načte (už načtené skripty nejdou odebrat). Výchozí true."
+   },
+   {
+    "name": "hideOnPaths",
+    "type": "string[]",
+    "required": false,
+    "doc": "Na těchto cestách se lišta neukáže (např. `[\"/admin\"]`)."
+   },
+   {
+    "name": "open",
+    "type": "boolean",
+    "required": false,
+    "doc": "Řízený režim (hodí se pro ukázky): lišta je vidět podle `open`\na po volbě zavolá `onClose`. Souhlas se přesto uloží."
+   },
+   {
+    "name": "onClose",
+    "type": "() => void",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "fixed",
+    "type": "boolean",
+    "required": false,
+    "doc": "`false` = v toku stránky místo `position: fixed` (do dokumentace)."
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "CookieBannerTexts": [
+   {
+    "name": "title",
+    "type": "ReactNode",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "body",
+    "type": "ReactNode",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "more",
+    "type": "ReactNode",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "necessary",
+    "type": "ReactNode",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "all",
+    "type": "ReactNode",
+    "required": true,
+    "doc": ""
+   }
+  ],
+  "FilterBarProps": [
+   {
+    "name": "filter",
+    "type": "FilterState<T>",
+    "required": true,
+    "doc": "Návratová hodnota `useFilter`."
+   },
+   {
+    "name": "labels",
+    "type": "Partial<FilterBarLabels>",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "sticky",
+    "type": "boolean | number",
+    "required": false,
+    "doc": "Přilepí lištu nahoře při scrollu (`top` v px, výchozí 0)."
+   },
+   {
+    "name": "hideCount",
+    "type": "boolean",
+    "required": false,
+    "doc": "Skryje řádek s počtem výsledků."
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "FilterBarLabels": [
+   {
+    "name": "search",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "filters",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "sort",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "active",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "clear",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "results",
+    "type": "(count: number, total: number) => ReactNode",
+    "required": true,
+    "doc": "„Zobrazeno 3 z 12“"
+   },
+   {
+    "name": "empty",
+    "type": "ReactNode",
+    "required": true,
+    "doc": ""
+   }
+  ],
+  "FilterPillsProps": [
+   {
+    "name": "options",
+    "type": "FilterPillOption[]",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "value",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "onChange",
+    "type": "(value: string) => void",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "aria-label",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "FilterPillOption": [
+   {
+    "name": "value",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "label",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "count",
+    "type": "number",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "FilterDropdownProps": [
+   {
+    "name": "label",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "icon",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "options",
+    "type": "FilterOption[]",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "placeholder",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "selectAllLabel",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "clearLabel",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "selectedLabel",
+    "type": "(count: number) => string",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "multiple",
+    "type": "boolean",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "value",
+    "type": "string | string[]",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "onChange",
+    "type": "(value: string) => void | (value: string[]) => void",
+    "required": true,
+    "doc": ""
+   }
+  ],
+  "FilterOption": [
+   {
+    "name": "value",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "label",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "count",
+    "type": "number",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "icon",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "dotClass",
+    "type": "string",
+    "required": false,
+    "doc": "CSS třída barevné tečky před popiskem."
+   }
+  ],
+  "UseFilterOptions": [
+   {
+    "name": "items",
+    "type": "T[]",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "searchText",
+    "type": "(item: T) => string",
+    "required": false,
+    "doc": "Text položky, ve kterém se hledá (název, popis, tagy…). Bez něj není vyhledávání."
+   },
+   {
+    "name": "filters",
+    "type": "FilterDef<T>[]",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "sorts",
+    "type": "SortDef<T>[]",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "defaultSort",
+    "type": "string",
+    "required": false,
+    "doc": "Výchozí řazení (`value` z `sorts`), jinak první."
+   },
+   {
+    "name": "initialQuery",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "initialValues",
+    "type": "Record<string, string[]>",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "FilterDef": [
+   {
+    "name": "key",
+    "type": "string",
+    "required": true,
+    "doc": "Unikátní klíč filtru (např. `category`)."
+   },
+   {
+    "name": "label",
+    "type": "string",
+    "required": true,
+    "doc": "Popisek ve dropdownu."
+   },
+   {
+    "name": "icon",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "multiple",
+    "type": "boolean",
+    "required": false,
+    "doc": "Více voleb najednou (položka projde, když má aspoň jednu z vybraných hodnot)."
+   },
+   {
+    "name": "getValue",
+    "type": "(item: T) => string | string[] | null | undefined",
+    "required": true,
+    "doc": "Hodnota(y) položky pro tento filtr."
+   },
+   {
+    "name": "options",
+    "type": "{ value: string; label?: string; dotClass?: string; icon?: ReactNode; }[]",
+    "required": false,
+    "doc": "Vlastní nabídka voleb. Bez ní se odvodí z dat (unikátní hodnoty, seřazené abecedně).\nPočty u voleb se dopočítají vždy."
+   },
+   {
+    "name": "allLabel",
+    "type": "string",
+    "required": false,
+    "doc": "Popisek volby „vše“ u jednoduchého (single) filtru."
+   },
+   {
+    "name": "chipLabel",
+    "type": "(value: string) => string",
+    "required": false,
+    "doc": "Text zobrazený v chipu aktivního filtru."
+   }
+  ],
+  "SortDef": [
+   {
+    "name": "value",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "label",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "compare",
+    "type": "(a: T, b: T) => number",
+    "required": true,
+    "doc": ""
+   }
+  ],
+  "FilterState": [
+   {
+    "name": "query",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "setQuery",
+    "type": "(q: string) => void",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "values",
+    "type": "Record<string, string[]>",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "setValue",
+    "type": "(key: string, value: string[]) => void",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "sort",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "setSort",
+    "type": "(sort: string) => void",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "reset",
+    "type": "() => void",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "filtered",
+    "type": "T[]",
+    "required": true,
+    "doc": "Výsledek – vyhledáno, vyfiltrováno, seřazeno."
+   },
+   {
+    "name": "total",
+    "type": "number",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "activeCount",
+    "type": "number",
+    "required": true,
+    "doc": "Počet aktivních omezení (hledání + vybrané hodnoty), bez řazení."
+   },
+   {
+    "name": "filters",
+    "type": "(FilterDef<T> & { options: FilterOption[]; })[]",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "sorts",
+    "type": "SortDef<T>[]",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "chips",
+    "type": "FilterChipModel[]",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "hasSearch",
+    "type": "boolean",
+    "required": true,
+    "doc": ""
+   }
+  ],
+  "FilterChipModel": [
+   {
+    "name": "id",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "label",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "onRemove",
+    "type": "() => void",
+    "required": true,
+    "doc": ""
+   }
+  ],
+  "TableProps": [
+   {
+    "name": "columns",
+    "type": "TableColumn<T>[]",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "data",
+    "type": "T[]",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "searchable",
+    "type": "boolean",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "searchPlaceholder",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "onRowClick",
+    "type": "(row: T) => void",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "rowKey",
+    "type": "(row: T, index: number) => string | number",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "emptyLabel",
+    "type": "ReactNode",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "TableColumn": [
+   {
+    "name": "key",
+    "type": "keyof T & string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "label",
+    "type": "ReactNode",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "align",
+    "type": "\"center\" | \"left\" | \"right\"",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "truncate",
+    "type": "number",
+    "required": false,
+    "doc": "Ořízne text na N znaků (celý je v `title`)."
+   },
+   {
+    "name": "filterable",
+    "type": "boolean",
+    "required": false,
+    "doc": "Nad tabulkou se objeví select pro filtrování podle hodnot sloupce."
+   },
+   {
+    "name": "sortable",
+    "type": "boolean",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "render",
+    "type": "(row: T) => ReactNode",
+    "required": false,
+    "doc": "Vlastní vykreslení buňky."
+   }
+  ],
+  "CalendarProps": [
+   {
+    "name": "selected",
+    "type": "null | Date",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "onSelect",
+    "type": "(date: Date) => void",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "locale",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "weekdayNames",
+    "type": "string[]",
+    "required": false,
+    "doc": "Zkratky dnů od pondělí."
+   },
+   {
+    "name": "min",
+    "type": "Date",
+    "required": false,
+    "doc": "Zakáže výběr dnů před tímto datem."
+   },
+   {
+    "name": "max",
+    "type": "Date",
+    "required": false,
+    "doc": "Zakáže výběr dnů po tomto datu."
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "CarouselProps": [
+   {
+    "name": "slides",
+    "type": "ReactNode[]",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "loop",
+    "type": "boolean",
+    "required": false,
+    "doc": "Po posledním snímku skočí na první a naopak."
+   },
+   {
+    "name": "autoplay",
+    "type": "number",
+    "required": false,
+    "doc": "Automatické přepínání v ms (0 = vypnuto). Zastaví se při najetí myší a při `prefers-reduced-motion`."
+   },
+   {
+    "name": "showArrows",
+    "type": "boolean",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "showDots",
+    "type": "boolean",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "ResizableProps": [
+   {
+    "name": "firstPanel",
+    "type": "ReactNode",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "secondPanel",
+    "type": "ReactNode",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "direction",
+    "type": "\"horizontal\" | \"vertical\"",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "defaultSize",
+    "type": "number",
+    "required": false,
+    "doc": "Počáteční velikost prvního panelu v %."
+   },
+   {
+    "name": "minSize",
+    "type": "number",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "maxSize",
+    "type": "number",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   }
+  ],
+  "ScrollAreaProps": [
+   {
+    "name": "maxHeight",
+    "type": "string | number | string & {}",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "both",
+    "type": "boolean",
+    "required": false,
+    "doc": "Obě osy (výchozí jen svisle)."
+   }
+  ],
+  "FABProps": [
+   {
+    "name": "icon",
+    "type": "ReactNode",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "label",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Text vedle ikony (rozšířený FAB)."
+   },
+   {
+    "name": "variant",
+    "type": "\"primary\" | \"secondary\"",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "position",
+    "type": "\"bottom-right\" | \"bottom-center\" | \"bottom-left\"",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "fixed",
+    "type": "boolean",
+    "required": false,
+    "doc": "`false` = zůstane v toku stránky (hodí se do ukázek)."
+   },
+   {
+    "name": "aria-label",
+    "type": "string",
+    "required": false,
+    "doc": "Defines a string value that labels the current element."
+   }
+  ],
+  "UseScrollRevealOptions": [
+   {
+    "name": "rootMargin",
+    "type": "string",
+    "required": false,
+    "doc": "Kdy se animace spustí (záporná hodnota = až když element trochu vjede do viewportu)."
+   },
+   {
+    "name": "disabled",
+    "type": "boolean",
+    "required": false,
+    "doc": "Vypne pozorování (např. během načítání dat)."
+   }
+  ],
+  "FloatingProps": [
+   {
+    "name": "anchorRef",
+    "type": "RefObject<HTMLElement | null>",
+    "required": true,
+    "doc": "Prvek, ke kterému se plovoucí panel přichytí."
+   },
+   {
+    "name": "open",
+    "type": "boolean",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "side",
+    "type": "\"left\" | \"top\" | \"bottom\" | \"right\"",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "align",
+    "type": "\"center\" | \"start\" | \"end\"",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "offset",
+    "type": "number",
+    "required": false,
+    "doc": "Vzdálenost od kotvy v px."
+   },
+   {
+    "name": "matchWidth",
+    "type": "boolean",
+    "required": false,
+    "doc": "Panel bude stejně široký jako kotva (dropdowny, autocomplete)."
+   },
+   {
+    "name": "point",
+    "type": "null | { x: number; y: number; }",
+    "required": false,
+    "doc": "Pozice kurzoru (kontextové menu) – má přednost před `anchorRef`."
+   },
+   {
+    "name": "panelRef",
+    "type": "RefObject<HTMLDivElement | null>",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "children",
+    "type": "ReactNode",
+    "required": true,
+    "doc": ""
+   }
+  ],
+  "CbbProviderProps": [
+   {
+    "name": "linkComponent",
+    "type": "\"symbol\" | \"object\" | \"form\" | \"slot\" | \"style\" | \"title\" | \"link\" | \"a\" | \"abbr\" | \"address\" | \"area\" | \"article\" | \"aside\" | \"audio\" | \"b\" | \"base\" | \"bdi\" | \"bdo\" | \"big\" | \"blockquote\" | \"body\" | \"br\" | \"button\" | \"canvas\" | \"caption\" | \"center\" | \"cite\" | \"code\" | \"col\" | \"colgroup\" | \"data\" | \"datalist\" | \"dd\" | \"del\" | \"details\" | \"dfn\" | \"dialog\" | \"div\" | \"dl\" | \"dt\" | \"em\" | \"embed\" | \"fieldset\" | \"figcaption\" | \"figure\" | \"footer\" | \"h1\" | \"h2\" | \"h3\" | \"h4\" | \"h5\" | \"h6\" | \"head\" | \"header\" | \"hgroup\" | \"hr\" | \"html\" | \"i\" | \"iframe\" | \"img\" | \"input\" | \"ins\" | \"kbd\" | \"keygen\" | \"label\" | \"legend\" | \"li\" | \"main\" | \"map\" | \"mark\" | \"menu\" | \"menuitem\" | \"meta\" | \"meter\" | \"nav\" | \"noindex\" | \"noscript\" | \"ol\" | \"optgroup\" | \"option\" | \"output\" | \"p\" | \"param\" | \"picture\" | \"pre\" | \"progress\" | \"q\" | \"rp\" | \"rt\" | \"ruby\" | \"s\" | \"samp\" | \"search\" | \"script\" | \"section\" | \"select\" | \"small\" | \"source\" | \"span\" | \"strong\" | \"sub\" | \"summary\" | \"sup\" | \"table\" | \"template\" | \"tbody\" | \"td\" | \"textarea\" | \"tfoot\" | \"th\" | \"thead\" | \"time\" | \"tr\" | \"track\" | \"u\" | \"ul\" | \"var\" | \"video\" | \"wbr\" | \"webview\" | \"svg\" | \"animate\" | \"animateMotion\" | \"animateTransform\" | \"circle\" | \"clipPath\" | \"defs\" | \"desc\" | \"ellipse\" | \"feBlend\" | \"feColorMatrix\" | \"feComponentTransfer\" | \"feComposite\" | \"feConvolveMatrix\" | \"feDiffuseLighting\" | \"feDisplacementMap\" | \"feDistantLight\" | \"feDropShadow\" | \"feFlood\" | \"feFuncA\" | \"feFuncB\" | \"feFuncG\" | \"feFuncR\" | \"feGaussianBlur\" | \"feImage\" | \"feMerge\" | \"feMergeNode\" | \"feMorphology\" | \"feOffset\" | \"fePointLight\" | \"feSpecularLighting\" | \"feSpotLight\" | \"feTile\" | \"feTurbulence\" | \"filter\" | \"foreignObject\" | \"g\" | \"image\" | \"line\" | \"linearGradient\" | \"marker\" | \"mask\" | \"metadata\" | \"mpath\" | \"path\" | \"pattern\" | \"polygon\" | \"polyline\" | \"radialGradient\" | \"rect\" | \"set\" | \"stop\" | \"switch\" | \"text\" | \"textPath\" | \"tspan\" | \"use\" | \"view\" | ComponentClass<any, any> | FunctionComponent<any>",
+    "required": false,
+    "doc": "Komponenta pro interní odkazy – v Next.js předej `next/link`,\nv React Routeru `Link` (pozor, ten chce `to` místo `href`, tam použij wrapper).\nVýchozí je obyčejné `<a>`."
+   },
+   {
+    "name": "children",
+    "type": "ReactNode",
+    "required": true,
+    "doc": ""
+   }
+  ],
+  "IconProps": [
+   {
+    "name": "size",
+    "type": "number",
+    "required": false,
+    "doc": "Velikost v px (výchozí 16)."
+   }
+  ]
+ },
+ "defaults": {
+  "Button": {
+   "variant": "\"primary\"",
+   "size": "\"md\"",
+   "loading": "false",
+   "type": "\"button\""
+  },
+  "Badge": {
+   "variant": "\"default\""
+  },
+  "Divider": {
+   "orientation": "\"horizontal\""
+  },
+  "Chip": {
+   "removeLabel": "\"Odebrat\""
+  },
+  "Typewriter": {
+   "typingSpeed": "90",
+   "deletingSpeed": "45",
+   "pause": "1600"
+  },
+  "Reveal": {
+   "as": "\"div\"",
+   "index": "0",
+   "step": "80"
+  },
+  "SectionHeading": {
+   "align": "\"center\""
+  },
+  "Textarea": {
+   "rows": "5"
+  },
+  "Radio": {
+   "orientation": "\"vertical\""
+  },
+  "Slider": {
+   "min": "0",
+   "max": "100",
+   "step": "1",
+   "showValue": "true",
+   "formatValue": "(v) => v"
+  },
+  "TagInput": {
+   "placeholder": "\"Přidat štítek…\""
+  },
+  "InputOTP": {
+   "length": "6",
+   "pattern": "/\\d/"
+  },
+  "FileUpload": {
+   "label": "\"Nahrát soubor\""
+  },
+  "DateTimePicker": {
+   "locale": "\"cs-CZ\"",
+   "monthNames": "DEFAULT_MONTHS",
+   "weekdayNames": "DEFAULT_WEEKDAYS",
+   "yearRange": "5"
+  },
+  "ContactForm": {
+   "successMessage": "\"Díky! Zpráva je na cestě.\"",
+   "errorMessage": "\"Odeslání se nepovedlo, zkus to prosím znovu.\""
+  },
+  "Toggle": {
+   "size": "\"md\""
+  },
+  "Card": {
+   "as": "\"div\""
+  },
+  "Avatar": {
+   "alt": "\"\"",
+   "size": "\"md\""
+  },
+  "AvatarGroup": {
+   "max": "4",
+   "size": "\"md\""
+  },
+  "Skeleton": {
+   "rounded": "\"sm\""
+  },
+  "SkeletonGrid": {
+   "count": "3",
+   "variant": "\"project\""
+  },
+  "Progress": {
+   "showValue": "true",
+   "variant": "\"default\"",
+   "size": "\"md\""
+  },
+  "SkillCard": {
+   "tools": "[]",
+   "maxTools": "3",
+   "index": "0",
+   "detailLabel": "\"Zobrazit detail\""
+  },
+  "SkillLevelBar": {
+   "levels": "DEFAULT_SKILL_LEVELS"
+  },
+  "ProjectCard": {
+   "imageAlt": "\"\"",
+   "tags": "[]",
+   "maxTags": "3"
+  },
+  "CodeBlock": {
+   "language": "\"text\"",
+   "showLineNumbers": "true",
+   "copyLabel": "\"Kopírovat\"",
+   "copiedLabel": "\"Zkopírováno!\""
+  },
+  "LazyImage": {
+   "placeholderColor": "\"#1a1a1a\"",
+   "errorText": "\"Obrázek se nepodařilo načíst\"",
+   "rootMargin": "\"50px\""
+  },
+  "Alert": {
+   "variant": "\"info\""
+  },
+  "AlertBar": {
+   "variant": "\"brand\"",
+   "position": "\"static\"",
+   "dismissible": "true"
+  },
+  "Toaster": {
+   "position": "\"bottom-right\""
+  },
+  "NotificationBadge": {
+   "max": "99"
+  },
+  "NotificationPopover": {
+   "title": "\"Oznámení\"",
+   "emptyLabel": "\"Žádná nová oznámení\"",
+   "markAllLabel": "\"Označit vše jako přečtené\""
+  },
+  "Dialog": {
+   "closeOnBackdrop": "true",
+   "size": "\"md\""
+  },
+  "AlertDialog": {
+   "variant": "\"default\"",
+   "confirmLabel": "\"OK\"",
+   "cancelLabel": "\"Zrušit\"",
+   "dismissible": "true"
+  },
+  "Sheet": {
+   "side": "\"right\""
+  },
+  "Lightbox": {
+   "initialIndex": "0"
+  },
+  "Tooltip": {
+   "side": "\"top\"",
+   "align": "\"center\"",
+   "delay": "150"
+  },
+  "Popover": {
+   "defaultOpen": "false",
+   "side": "\"bottom\"",
+   "align": "\"start\""
+  },
+  "HoverCard": {
+   "side": "\"bottom\"",
+   "align": "\"center\"",
+   "openDelay": "200",
+   "closeDelay": "150"
+  },
+  "Dropdown": {
+   "side": "\"bottom\"",
+   "align": "\"start\""
+  },
+  "MenuList": {
+   "autoFocus": "true"
+  },
+  "Navbar": {
+   "brandHref": "\"/\"",
+   "fixed": "true"
+  },
+  "Tabs": {
+   "variant": "\"underline\""
+  },
+  "Pagination": {
+   "siblingCount": "1"
+  },
+  "Accordion": {
+   "multiple": "false"
+  },
+  "Collapsible": {
+   "defaultOpen": "false"
+  },
+  "ScrollProgress": {
+   "position": "\"top\"",
+   "height": "3"
+  },
+  "SearchBar": {
+   "placeholder": "\"Hledat…\"",
+   "clearLabel": "\"Vymazat hledání\""
+  },
+  "SearchAutocomplete": {
+   "placeholder": "\"Hledat…\"",
+   "shortcut": "true",
+   "emptyLabel": "\"Nic nenalezeno\"",
+   "limit": "12"
+  },
+  "CookieBanner": {
+   "policyHref": "\"/GDPR\"",
+   "storageKey": "COOKIE_CONSENT_KEY",
+   "position": "\"bottom\"",
+   "reloadOnRevoke": "true",
+   "hideOnPaths": "[]",
+   "fixed": "true"
+  },
+  "useFilter": {
+   "filters": "[]",
+   "sorts": "[]",
+   "initialQuery": "\"\"",
+   "initialValues": "{}"
+  },
+  "Table": {
+   "searchPlaceholder": "\"Hledat…\"",
+   "emptyLabel": "\"Žádná data\""
+  },
+  "Calendar": {
+   "locale": "\"cs-CZ\"",
+   "weekdayNames": "WEEKDAYS"
+  },
+  "Carousel": {
+   "loop": "true",
+   "autoplay": "0",
+   "showArrows": "true",
+   "showDots": "true"
+  },
+  "Resizable": {
+   "direction": "\"horizontal\"",
+   "defaultSize": "50",
+   "minSize": "15",
+   "maxSize": "85"
+  },
+  "ScrollArea": {
+   "maxHeight": "200"
+  },
+  "FAB": {
+   "variant": "\"primary\"",
+   "position": "\"bottom-right\"",
+   "fixed": "true"
+  },
+  "useScrollReveal": {
+   "rootMargin": "\"-60px\"",
+   "disabled": "false"
+  },
+  "Floating": {
+   "side": "\"bottom\"",
+   "align": "\"start\"",
+   "offset": "8"
+  },
+  "CbbProvider": {
+   "linkComponent": "\"a\""
+  }
+ }
+}
