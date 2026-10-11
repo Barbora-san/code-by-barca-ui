@@ -5,7 +5,9 @@ import { XIcon } from "./Icons";
 export interface ChipProps extends Omit<HTMLAttributes<HTMLSpanElement>, "onClick"> {
   /** Když je zadáno, ukáže se křížek pro odebrání. */
   onRemove?: () => void;
+  /** Přístupný popisek křížku (výchozí „Odebrat“). */
   removeLabel?: string;
+  /** Ikona před textem. */
   icon?: ReactNode;
 }
 

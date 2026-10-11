@@ -3,11 +3,13 @@ import { cn } from "../lib/cn";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 
 export interface RevealProps extends HTMLAttributes<HTMLElement> {
+  /** HTML prvek nebo komponenta, ve které se obsah vykreslí. */
   as?: ElementType;
   /** Pořadí v mřížce – dopočítá zpoždění (stagger), max 8 kroků. */
   index?: number;
   /** Zpoždění jednoho kroku v ms (výchozí 80). */
   step?: number;
+  /** Okraj viewportu pro spuštění animace (např. `0px 0px -10% 0px`). */
   rootMargin?: string;
 }
 

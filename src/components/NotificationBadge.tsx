@@ -2,12 +2,15 @@ import type { ReactNode } from "react";
 import { cn } from "../lib/cn";
 
 export interface NotificationBadgeProps {
+  /** Prvek, ke kterému se odznak přilepí. */
   children: ReactNode;
+  /** Počet. Nad `max` zobrazí „99+“. */
   count?: number;
   /** Jen tečka bez čísla. */
   dot?: boolean;
   /** Nad tuto hodnotu se zobrazí „99+“. */
   max?: number;
+  /** Vlastní CSS třída přidaná ke kořenovému prvku. */
   className?: string;
 }
 

@@ -5,11 +5,15 @@ import { AlertTriangleIcon, CheckCircleIcon, InfoIcon, XCircleIcon, XIcon } from
 export type ToastVariant = "default" | "success" | "error" | "info" | "warning";
 
 export interface ToastOptions {
+  /** Typ oznámení. */
   variant?: ToastVariant;
+  /** Hlavní text. */
   title: ReactNode;
+  /** Menší text pod ním. */
   description?: ReactNode;
   /** Doba zobrazení v ms (0 = nezmizí samo). Výchozí 4000. */
   duration?: number;
+  /** Tlačítko `{ label, onClick }`. */
   action?: { label: ReactNode; onClick: () => void };
 }
 
@@ -64,6 +68,7 @@ const getServerSnapshot = () => items;
 const ICONS = { default: null, success: CheckCircleIcon, error: XCircleIcon, info: InfoIcon, warning: AlertTriangleIcon } as const;
 
 export interface ToasterProps {
+  /** Roh obrazovky, ve kterém se oznámení zobrazí. */
   position?: "top-right" | "top-center" | "bottom-right" | "bottom-center" | "bottom-left";
 }
 

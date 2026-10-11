@@ -4,13 +4,19 @@ import { cn } from "../lib/cn";
 export interface ProgressProps {
   /** 0–100. Bez hodnoty je indikátor neurčitý (animovaný). */
   value?: number;
+  /** Popisek nad lištou. */
   label?: ReactNode;
+  /** Zobrazí procenta vpravo. */
   showValue?: boolean;
+  /** Barva lišty. */
   variant?: "default" | "success" | "destructive";
+  /** Tloušťka lišty. */
   size?: "sm" | "md";
+  /** Vlastní CSS třída přidaná ke kořenovému prvku. */
   className?: string;
 }
 
+/** Ukazatel průběhu. Bez value je neurčitý (animovaný). */
 export function Progress({ value, label, showValue = true, variant = "default", size = "md", className }: ProgressProps) {
   const indeterminate = value === undefined;
   const pct = indeterminate ? 0 : Math.max(0, Math.min(100, value));

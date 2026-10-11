@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 import { cn } from "../lib/cn";
 
 export interface ScrollProgressProps {
+  /** Nahoře, nebo dole. */
   position?: "top" | "bottom";
   /** Výška lišty v px. */
   height?: number;
+  /** Vlastní CSS třída přidaná ke kořenovému prvku. */
   className?: string;
 }
 

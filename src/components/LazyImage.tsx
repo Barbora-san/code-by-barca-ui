@@ -2,12 +2,15 @@ import { useEffect, useRef, useState, type ImgHTMLAttributes } from "react";
 import { cn } from "../lib/cn";
 
 export interface LazyImageProps extends Omit<ImgHTMLAttributes<HTMLImageElement>, "src"> {
+  /** Adresa obrázku – stáhne se až před vjezdem do viewportu. */
   src?: string;
+  /** Alternativní text. */
   alt: string;
   /** Barva podkladu, než se obrázek načte. */
   placeholderColor?: string;
   /** Třída pro obalující `div` (rozměry, poměr stran…). */
   wrapperClassName?: string;
+  /** Text při chybě načtení. */
   errorText?: string;
   /** Jak brzy před vjezdem do viewportu začít stahovat. */
   rootMargin?: string;

@@ -20,6 +20,7 @@ export interface CardProps extends HTMLAttributes<HTMLElement> {
   corners?: boolean;
 }
 
+/** Základní karta. Přepínače glow, corners a interactive dělají karty z webu (dovednosti, formuláře, projekty). */
 export function Card({
   as: Tag = "div",
   interactive,
@@ -53,6 +54,7 @@ export function Card({
   );
 }
 
+/** Obrázková část `Card` (nahoře, bez paddingu). */
 export function CardMedia({ className, children, ...rest }: HTMLAttributes<HTMLDivElement>) {
   return (
     <div className={cn("cbb-card__media", className)} {...rest}>
@@ -61,6 +63,7 @@ export function CardMedia({ className, children, ...rest }: HTMLAttributes<HTMLD
   );
 }
 
+/** Textová část `Card` s paddingem. */
 export function CardBody({ className, children, ...rest }: HTMLAttributes<HTMLDivElement>) {
   return (
     <div className={cn("cbb-card__body", className)} {...rest}>

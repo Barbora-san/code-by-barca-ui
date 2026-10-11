@@ -4,10 +4,13 @@ import { cn } from "../lib/cn";
 export interface TypewriterProps {
   /** Slova, která se střídavě píšou a mažou. */
   words: string[];
+  /** Rychlost psaní (ms na znak). */
   typingSpeed?: number;
+  /** Rychlost mazání (ms na znak). */
   deletingSpeed?: number;
   /** Pauza po dopsání slova (ms). */
   pause?: number;
+  /** Vlastní CSS třída přidaná ke kořenovému prvku. */
   className?: string;
 }
 

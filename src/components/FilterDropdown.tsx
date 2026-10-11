@@ -1,11 +1,16 @@
 import { useEffect, useId, useRef, useState, type ReactNode } from "react";
 import { cn } from "../lib/cn";
+import { Floating, useClickOutside } from "../lib/floating";
 import { CheckIcon, ChevronDownIcon } from "./Icons";
 
 export interface FilterOption {
+  /** Hodnota, kterou `onChange` vrátí. */
   value: string;
+  /** Text možnosti. */
   label: string;
+  /** Počet za textem. */
   count?: number;
+  /** Ikona před textem. */
   icon?: ReactNode;
   /** CSS třída barevné tečky před popiskem. */
   dotClass?: string;
@@ -46,20 +51,16 @@ export function FilterDropdown(props: FilterDropdownProps) {
   const multiple = props.multiple === true;
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
   const listId = useId();
 
+  // panel je v portálu, proto klik „mimo“ počítáme od kořene i od panelu
+  useClickOutside([rootRef, panelRef], () => setOpen(false), open);
   useEffect(() => {
     if (!open) return;
-    const onDown = (e: MouseEvent) => {
-      if (rootRef.current && !rootRef.current.contains(e.target as Node)) setOpen(false);
-    };
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
-    document.addEventListener("mousedown", onDown);
     document.addEventListener("keydown", onKey);
-    return () => {
-      document.removeEventListener("mousedown", onDown);
-      document.removeEventListener("keydown", onKey);
-    };
+    return () => document.removeEventListener("keydown", onKey);
   }, [open]);
 
   const selected: string[] = multiple ? (props.value as string[]) : [props.value as string];
@@ -108,7 +109,7 @@ export function FilterDropdown(props: FilterDropdownProps) {
         <ChevronDownIcon size={16} className={cn("cbb-dropdown__chevron", open && "is-open")} />
       </button>
 
-      {open && (
+      <Floating anchorRef={rootRef} panelRef={panelRef} open={open} side="bottom" align="start" offset={8} matchWidth className="cbb-floating--menu">
         <div id={listId} role="listbox" aria-multiselectable={multiple || undefined} className="cbb-dropdown__menu">
           {props.multiple && (
             <div className="cbb-dropdown__head">
@@ -146,7 +147,7 @@ export function FilterDropdown(props: FilterDropdownProps) {
             );
           })}
         </div>
-      )}
+      </Floating>
     </div>
   );
 }

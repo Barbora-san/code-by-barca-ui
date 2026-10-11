@@ -3,19 +3,26 @@ import { ChevronDownIcon } from "./Icons";
 import { cn } from "../lib/cn";
 
 export interface AccordionItem {
+  /** Nadpis sekce. */
   title: ReactNode;
+  /** Obsah sekce. */
   content: ReactNode;
+  /** Sekce je na začátku otevřená. */
   defaultOpen?: boolean;
+  /** Zakáže sekci. */
   disabled?: boolean;
 }
 
 export interface AccordionProps {
+  /** Sekce. */
   items: AccordionItem[];
   /** Může být otevřených víc položek najednou. */
   multiple?: boolean;
+  /** Vlastní CSS třída přidaná ke kořenovému prvku. */
   className?: string;
 }
 
+/** Skládací sekce / FAQ. S multiple jde otevřít víc najednou. */
 export function Accordion({ items, multiple = false, className }: AccordionProps) {
   const uid = useId();
   const [open, setOpen] = useState<Set<number>>(() => new Set(items.flatMap((it, i) => (it.defaultOpen ? [i] : []))));

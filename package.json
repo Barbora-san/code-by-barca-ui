@@ -1,6 +1,6 @@
 {
   "name": "code-by-barca-ui",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "UI knihovna pro code-by-barca.cz – tmavý „geeky“ design se žlutým akcentem (React, TypeScript, bez závislosti na Tailwindu).",
   "keywords": [
     "react",
@@ -47,23 +47,29 @@
   "scripts": {
     "build": "tsup && node scripts/copy-css.mjs",
     "dev": "tsup --watch",
-    "typecheck": "tsc --noEmit",
-    "prepublishOnly": "npm run typecheck && npm run build",
-    "demo:build": "esbuild demo/main.tsx --bundle --minify --jsx=automatic --define:process.env.NODE_ENV=\\\"production\\\" --outdir=demo/dist && node scripts/copy-demo.mjs",
-    "demo": "npm run demo:build && npx --yes serve demo/dist"
+    "typecheck": "tsc --noEmit && tsc --noEmit -p demo",
+    "prepublishOnly": "npm run typecheck && npm run test:unit",
+    "demo:build": "node scripts/gen-docs.mjs && esbuild demo/main.tsx --bundle --minify --jsx=automatic --loader:.css=css --define:process.env.NODE_ENV=\\\"production\\\" --outdir=demo/dist && node scripts/copy-demo.mjs",
+    "demo": "npm run demo:build && npx --yes serve demo/dist",
+    "docs": "node scripts/gen-docs.mjs",
+    "test": "npm run build && vitest run && npm run demo:build && playwright test",
+    "test:unit": "npm run build && vitest run",
+    "test:e2e": "npm run demo:build && playwright test"
   },
   "peerDependencies": {
     "react": ">=18",
     "react-dom": ">=18"
   },
   "devDependencies": {
+    "@playwright/test": "^1.63.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
+    "esbuild": "^0.28.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "tsup": "^8.3.0",
     "typescript": "^5.6.0",
-    "esbuild": "^0.25.0"
+    "vitest": "^5.0.3"
   },
   "publishConfig": {
     "access": "public"

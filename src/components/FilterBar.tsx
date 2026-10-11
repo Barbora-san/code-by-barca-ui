@@ -7,16 +7,23 @@ import { Chip } from "./Chip";
 import { ArrowUpDownIcon, SlidersIcon } from "./Icons";
 
 export interface FilterBarLabels {
+  /** Placeholder hledání. */
   search: string;
+  /** Text tlačítka Filtry (mobil). */
   filters: string;
+  /** Popisek řazení. */
   sort: string;
+  /** Popisek aktivních filtrů. */
   active: string;
+  /** Text „Vymazat vše“. */
   clear: string;
   /** „Zobrazeno 3 z 12“ */
   results: (count: number, total: number) => ReactNode;
+  /** Hláška, když nic nevyhovuje. */
   empty: ReactNode;
 }
 
+/** Výchozí české texty `FilterBar`. */
 export const DEFAULT_FILTER_LABELS: FilterBarLabels = {
   search: "Hledat…",
   filters: "Filtry",
@@ -34,11 +41,13 @@ export const DEFAULT_FILTER_LABELS: FilterBarLabels = {
 export interface FilterBarProps<T> {
   /** Návratová hodnota `useFilter`. */
   filter: FilterState<T>;
+  /** Přepíše texty lišty. */
   labels?: Partial<FilterBarLabels>;
   /** Přilepí lištu nahoře při scrollu (`top` v px, výchozí 0). */
   sticky?: boolean | number;
   /** Skryje řádek s počtem výsledků. */
   hideCount?: boolean;
+  /** Vlastní CSS třída přidaná ke kořenovému prvku. */
   className?: string;
 }
 

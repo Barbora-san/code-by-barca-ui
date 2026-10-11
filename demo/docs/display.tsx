@@ -82,19 +82,20 @@ export const display: Category = {
       id: "skeleton",
       name: "Skeleton",
       desc: "Pulzující placeholder při načítání. SkeletonGrid předvyrobí kartu projektu nebo dovednosti.",
-      props: ["Skeleton"],
+      props: ["Skeleton", "SkeletonGrid"],
       preview: (
         <Col>
           <Row><Skeleton variant="circle" /><Col gap={8} width={240}><Skeleton variant="text" width="70%" /><Skeleton variant="text" /></Col></Row>
           <Skeleton width="100%" height={80} rounded="md" />
-          <div className="demo-grid3"><SkeletonGrid count={3} variant="skill" /></div>
+          <SkeletonGrid count={3} variant="skill" />
         </Col>
       ),
       code: `<Skeleton variant="circle" />
 <Skeleton variant="text" width="70%" />
 <Skeleton width="100%" height={80} rounded="md" />
 
-<SkeletonGrid count={3} variant="project" />`,
+<SkeletonGrid count={3} variant="skill" />
+<SkeletonGrid count={4} variant="project" columns={4} />`,
     },
     {
       id: "progress",

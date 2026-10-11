@@ -2,8 +2,11 @@ import type { ButtonHTMLAttributes, ReactNode } from "react";
 import { cn } from "../lib/cn";
 
 export interface ToggleProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, "onChange"> {
+  /** Zda je tlačítko zapnuté. */
   pressed: boolean;
+  /** Dostane nový stav. */
   onChange: (pressed: boolean) => void;
+  /** Velikost. */
   size?: "sm" | "md";
 }
 
@@ -23,16 +26,24 @@ export function Toggle({ pressed, onChange, size = "md", className, children, ..
 }
 
 export interface ToggleGroupItem {
+  /** Hodnota, kterou `onChange` vrátí. */
   value: string;
+  /** Text položky. */
   label: ReactNode;
+  /** Zakáže položku. */
   disabled?: boolean;
 }
 
 export interface ToggleGroupProps {
+  /** Možnosti skupiny. */
   items: ToggleGroupItem[];
+  /** Vybraná hodnota. */
   value: string;
+  /** Dostane hodnotu vybrané možnosti. */
   onChange: (value: string) => void;
+  /** Vlastní CSS třída přidaná ke kořenovému prvku. */
   className?: string;
+  /** Název skupiny pro čtečky obrazovky. */
   "aria-label"?: string;
 }
 

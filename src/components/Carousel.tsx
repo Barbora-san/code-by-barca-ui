@@ -3,16 +3,21 @@ import { ChevronLeftIcon, ChevronRightIcon } from "./Icons";
 import { cn } from "../lib/cn";
 
 export interface CarouselProps {
+  /** Pole snímků. */
   slides: ReactNode[];
   /** Po posledním snímku skočí na první a naopak. */
   loop?: boolean;
   /** Automatické přepínání v ms (0 = vypnuto). Zastaví se při najetí myší a při `prefers-reduced-motion`. */
   autoplay?: number;
+  /** Zobrazí šipky. */
   showArrows?: boolean;
+  /** Zobrazí tečky. */
   showDots?: boolean;
+  /** Vlastní CSS třída přidaná ke kořenovému prvku. */
   className?: string;
 }
 
+/** Karusel se šipkami, tečkami, tažením prstem / myší a volitelným autoplayem. */
 export function Carousel({ slides, loop = true, autoplay = 0, showArrows = true, showDots = true, className }: CarouselProps) {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);

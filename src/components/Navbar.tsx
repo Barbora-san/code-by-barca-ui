@@ -5,7 +5,9 @@ import { MenuIcon, XIcon } from "./Icons";
 import { useEscape } from "../hooks/useEscape";
 
 export interface NavItem {
+  /** Text odkazu. */
   label: ReactNode;
+  /** Adresa. */
   href: string;
   /** Označí položku jako aktuální (`aria-current="page"`). */
   active?: boolean;
@@ -14,7 +16,9 @@ export interface NavItem {
 export interface NavbarProps {
   /** Logo / název vlevo. */
   brand: ReactNode;
+  /** Kam vede logo (výchozí `/`). */
   brandHref?: string;
+  /** Odkazy v menu. */
   items: NavItem[];
   /** CTA vpravo (např. `<Button size="sm">Kontakt</Button>`). */
   cta?: ReactNode;
@@ -22,9 +26,11 @@ export interface NavbarProps {
   extras?: ReactNode;
   /** Pevně přilepená nahoře (výchozí true). */
   fixed?: boolean;
+  /** Vlastní CSS třída přidaná ke kořenovému prvku. */
   className?: string;
 }
 
+/** Horní navigace s logem, odkazy, tlačítkem a mobilním menu. V ukázce je fixed vypnuté, na webu se přilepí nahoru. */
 export function Navbar({ brand, brandHref = "/", items, cta, extras, fixed = true, className }: NavbarProps) {
   const LinkComponent = useLinkComponent();
   const [open, setOpen] = useState(false);

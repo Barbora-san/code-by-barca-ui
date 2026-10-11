@@ -7,13 +7,17 @@ export type AlertVariant = "info" | "success" | "warning" | "error";
 const ICONS = { info: InfoIcon, success: CheckCircleIcon, warning: AlertTriangleIcon, error: XCircleIcon } as const;
 
 export interface AlertProps extends Omit<HTMLAttributes<HTMLDivElement>, "title"> {
+  /** Typ hlášky: `info`, `success`, `warning`, `error`. */
   variant?: AlertVariant;
+  /** Tučný nadpis. */
   title?: ReactNode;
+  /** Text hlášky (alternativa k `children`). */
   description?: ReactNode;
   /** Vlastní ikona, nebo `null` pro žádnou. */
   icon?: ReactNode | null;
   /** Zobrazí křížek; vrací se `onDismiss`. */
   dismissible?: boolean;
+  /** Zavolá se po zavření křížkem (potřebuje `dismissible`). */
   onDismiss?: () => void;
   /** Tlačítko / odkaz vpravo. */
   action?: ReactNode;

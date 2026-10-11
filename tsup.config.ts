@@ -6,7 +6,6 @@ export default defineConfig({
   dts: true,
   sourcemap: true,
   clean: true,
-  treeshake: true,
   external: ["react", "react-dom"],
   // Všechny komponenty používají hooky / DOM → v Next.js App Routeru musí být client.
   banner: { js: '"use client";' },

@@ -2,6 +2,7 @@ import type { CSSProperties, HTMLAttributes } from "react";
 import { cn } from "../lib/cn";
 
 export interface ScrollAreaProps extends HTMLAttributes<HTMLDivElement> {
+  /** Nejvyšší výška, nad kterou se začne scrollovat. */
   maxHeight?: CSSProperties["maxHeight"];
   /** Obě osy (výchozí jen svisle). */
   both?: boolean;

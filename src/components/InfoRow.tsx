@@ -3,10 +3,15 @@ import { isExternalHref, useLinkComponent } from "../lib/link";
 import { cn } from "../lib/cn";
 
 export interface InfoRowProps {
+  /** Ikona vlevo. */
   icon: ReactNode;
+  /** Popisek (např. „Email“). */
   label: ReactNode;
+  /** Hodnota (text, nebo odkaz s `href`). */
   value: ReactNode;
+  /** Hodnota bude odkaz (`mailto:`, `tel:`, https…). */
   href?: string;
+  /** Vlastní CSS třída přidaná ke kořenovému prvku. */
   className?: string;
 }
 
@@ -31,8 +36,11 @@ export function InfoRow({ icon, label, value, href, className }: InfoRowProps) {
 }
 
 export interface SocialLink {
+  /** Název sítě (přístupný popisek). */
   label: string;
+  /** Adresa profilu. */
   href: string;
+  /** Ikona sítě. */
   icon: ReactNode;
 }
 

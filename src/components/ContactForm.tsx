@@ -5,23 +5,34 @@ import { Input, Textarea } from "./Field";
 import { SendIcon } from "./Icons";
 
 export interface ContactFormValues {
+  /** Jméno odesílatele. */
   name: string;
+  /** E-mail odesílatele. */
   email: string;
+  /** Text zprávy. */
   message: string;
 }
 
 export interface ContactFormLabels {
+  /** Popisek jména. */
   name: string;
+  /** Popisek e-mailu. */
   email: string;
+  /** Popisek zprávy. */
   message: string;
+  /** Text tlačítka. */
   submit: string;
+  /** Text tlačítka při odesílání. */
   sending: string;
   /** Popisek honeypot pole (viditelný jen robotům / čtečkám). */
   honeypot: string;
+  /** Chyba prázdného pole. */
   required: string;
+  /** Chyba špatného e-mailu. */
   invalidEmail: string;
 }
 
+/** Výchozí české texty `ContactForm`. */
 export const DEFAULT_CONTACT_LABELS: ContactFormLabels = {
   name: "Jméno",
   email: "Váš Email",
@@ -39,16 +50,19 @@ export interface ContactFormProps {
    * Když je vyplněný honeypot, `onSubmit` se NEvolá (formulář se tváří jako odeslaný).
    */
   onSubmit: (values: ContactFormValues) => void | Promise<void>;
+  /** Přepíše texty (jméno, e-mail, zpráva, tlačítko, chyby). */
   labels?: Partial<ContactFormLabels>;
   /** Zpráva po úspěšném odeslání (nahradí formulář). */
   successMessage?: ReactNode;
   /** Zpráva při chybě odeslání. */
   errorMessage?: ReactNode;
+  /** Vlastní CSS třída přidaná ke kořenovému prvku. */
   className?: string;
 }
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+/** Hotový kontaktní formulář s validací, honeypotem proti robotům a stavy odeslání. Odeslání (mailto, API) řešíš v onSubmit. */
 export function ContactForm({
   onSubmit,
   labels,

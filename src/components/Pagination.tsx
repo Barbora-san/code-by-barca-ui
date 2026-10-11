@@ -2,11 +2,15 @@ import { ChevronLeftIcon, ChevronRightIcon } from "./Icons";
 import { cn } from "../lib/cn";
 
 export interface PaginationProps {
+  /** Aktuální stránka (od 1). */
   currentPage: number;
+  /** Celkový počet stránek. */
   totalPages: number;
+  /** Dostane číslo zvolené stránky. */
   onPageChange: (page: number) => void;
   /** Kolik stránek ukázat vedle aktuální. */
   siblingCount?: number;
+  /** Vlastní CSS třída přidaná ke kořenovému prvku. */
   className?: string;
 }
 
@@ -24,6 +28,7 @@ export function getPageRange(current: number, total: number, siblings = 1): (num
   return [1, "…", ...range(left, right), "…", total];
 }
 
+/** Stránkování s trojtečkami. Pomocná funkce getPageRange vrátí čísla stránek, když chceš vlastní vzhled. */
 export function Pagination({ currentPage, totalPages, onPageChange, siblingCount = 1, className }: PaginationProps) {
   if (totalPages <= 1) return null;
   const go = (p: number) => onPageChange(Math.max(1, Math.min(totalPages, p)));

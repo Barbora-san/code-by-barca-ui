@@ -3,9 +3,13 @@ import { cn } from "../lib/cn";
 import { Reveal } from "./Reveal";
 
 export interface TimelineEntry {
+  /** Období (např. `2020 — 2022`). */
   period?: ReactNode;
+  /** Název pozice / události. */
   title: ReactNode;
+  /** Firma nebo místo. */
   subtitle?: ReactNode;
+  /** Popis. */
   description?: ReactNode;
 }
 

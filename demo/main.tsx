@@ -2,8 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { createRoot } from "react-dom/client";
 import {
   Sidebar, Sheet, Button, Tabs, CodeBlock, Badge, ScrollProgress, Toaster, MessageBoxHost, CbbProvider, SearchAutocomplete,
-  GithubIcon, MenuIcon, ArrowDownIcon, CheckIcon, SparklesIcon, FolderIcon, type SidebarGroup,
-} from "../src";
+  GithubIcon, MenuIcon, ArrowDownIcon, CheckIcon, SparklesIcon, FolderIcon, type SidebarGroup, ThemeToggle } from "../src";
 import "../src/styles.css";
 import "./demo.css";
 import { CATEGORIES } from "./docs";
@@ -115,6 +114,7 @@ function App() {
           <div className="demo-topbar">
             <Button variant="ghost" size="sm" aria-label="Otevřít menu" className="demo-burger" onClick={() => setMobileNav(true)}><MenuIcon size={18} /></Button>
             <div className="demo-search"><SearchAutocomplete items={searchItems} shortcut placeholder="Hledat komponentu…" onSelect={(id) => go(id)} /></div>
+            <ThemeToggle includeSystem />
             <Button variant="outline" size="sm" href={REPO} target="_blank" rel="noopener noreferrer" leftIcon={<GithubIcon size={16} />}>GitHub</Button>
           </div>
 

@@ -3,10 +3,15 @@ import { Floating, useClickOutside, type Align, type Side } from "../lib/floatin
 import { MenuList, type MenuItem } from "./Menu";
 
 export interface DropdownProps {
+  /** Prvek, který menu otevírá. */
   trigger: ReactNode;
+  /** Položky menu. */
   items: MenuItem[];
+  /** Strana menu. */
   side?: Side;
+  /** Zarovnání menu. */
   align?: Align;
+  /** Vlastní CSS třída přidaná ke kořenovému prvku. */
   className?: string;
 }
 

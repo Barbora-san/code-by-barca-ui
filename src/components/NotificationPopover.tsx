@@ -5,22 +5,34 @@ import { Popover } from "./Popover";
 import { cn } from "../lib/cn";
 
 export interface NotificationItem {
+  /** Jedinečné `id`. */
   id: string;
+  /** Text upozornění. */
   title: ReactNode;
+  /** Doplňující text. */
   description?: ReactNode;
   /** Např. „před 2 minutami“. */
   time?: ReactNode;
+  /** Přečtené upozornění je ztlumené. */
   read?: boolean;
 }
 
 export interface NotificationPopoverProps {
+  /** Seznam upozornění. */
   notifications: NotificationItem[];
+  /** Zavolá se po „Označit vše“. */
   onMarkAllRead?: () => void;
+  /** Dostane `id` zavřeného upozornění. */
   onDismiss?: (id: string) => void;
+  /** Dostane `id` kliknutého upozornění. */
   onNotificationClick?: (id: string) => void;
+  /** Nadpis panelu. */
   title?: ReactNode;
+  /** Text, když nic nepřišlo. */
   emptyLabel?: ReactNode;
+  /** Text tlačítka „Označit vše“. */
   markAllLabel?: ReactNode;
+  /** Vlastní CSS třída přidaná ke kořenovému prvku. */
   className?: string;
 }
 

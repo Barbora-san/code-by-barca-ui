@@ -2,8 +2,11 @@ import type { CSSProperties, HTMLAttributes } from "react";
 import { cn } from "../lib/cn";
 
 export interface SkeletonProps extends HTMLAttributes<HTMLDivElement> {
+  /** Šířka (číslo = px, nebo CSS hodnota). */
   width?: CSSProperties["width"];
+  /** Výška (číslo = px, nebo CSS hodnota). */
   height?: CSSProperties["height"];
+  /** Zaoblení rohů. */
   rounded?: "sm" | "md" | "full";
   /** Zkratka: `circle` = kulatý 40px, `text` = řádek textu, `rect` = obdélník. */
   variant?: "circle" | "text" | "rect";
@@ -33,6 +36,7 @@ export function Skeleton({ width, height, rounded = "sm", variant, className, st
   );
 }
 
+/** Skeleton (zástupná kostra) karty projektu pro dobu načítání. */
 export function ProjectCardSkeleton() {
   return (
     <div className="cbb-card cbb-card--flush" aria-busy="true">
@@ -51,6 +55,7 @@ export function ProjectCardSkeleton() {
   );
 }
 
+/** Skeleton (zástupná kostra) karty dovednosti pro dobu načítání. */
 export function SkillCardSkeleton() {
   return (
     <div className="cbb-card cbb-skill" aria-busy="true">
@@ -65,10 +70,22 @@ export function SkillCardSkeleton() {
   );
 }
 
-export function SkeletonGrid({ count = 3, variant = "project" }: { count?: number; variant?: "project" | "skill" }) {
+export interface SkeletonGridProps {
+  /** Kolik karet vykreslit. */
+  count?: number;
+  /** Tvar karty: `project` (s obrázkem) nebo `skill`. */
+  variant?: "project" | "skill";
+  /** Počet sloupců na širokém displeji (na tabletu 2, na mobilu 1). */
+  columns?: 2 | 3 | 4;
+  /** Vlastní CSS třída přidaná ke kořenovému prvku. */
+  className?: string;
+}
+
+/** Mřížka zástupných karet. Sama se roztáhne na celou šířku – nevkládej ji do další mřížky. */
+export function SkeletonGrid({ count = 3, variant = "project", columns = 3, className }: SkeletonGridProps) {
   const Item = variant === "project" ? ProjectCardSkeleton : SkillCardSkeleton;
   return (
-    <div className="cbb-grid cbb-grid--3">
+    <div className={cn("cbb-grid", `cbb-grid--${columns}`, className)}>
       {Array.from({ length: count }, (_, i) => (
         <Item key={i} />
       ))}

@@ -5,13 +5,13 @@
     "name": "variant",
     "type": "\"primary\" | \"secondary\" | \"outline\" | \"soft\" | \"ghost\" | \"destructive\" | \"link\"",
     "required": false,
-    "doc": ""
+    "doc": "Vzhled tlačítka: `primary` (žluté), `secondary`, `outline`, `soft`, `ghost`, `destructive`, `link`."
    },
    {
     "name": "size",
     "type": "\"sm\" | \"md\" | \"lg\"",
     "required": false,
-    "doc": ""
+    "doc": "Velikost: `sm`, `md`, `lg`."
    },
    {
     "name": "loading",
@@ -23,19 +23,19 @@
     "name": "leftIcon",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Ikona před textem."
    },
    {
     "name": "rightIcon",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Ikona za textem."
    },
    {
     "name": "fullWidth",
     "type": "boolean",
     "required": false,
-    "doc": ""
+    "doc": "Roztáhne tlačítko na celou šířku rodiče."
    },
    {
     "name": "glow",
@@ -53,13 +53,13 @@
     "name": "target",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Cíl odkazu (`_blank` otevře novou kartu). Má smysl jen s `href`."
    },
    {
     "name": "rel",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Atribut `rel` odkazu. U `_blank` se `noopener noreferrer` doplní samo."
    }
   ],
   "BadgeProps": [
@@ -67,7 +67,7 @@
     "name": "variant",
     "type": "\"secondary\" | \"outline\" | \"destructive\" | \"default\" | \"success\" | \"info\" | \"warning\"",
     "required": false,
-    "doc": ""
+    "doc": "Barva a styl odznaku."
    },
    {
     "name": "dot",
@@ -79,7 +79,7 @@
     "name": "icon",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Ikona před textem."
    }
   ],
   "TagProps": [
@@ -101,7 +101,7 @@
     "name": "orientation",
     "type": "\"horizontal\" | \"vertical\"",
     "required": false,
-    "doc": ""
+    "doc": "Vodorovná čára, nebo svislá (potřebuje rodiče s výškou)."
    }
   ],
   "ChipProps": [
@@ -115,13 +115,13 @@
     "name": "removeLabel",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Přístupný popisek křížku (výchozí „Odebrat“)."
    },
    {
     "name": "icon",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Ikona před textem."
    }
   ],
   "TypewriterProps": [
@@ -135,13 +135,13 @@
     "name": "typingSpeed",
     "type": "number",
     "required": false,
-    "doc": ""
+    "doc": "Rychlost psaní (ms na znak)."
    },
    {
     "name": "deletingSpeed",
     "type": "number",
     "required": false,
-    "doc": ""
+    "doc": "Rychlost mazání (ms na znak)."
    },
    {
     "name": "pause",
@@ -153,15 +153,15 @@
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    }
   ],
   "RevealProps": [
    {
     "name": "as",
-    "type": "\"symbol\" | \"object\" | \"form\" | \"slot\" | \"style\" | \"title\" | \"link\" | \"a\" | \"abbr\" | \"address\" | \"area\" | \"article\" | \"aside\" | \"audio\" | \"b\" | \"base\" | \"bdi\" | \"bdo\" | \"big\" | \"blockquote\" | \"body\" | \"br\" | \"button\" | \"canvas\" | \"caption\" | \"center\" | \"cite\" | \"code\" | \"col\" | \"colgroup\" | \"data\" | \"datalist\" | \"dd\" | \"del\" | \"details\" | \"dfn\" | \"dialog\" | \"div\" | \"dl\" | \"dt\" | \"em\" | \"embed\" | \"fieldset\" | \"figcaption\" | \"figure\" | \"footer\" | \"h1\" | \"h2\" | \"h3\" | \"h4\" | \"h5\" | \"h6\" | \"head\" | \"header\" | \"hgroup\" | \"hr\" | \"html\" | \"i\" | \"iframe\" | \"img\" | \"input\" | \"ins\" | \"kbd\" | \"keygen\" | \"label\" | \"legend\" | \"li\" | \"main\" | \"map\" | \"mark\" | \"menu\" | \"menuitem\" | \"meta\" | \"meter\" | \"nav\" | \"noindex\" | \"noscript\" | \"ol\" | \"optgroup\" | \"option\" | \"output\" | \"p\" | \"param\" | \"picture\" | \"pre\" | \"progress\" | \"q\" | \"rp\" | \"rt\" | \"ruby\" | \"s\" | \"samp\" | \"search\" | \"script\" | \"section\" | \"select\" | \"small\" | \"source\" | \"span\" | \"strong\" | \"sub\" | \"summary\" | \"sup\" | \"table\" | \"template\" | \"tbody\" | \"td\" | \"textarea\" | \"tfoot\" | \"th\" | \"thead\" | \"time\" | \"tr\" | \"track\" | \"u\" | \"ul\" | \"var\" | \"video\" | \"wbr\" | \"webview\" | \"svg\" | \"animate\" | \"animateMotion\" | \"animateTransform\" | \"circle\" | \"clipPath\" | \"defs\" | \"desc\" | \"ellipse\" | \"feBlend\" | \"feColorMatrix\" | \"feComponentTransfer\" | \"feComposite\" | \"feConvolveMatrix\" | \"feDiffuseLighting\" | \"feDisplacementMap\" | \"feDistantLight\" | \"feDropShadow\" | \"feFlood\" | \"feFuncA\" | \"feFuncB\" | \"feFuncG\" | \"feFuncR\" | \"feGaussianBlur\" | \"feImage\" | \"feMerge\" | \"feMergeNode\" | \"feMorphology\" | \"feOffset\" | \"fePointLight\" | \"feSpecularLighting\" | \"feSpotLight\" | \"feTile\" | \"feTurbulence\" | \"filter\" | \"foreignObject\" | \"g\" | \"image\" | \"line\" | \"linearGradient\" | \"marker\" | \"mask\" | \"metadata\" | \"mpath\" | \"path\" | \"pattern\" | \"polygon\" | \"polyline\" | \"radialGradient\" | \"rect\" | \"set\" | \"stop\" | \"switch\" | \"text\" | \"textPath\" | \"tspan\" | \"use\" | \"view\" | ComponentClass<any, any> | FunctionComponent<any>",
+    "type": "ElementType",
     "required": false,
-    "doc": ""
+    "doc": "HTML prvek nebo komponenta, ve které se obsah vykreslí."
    },
    {
     "name": "index",
@@ -179,7 +179,7 @@
     "name": "rootMargin",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Okraj viewportu pro spuštění animace (např. `0px 0px -10% 0px`)."
    }
   ],
   "SectionHeadingProps": [
@@ -205,13 +205,13 @@
     "name": "description",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Popis pod nadpisem."
    },
    {
     "name": "align",
     "type": "\"center\" | \"left\"",
     "required": false,
-    "doc": ""
+    "doc": "Zarovnání textu: na střed, nebo vlevo (s `action` vpravo)."
    },
    {
     "name": "action",
@@ -223,7 +223,7 @@
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    }
   ],
   "FieldProps": [
@@ -231,19 +231,19 @@
     "name": "label",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Popisek nad polem."
    },
    {
     "name": "hint",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Nápověda pod polem."
    },
    {
     "name": "error",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Chyba pod polem (nahradí nápovědu)."
    },
    {
     "name": "htmlFor",
@@ -255,13 +255,13 @@
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    },
    {
     "name": "children",
     "type": "ReactNode",
     "required": true,
-    "doc": ""
+    "doc": "Ovládací prvek, který se obalí (`Input`, vlastní komponenta…)."
    }
   ],
   "InputProps": [
@@ -269,19 +269,19 @@
     "name": "label",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Popisek nad polem."
    },
    {
     "name": "hint",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Nápověda pod polem."
    },
    {
     "name": "error",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Chyba pod polem (zčervená)."
    },
    {
     "name": "wrapperClassName",
@@ -295,19 +295,19 @@
     "name": "label",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Popisek nad polem."
    },
    {
     "name": "hint",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Nápověda pod polem."
    },
    {
     "name": "error",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Chyba pod polem (zčervená)."
    },
    {
     "name": "wrapperClassName",
@@ -327,25 +327,25 @@
     "name": "placeholder",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Text první, nevybratelné položky."
    },
    {
     "name": "label",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Popisek nad polem."
    },
    {
     "name": "hint",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Nápověda pod polem."
    },
    {
     "name": "error",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Chyba pod polem (zčervená)."
    },
    {
     "name": "wrapperClassName",
@@ -359,25 +359,25 @@
     "name": "checked",
     "type": "boolean",
     "required": false,
-    "doc": ""
+    "doc": "Zaškrtnuto (řízený stav)."
    },
    {
     "name": "onChange",
     "type": "(checked: boolean) => void",
     "required": false,
-    "doc": ""
+    "doc": "Dostane nový stav `true` / `false`."
    },
    {
     "name": "label",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Text vedle pole."
    },
    {
     "name": "description",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Šedý doplňující text pod popiskem."
    },
    {
     "name": "indeterminate",
@@ -391,49 +391,49 @@
     "name": "options",
     "type": "RadioOption[]",
     "required": true,
-    "doc": ""
+    "doc": "Možnosti skupiny."
    },
    {
     "name": "value",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vybraná hodnota."
    },
    {
     "name": "onChange",
     "type": "(value: string) => void",
     "required": false,
-    "doc": ""
+    "doc": "Dostane hodnotu vybrané možnosti."
    },
    {
     "name": "name",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Společné `name` skupiny (výchozí se vygeneruje)."
    },
    {
     "name": "orientation",
     "type": "\"horizontal\" | \"vertical\"",
     "required": false,
-    "doc": ""
+    "doc": "Možnosti pod sebou, nebo vedle sebe."
    },
    {
     "name": "disabled",
     "type": "boolean",
     "required": false,
-    "doc": ""
+    "doc": "Zakáže celou skupinu."
    },
    {
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    },
    {
     "name": "aria-label",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Název skupiny pro čtečky obrazovky."
    }
   ],
   "RadioOption": [
@@ -441,25 +441,25 @@
     "name": "value",
     "type": "string",
     "required": true,
-    "doc": ""
+    "doc": "Hodnota, kterou `onChange` vrátí."
    },
    {
     "name": "label",
     "type": "ReactNode",
     "required": true,
-    "doc": ""
+    "doc": "Text možnosti."
    },
    {
     "name": "description",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Doplňující text."
    },
    {
     "name": "disabled",
     "type": "boolean",
     "required": false,
-    "doc": ""
+    "doc": "Zakáže jen tuto možnost."
    }
   ],
   "SwitchProps": [
@@ -467,25 +467,25 @@
     "name": "checked",
     "type": "boolean",
     "required": true,
-    "doc": ""
+    "doc": "Zapnuto (řízený stav)."
    },
    {
     "name": "onChange",
     "type": "(checked: boolean) => void",
     "required": true,
-    "doc": ""
+    "doc": "Dostane nový stav `true` / `false`."
    },
    {
     "name": "label",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Text vedle přepínače."
    },
    {
     "name": "description",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Šedý doplňující text."
    }
   ],
   "SliderProps": [
@@ -493,37 +493,37 @@
     "name": "value",
     "type": "number",
     "required": true,
-    "doc": ""
+    "doc": "Aktuální hodnota."
    },
    {
     "name": "onChange",
     "type": "(value: number) => void",
     "required": true,
-    "doc": ""
+    "doc": "Dostane novou hodnotu."
    },
    {
     "name": "label",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Popisek nad posuvníkem."
    },
    {
     "name": "min",
     "type": "number",
     "required": false,
-    "doc": ""
+    "doc": "Nejmenší hodnota (výchozí 0)."
    },
    {
     "name": "max",
     "type": "number",
     "required": false,
-    "doc": ""
+    "doc": "Největší hodnota (výchozí 100)."
    },
    {
     "name": "step",
     "type": "number",
     "required": false,
-    "doc": ""
+    "doc": "Krok (výchozí 1)."
    },
    {
     "name": "showValue",
@@ -543,31 +543,31 @@
     "name": "tags",
     "type": "string[]",
     "required": true,
-    "doc": ""
+    "doc": "Aktuální tagy."
    },
    {
     "name": "onChange",
     "type": "(tags: string[]) => void",
     "required": true,
-    "doc": ""
+    "doc": "Dostane nové pole tagů."
    },
    {
     "name": "placeholder",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Text v prázdném poli."
    },
    {
     "name": "maxTags",
     "type": "number",
     "required": false,
-    "doc": ""
+    "doc": "Nejvýš kolik tagů jde přidat."
    },
    {
     "name": "label",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Popisek nad polem."
    },
    {
     "name": "allowDuplicates",
@@ -579,13 +579,13 @@
     "name": "disabled",
     "type": "boolean",
     "required": false,
-    "doc": ""
+    "doc": "Zakáže prvek (nejde ho použít, je ztlumený)."
    },
    {
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    }
   ],
   "InputOTPProps": [
@@ -593,19 +593,19 @@
     "name": "value",
     "type": "string",
     "required": true,
-    "doc": ""
+    "doc": "Aktuálně zadaný kód."
    },
    {
     "name": "onChange",
     "type": "(value: string) => void",
     "required": true,
-    "doc": ""
+    "doc": "Dostane kód po každé změně."
    },
    {
     "name": "length",
     "type": "number",
     "required": false,
-    "doc": ""
+    "doc": "Počet znaků (výchozí 6)."
    },
    {
     "name": "separator",
@@ -629,25 +629,25 @@
     "name": "disabled",
     "type": "boolean",
     "required": false,
-    "doc": ""
+    "doc": "Zakáže prvek (nejde ho použít, je ztlumený)."
    },
    {
     "name": "invalid",
     "type": "boolean",
     "required": false,
-    "doc": ""
+    "doc": "Zvýrazní pole červeně."
    },
    {
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    },
    {
     "name": "aria-label",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Přístupný název pro čtečky obrazovky (když není vidět text)."
    }
   ],
   "FileUploadProps": [
@@ -667,19 +667,19 @@
     "name": "multiple",
     "type": "boolean",
     "required": false,
-    "doc": ""
+    "doc": "Povolí víc souborů najednou."
    },
    {
     "name": "label",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Popisek nad zónou."
    },
    {
     "name": "hint",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Nápověda pod zónou."
    },
    {
     "name": "onUpload",
@@ -691,13 +691,13 @@
     "name": "disabled",
     "type": "boolean",
     "required": false,
-    "doc": ""
+    "doc": "Zakáže nahrávání."
    },
    {
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    }
   ],
   "DateTimePickerProps": [
@@ -712,6 +712,12 @@
     "type": "(iso: string) => void",
     "required": true,
     "doc": "Dostane ISO řetězec (`toISOString()`)."
+   },
+   {
+    "name": "withTime",
+    "type": "boolean",
+    "required": false,
+    "doc": "Zobrazit i výběr času (výchozí `true`). S `false` je to čistý výběr data – viz `DatePicker`."
    },
    {
     "name": "locale",
@@ -735,7 +741,7 @@
     "name": "placeholder",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Text v prázdném poli."
    },
    {
     "name": "yearRange",
@@ -747,25 +753,25 @@
     "name": "disabled",
     "type": "boolean",
     "required": false,
-    "doc": ""
+    "doc": "Zakáže výběr."
    },
    {
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    },
    {
     "name": "id",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Atribut `id` pole."
    },
    {
     "name": "name",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Atribut `name` pole."
    }
   ],
   "ContactFormProps": [
@@ -779,7 +785,7 @@
     "name": "labels",
     "type": "Partial<ContactFormLabels>",
     "required": false,
-    "doc": ""
+    "doc": "Přepíše texty (jméno, e-mail, zpráva, tlačítko, chyby)."
    },
    {
     "name": "successMessage",
@@ -797,7 +803,7 @@
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    }
   ],
   "ContactFormValues": [
@@ -805,19 +811,19 @@
     "name": "name",
     "type": "string",
     "required": true,
-    "doc": ""
+    "doc": "Jméno odesílatele."
    },
    {
     "name": "email",
     "type": "string",
     "required": true,
-    "doc": ""
+    "doc": "E-mail odesílatele."
    },
    {
     "name": "message",
     "type": "string",
     "required": true,
-    "doc": ""
+    "doc": "Text zprávy."
    }
   ],
   "ContactFormLabels": [
@@ -825,31 +831,31 @@
     "name": "name",
     "type": "string",
     "required": true,
-    "doc": ""
+    "doc": "Popisek jména."
    },
    {
     "name": "email",
     "type": "string",
     "required": true,
-    "doc": ""
+    "doc": "Popisek e-mailu."
    },
    {
     "name": "message",
     "type": "string",
     "required": true,
-    "doc": ""
+    "doc": "Popisek zprávy."
    },
    {
     "name": "submit",
     "type": "string",
     "required": true,
-    "doc": ""
+    "doc": "Text tlačítka."
    },
    {
     "name": "sending",
     "type": "string",
     "required": true,
-    "doc": ""
+    "doc": "Text tlačítka při odesílání."
    },
    {
     "name": "honeypot",
@@ -861,13 +867,13 @@
     "name": "required",
     "type": "string",
     "required": true,
-    "doc": ""
+    "doc": "Chyba prázdného pole."
    },
    {
     "name": "invalidEmail",
     "type": "string",
     "required": true,
-    "doc": ""
+    "doc": "Chyba špatného e-mailu."
    }
   ],
   "ToggleProps": [
@@ -875,19 +881,19 @@
     "name": "pressed",
     "type": "boolean",
     "required": true,
-    "doc": ""
+    "doc": "Zda je tlačítko zapnuté."
    },
    {
     "name": "onChange",
     "type": "(pressed: boolean) => void",
     "required": true,
-    "doc": ""
+    "doc": "Dostane nový stav."
    },
    {
     "name": "size",
     "type": "\"sm\" | \"md\"",
     "required": false,
-    "doc": ""
+    "doc": "Velikost."
    }
   ],
   "ToggleGroupProps": [
@@ -895,31 +901,31 @@
     "name": "items",
     "type": "ToggleGroupItem[]",
     "required": true,
-    "doc": ""
+    "doc": "Možnosti skupiny."
    },
    {
     "name": "value",
     "type": "string",
     "required": true,
-    "doc": ""
+    "doc": "Vybraná hodnota."
    },
    {
     "name": "onChange",
     "type": "(value: string) => void",
     "required": true,
-    "doc": ""
+    "doc": "Dostane hodnotu vybrané možnosti."
    },
    {
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    },
    {
     "name": "aria-label",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Název skupiny pro čtečky obrazovky."
    }
   ],
   "ToggleGroupItem": [
@@ -927,25 +933,25 @@
     "name": "value",
     "type": "string",
     "required": true,
-    "doc": ""
+    "doc": "Hodnota, kterou `onChange` vrátí."
    },
    {
     "name": "label",
     "type": "ReactNode",
     "required": true,
-    "doc": ""
+    "doc": "Text položky."
    },
    {
     "name": "disabled",
     "type": "boolean",
     "required": false,
-    "doc": ""
+    "doc": "Zakáže položku."
    }
   ],
   "CardProps": [
    {
     "name": "as",
-    "type": "\"symbol\" | \"object\" | \"form\" | \"slot\" | \"style\" | \"title\" | \"link\" | \"a\" | \"abbr\" | \"address\" | \"area\" | \"article\" | \"aside\" | \"audio\" | \"b\" | \"base\" | \"bdi\" | \"bdo\" | \"big\" | \"blockquote\" | \"body\" | \"br\" | \"button\" | \"canvas\" | \"caption\" | \"center\" | \"cite\" | \"code\" | \"col\" | \"colgroup\" | \"data\" | \"datalist\" | \"dd\" | \"del\" | \"details\" | \"dfn\" | \"dialog\" | \"div\" | \"dl\" | \"dt\" | \"em\" | \"embed\" | \"fieldset\" | \"figcaption\" | \"figure\" | \"footer\" | \"h1\" | \"h2\" | \"h3\" | \"h4\" | \"h5\" | \"h6\" | \"head\" | \"header\" | \"hgroup\" | \"hr\" | \"html\" | \"i\" | \"iframe\" | \"img\" | \"input\" | \"ins\" | \"kbd\" | \"keygen\" | \"label\" | \"legend\" | \"li\" | \"main\" | \"map\" | \"mark\" | \"menu\" | \"menuitem\" | \"meta\" | \"meter\" | \"nav\" | \"noindex\" | \"noscript\" | \"ol\" | \"optgroup\" | \"option\" | \"output\" | \"p\" | \"param\" | \"picture\" | \"pre\" | \"progress\" | \"q\" | \"rp\" | \"rt\" | \"ruby\" | \"s\" | \"samp\" | \"search\" | \"script\" | \"section\" | \"select\" | \"small\" | \"source\" | \"span\" | \"strong\" | \"sub\" | \"summary\" | \"sup\" | \"table\" | \"template\" | \"tbody\" | \"td\" | \"textarea\" | \"tfoot\" | \"th\" | \"thead\" | \"time\" | \"tr\" | \"track\" | \"u\" | \"ul\" | \"var\" | \"video\" | \"wbr\" | \"webview\" | \"svg\" | \"animate\" | \"animateMotion\" | \"animateTransform\" | \"circle\" | \"clipPath\" | \"defs\" | \"desc\" | \"ellipse\" | \"feBlend\" | \"feColorMatrix\" | \"feComponentTransfer\" | \"feComposite\" | \"feConvolveMatrix\" | \"feDiffuseLighting\" | \"feDisplacementMap\" | \"feDistantLight\" | \"feDropShadow\" | \"feFlood\" | \"feFuncA\" | \"feFuncB\" | \"feFuncG\" | \"feFuncR\" | \"feGaussianBlur\" | \"feImage\" | \"feMerge\" | \"feMergeNode\" | \"feMorphology\" | \"feOffset\" | \"fePointLight\" | \"feSpecularLighting\" | \"feSpotLight\" | \"feTile\" | \"feTurbulence\" | \"filter\" | \"foreignObject\" | \"g\" | \"image\" | \"line\" | \"linearGradient\" | \"marker\" | \"mask\" | \"metadata\" | \"mpath\" | \"path\" | \"pattern\" | \"polygon\" | \"polyline\" | \"radialGradient\" | \"rect\" | \"set\" | \"stop\" | \"switch\" | \"text\" | \"textPath\" | \"tspan\" | \"use\" | \"view\" | ComponentClass<any, any> | FunctionComponent<any>",
+    "type": "ElementType",
     "required": false,
     "doc": "Element, který se vykreslí (výchozí `div`)."
    },
@@ -997,13 +1003,13 @@
     "name": "label",
     "type": "ReactNode",
     "required": true,
-    "doc": ""
+    "doc": "Popisek čísla."
    },
    {
     "name": "value",
     "type": "ReactNode",
     "required": true,
-    "doc": ""
+    "doc": "Hlavní hodnota (velké číslo)."
    },
    {
     "name": "change",
@@ -1021,19 +1027,19 @@
     "name": "icon",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Ikona v rohu."
    },
    {
     "name": "hint",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Šedý text pod hodnotou."
    },
    {
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    }
   ],
   "AvatarProps": [
@@ -1041,13 +1047,13 @@
     "name": "src",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Obrázek. Bez něj se zobrazí `initials`."
    },
    {
     "name": "alt",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Alternativní text obrázku."
    },
    {
     "name": "initials",
@@ -1059,19 +1065,19 @@
     "name": "size",
     "type": "\"sm\" | \"md\" | \"lg\"",
     "required": false,
-    "doc": ""
+    "doc": "Velikost: `sm`, `md`, `lg`."
    },
    {
     "name": "status",
     "type": "\"online\" | \"away\" | \"busy\" | \"offline\"",
     "required": false,
-    "doc": ""
+    "doc": "Stavová tečka: `online`, `away`, `busy`, `offline`."
    },
    {
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    }
   ],
   "AvatarGroupProps": [
@@ -1079,7 +1085,7 @@
     "name": "avatars",
     "type": "Omit<AvatarProps, \"className\" | \"size\">[]",
     "required": true,
-    "doc": ""
+    "doc": "Pole avatarů (props jako u `Avatar`)."
    },
    {
     "name": "max",
@@ -1091,33 +1097,59 @@
     "name": "size",
     "type": "\"sm\" | \"md\" | \"lg\"",
     "required": false,
-    "doc": ""
+    "doc": "Velikost všech avatarů."
    },
    {
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
+   }
+  ],
+  "SkeletonGridProps": [
+   {
+    "name": "count",
+    "type": "number",
+    "required": false,
+    "doc": "Kolik karet vykreslit."
+   },
+   {
+    "name": "variant",
+    "type": "\"project\" | \"skill\"",
+    "required": false,
+    "doc": "Tvar karty: `project` (s obrázkem) nebo `skill`."
+   },
+   {
+    "name": "columns",
+    "type": "2 | 3 | 4",
+    "required": false,
+    "doc": "Počet sloupců na širokém displeji (na tabletu 2, na mobilu 1)."
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    }
   ],
   "SkeletonProps": [
    {
     "name": "width",
-    "type": "string | number | string & {}",
+    "type": "string | number",
     "required": false,
-    "doc": ""
+    "doc": "Šířka (číslo = px, nebo CSS hodnota)."
    },
    {
     "name": "height",
-    "type": "string | number | string & {}",
+    "type": "string | number",
     "required": false,
-    "doc": ""
+    "doc": "Výška (číslo = px, nebo CSS hodnota)."
    },
    {
     "name": "rounded",
     "type": "\"sm\" | \"md\" | \"full\"",
     "required": false,
-    "doc": ""
+    "doc": "Zaoblení rohů."
    },
    {
     "name": "variant",
@@ -1137,31 +1169,31 @@
     "name": "label",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Popisek nad lištou."
    },
    {
     "name": "showValue",
     "type": "boolean",
     "required": false,
-    "doc": ""
+    "doc": "Zobrazí procenta vpravo."
    },
    {
     "name": "variant",
     "type": "\"destructive\" | \"default\" | \"success\"",
     "required": false,
-    "doc": ""
+    "doc": "Barva lišty."
    },
    {
     "name": "size",
     "type": "\"sm\" | \"md\"",
     "required": false,
-    "doc": ""
+    "doc": "Tloušťka lišty."
    },
    {
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    }
   ],
   "SkillCardProps": [
@@ -1169,13 +1201,13 @@
     "name": "title",
     "type": "ReactNode",
     "required": true,
-    "doc": ""
+    "doc": "Název dovednosti."
    },
    {
     "name": "description",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Krátký popis (max. 3 řádky)."
    },
    {
     "name": "icon",
@@ -1193,13 +1225,13 @@
     "name": "levels",
     "type": "readonly string[]",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní popisky úrovní."
    },
    {
     "name": "tools",
     "type": "string[]",
     "required": false,
-    "doc": ""
+    "doc": "Nástroje zobrazené jako tagy."
    },
    {
     "name": "maxTools",
@@ -1217,25 +1249,25 @@
     "name": "detailLabel",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Text „Zobrazit detail“ dole na kartě."
    },
    {
     "name": "href",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Celá karta bude odkaz."
    },
    {
     "name": "onClick",
     "type": "() => void",
     "required": false,
-    "doc": ""
+    "doc": "Celá karta bude tlačítko."
    },
    {
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    }
   ],
   "SkillLevelBarProps": [
@@ -1261,7 +1293,7 @@
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    }
   ],
   "ProjectCardProps": [
@@ -1269,13 +1301,13 @@
     "name": "title",
     "type": "ReactNode",
     "required": true,
-    "doc": ""
+    "doc": "Název projektu."
    },
    {
     "name": "description",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Krátký popis (max. 2 řádky)."
    },
    {
     "name": "image",
@@ -1287,7 +1319,7 @@
     "name": "imageAlt",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Alternativní text náhledu."
    },
    {
     "name": "media",
@@ -1299,7 +1331,7 @@
     "name": "category",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Kategorie nad nadpisem."
    },
    {
     "name": "year",
@@ -1311,31 +1343,31 @@
     "name": "tags",
     "type": "string[]",
     "required": false,
-    "doc": ""
+    "doc": "Tagy pod popisem."
    },
    {
     "name": "maxTags",
     "type": "number",
     "required": false,
-    "doc": ""
+    "doc": "Kolik tagů zobrazit, zbytek se schová do „+N“."
    },
    {
     "name": "href",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Celá karta bude odkaz."
    },
    {
     "name": "onClick",
     "type": "() => void",
     "required": false,
-    "doc": ""
+    "doc": "Celá karta bude tlačítko."
    },
    {
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    }
   ],
   "TimelineEntry": [
@@ -1343,25 +1375,25 @@
     "name": "period",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Období (např. `2020 — 2022`)."
    },
    {
     "name": "title",
     "type": "ReactNode",
     "required": true,
-    "doc": ""
+    "doc": "Název pozice / události."
    },
    {
     "name": "subtitle",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Firma nebo místo."
    },
    {
     "name": "description",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Popis."
    }
   ],
   "InfoRowProps": [
@@ -1369,31 +1401,31 @@
     "name": "icon",
     "type": "ReactNode",
     "required": true,
-    "doc": ""
+    "doc": "Ikona vlevo."
    },
    {
     "name": "label",
     "type": "ReactNode",
     "required": true,
-    "doc": ""
+    "doc": "Popisek (např. „Email“)."
    },
    {
     "name": "value",
     "type": "ReactNode",
     "required": true,
-    "doc": ""
+    "doc": "Hodnota (text, nebo odkaz s `href`)."
    },
    {
     "name": "href",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Hodnota bude odkaz (`mailto:`, `tel:`, https…)."
    },
    {
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    }
   ],
   "SocialLink": [
@@ -1401,19 +1433,19 @@
     "name": "label",
     "type": "string",
     "required": true,
-    "doc": ""
+    "doc": "Název sítě (přístupný popisek)."
    },
    {
     "name": "href",
     "type": "string",
     "required": true,
-    "doc": ""
+    "doc": "Adresa profilu."
    },
    {
     "name": "icon",
     "type": "ReactNode",
     "required": true,
-    "doc": ""
+    "doc": "Ikona sítě."
    }
   ],
   "CodeBlockProps": [
@@ -1421,7 +1453,7 @@
     "name": "code",
     "type": "string",
     "required": true,
-    "doc": ""
+    "doc": "Zobrazený kód."
    },
    {
     "name": "language",
@@ -1433,25 +1465,25 @@
     "name": "showLineNumbers",
     "type": "boolean",
     "required": false,
-    "doc": ""
+    "doc": "Zobrazí čísla řádků."
    },
    {
     "name": "copyLabel",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Text tlačítka „Kopírovat“."
    },
    {
     "name": "copiedLabel",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Text po zkopírování."
    },
    {
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    }
   ],
   "LazyImageProps": [
@@ -1459,13 +1491,13 @@
     "name": "src",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Adresa obrázku – stáhne se až před vjezdem do viewportu."
    },
    {
     "name": "alt",
     "type": "string",
     "required": true,
-    "doc": ""
+    "doc": "Alternativní text."
    },
    {
     "name": "placeholderColor",
@@ -1483,7 +1515,7 @@
     "name": "errorText",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Text při chybě načtení."
    },
    {
     "name": "rootMargin",
@@ -1497,19 +1529,19 @@
     "name": "icon",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Velká ikona nahoře."
    },
    {
     "name": "title",
     "type": "ReactNode",
     "required": true,
-    "doc": ""
+    "doc": "Nadpis."
    },
    {
     "name": "description",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Vysvětlení."
    },
    {
     "name": "action",
@@ -1521,7 +1553,7 @@
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    }
   ],
   "AlertProps": [
@@ -1529,19 +1561,19 @@
     "name": "variant",
     "type": "\"success\" | \"info\" | \"warning\" | \"error\"",
     "required": false,
-    "doc": ""
+    "doc": "Typ hlášky: `info`, `success`, `warning`, `error`."
    },
    {
     "name": "title",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Tučný nadpis."
    },
    {
     "name": "description",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Text hlášky (alternativa k `children`)."
    },
    {
     "name": "icon",
@@ -1559,7 +1591,7 @@
     "name": "onDismiss",
     "type": "() => void",
     "required": false,
-    "doc": ""
+    "doc": "Zavolá se po zavření křížkem (potřebuje `dismissible`)."
    },
    {
     "name": "action",
@@ -1573,13 +1605,13 @@
     "name": "children",
     "type": "ReactNode",
     "required": true,
-    "doc": ""
+    "doc": "Text oznámení."
    },
    {
     "name": "variant",
     "type": "\"success\" | \"info\" | \"warning\" | \"error\" | \"brand\"",
     "required": false,
-    "doc": ""
+    "doc": "Barva lišty."
    },
    {
     "name": "position",
@@ -1591,7 +1623,7 @@
     "name": "icon",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Ikona před textem."
    },
    {
     "name": "action",
@@ -1603,7 +1635,7 @@
     "name": "dismissible",
     "type": "boolean",
     "required": false,
-    "doc": ""
+    "doc": "Zobrazí křížek (výchozí zapnuto)."
    },
    {
     "name": "storageKey",
@@ -1615,13 +1647,13 @@
     "name": "onDismiss",
     "type": "() => void",
     "required": false,
-    "doc": ""
+    "doc": "Zavolá se po zavření."
    },
    {
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    }
   ],
   "ToastOptions": [
@@ -1629,19 +1661,19 @@
     "name": "variant",
     "type": "\"default\" | \"success\" | \"info\" | \"warning\" | \"error\"",
     "required": false,
-    "doc": ""
+    "doc": "Typ oznámení."
    },
    {
     "name": "title",
     "type": "ReactNode",
     "required": true,
-    "doc": ""
+    "doc": "Hlavní text."
    },
    {
     "name": "description",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Menší text pod ním."
    },
    {
     "name": "duration",
@@ -1653,7 +1685,7 @@
     "name": "action",
     "type": "{ label: ReactNode; onClick: () => void; }",
     "required": false,
-    "doc": ""
+    "doc": "Tlačítko `{ label, onClick }`."
    }
   ],
   "ToasterProps": [
@@ -1661,7 +1693,7 @@
     "name": "position",
     "type": "\"top-right\" | \"top-center\" | \"bottom-right\" | \"bottom-center\" | \"bottom-left\"",
     "required": false,
-    "doc": ""
+    "doc": "Roh obrazovky, ve kterém se oznámení zobrazí."
    }
   ],
   "NotificationBadgeProps": [
@@ -1669,13 +1701,13 @@
     "name": "children",
     "type": "ReactNode",
     "required": true,
-    "doc": ""
+    "doc": "Prvek, ke kterému se odznak přilepí."
    },
    {
     "name": "count",
     "type": "number",
     "required": false,
-    "doc": ""
+    "doc": "Počet. Nad `max` zobrazí „99+“."
    },
    {
     "name": "dot",
@@ -1693,7 +1725,7 @@
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    }
   ],
   "NotificationPopoverProps": [
@@ -1701,49 +1733,49 @@
     "name": "notifications",
     "type": "NotificationItem[]",
     "required": true,
-    "doc": ""
+    "doc": "Seznam upozornění."
    },
    {
     "name": "onMarkAllRead",
     "type": "() => void",
     "required": false,
-    "doc": ""
+    "doc": "Zavolá se po „Označit vše“."
    },
    {
     "name": "onDismiss",
     "type": "(id: string) => void",
     "required": false,
-    "doc": ""
+    "doc": "Dostane `id` zavřeného upozornění."
    },
    {
     "name": "onNotificationClick",
     "type": "(id: string) => void",
     "required": false,
-    "doc": ""
+    "doc": "Dostane `id` kliknutého upozornění."
    },
    {
     "name": "title",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Nadpis panelu."
    },
    {
     "name": "emptyLabel",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Text, když nic nepřišlo."
    },
    {
     "name": "markAllLabel",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Text tlačítka „Označit vše“."
    },
    {
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    }
   ],
   "NotificationItem": [
@@ -1751,19 +1783,19 @@
     "name": "id",
     "type": "string",
     "required": true,
-    "doc": ""
+    "doc": "Jedinečné `id`."
    },
    {
     "name": "title",
     "type": "ReactNode",
     "required": true,
-    "doc": ""
+    "doc": "Text upozornění."
    },
    {
     "name": "description",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Doplňující text."
    },
    {
     "name": "time",
@@ -1775,7 +1807,7 @@
     "name": "read",
     "type": "boolean",
     "required": false,
-    "doc": ""
+    "doc": "Přečtené upozornění je ztlumené."
    }
   ],
   "DialogProps": [
@@ -1783,25 +1815,25 @@
     "name": "open",
     "type": "boolean",
     "required": true,
-    "doc": ""
+    "doc": "Zda je okno otevřené."
    },
    {
     "name": "onClose",
     "type": "() => void",
     "required": true,
-    "doc": ""
+    "doc": "Zavolá se při zavření (Esc, křížek, klik na pozadí)."
    },
    {
     "name": "title",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Nadpis okna."
    },
    {
     "name": "description",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Popis pod nadpisem."
    },
    {
     "name": "closeOnBackdrop",
@@ -1813,25 +1845,25 @@
     "name": "size",
     "type": "\"sm\" | \"md\" | \"lg\" | \"xl\"",
     "required": false,
-    "doc": ""
+    "doc": "Šířka okna."
    },
    {
     "name": "footer",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Patička (tlačítka)."
    },
    {
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    },
    {
     "name": "children",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Obsah okna."
    }
   ],
   "ModalProps": [
@@ -1839,25 +1871,25 @@
     "name": "open",
     "type": "boolean",
     "required": true,
-    "doc": ""
+    "doc": "Zda je okno otevřené."
    },
    {
     "name": "onClose",
     "type": "() => void",
     "required": true,
-    "doc": ""
+    "doc": "Zavolá se při zavření (Esc, křížek, klik na pozadí)."
    },
    {
     "name": "title",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Nadpis okna."
    },
    {
     "name": "description",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Popis pod nadpisem."
    },
    {
     "name": "closeOnBackdrop",
@@ -1869,25 +1901,25 @@
     "name": "size",
     "type": "\"sm\" | \"md\" | \"lg\" | \"xl\"",
     "required": false,
-    "doc": ""
+    "doc": "Šířka okna."
    },
    {
     "name": "footer",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Patička (tlačítka)."
    },
    {
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    },
    {
     "name": "children",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Obsah okna."
    }
   ],
   "AlertDialogProps": [
@@ -1895,31 +1927,31 @@
     "name": "open",
     "type": "boolean",
     "required": true,
-    "doc": ""
+    "doc": "Zda je dialog otevřený."
    },
    {
     "name": "onClose",
     "type": "() => void",
     "required": true,
-    "doc": ""
+    "doc": "Zavolá se při zavření (Zrušit, Esc)."
    },
    {
     "name": "title",
     "type": "ReactNode",
     "required": true,
-    "doc": ""
+    "doc": "Otázka."
    },
    {
     "name": "description",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Vysvětlení důsledků."
    },
    {
     "name": "variant",
     "type": "\"destructive\" | \"default\" | \"success\" | \"info\" | \"warning\" | \"error\"",
     "required": false,
-    "doc": ""
+    "doc": "Barva a ikona (`destructive` pro mazání)."
    },
    {
     "name": "icon",
@@ -1931,7 +1963,7 @@
     "name": "confirmLabel",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Text potvrzovacího tlačítka."
    },
    {
     "name": "cancelLabel",
@@ -1943,7 +1975,7 @@
     "name": "onConfirm",
     "type": "() => void",
     "required": false,
-    "doc": ""
+    "doc": "Zavolá se po potvrzení."
    },
    {
     "name": "dismissible",
@@ -1955,7 +1987,7 @@
     "name": "children",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní obsah pod popisem."
    }
   ],
   "MessageBoxOptions": [
@@ -1963,31 +1995,31 @@
     "name": "title",
     "type": "ReactNode",
     "required": true,
-    "doc": ""
+    "doc": "Nadpis."
    },
    {
     "name": "message",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Text zprávy."
    },
    {
     "name": "variant",
     "type": "\"destructive\" | \"default\" | \"success\" | \"info\" | \"warning\" | \"error\"",
     "required": false,
-    "doc": ""
+    "doc": "Barva a ikona."
    },
    {
     "name": "okLabel",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Text potvrzovacího tlačítka."
    },
    {
     "name": "cancelLabel",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Text tlačítka Zrušit (jen `confirm`)."
    }
   ],
   "SheetProps": [
@@ -1995,49 +2027,49 @@
     "name": "open",
     "type": "boolean",
     "required": true,
-    "doc": ""
+    "doc": "Zda je panel otevřený."
    },
    {
     "name": "onClose",
     "type": "() => void",
     "required": true,
-    "doc": ""
+    "doc": "Zavolá se při zavření."
    },
    {
     "name": "title",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Nadpis panelu."
    },
    {
     "name": "description",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Popis pod nadpisem."
    },
    {
     "name": "side",
     "type": "\"left\" | \"top\" | \"bottom\" | \"right\"",
     "required": false,
-    "doc": ""
+    "doc": "Ze které strany panel vyjede."
    },
    {
     "name": "footer",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Patička (tlačítka)."
    },
    {
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    },
    {
     "name": "children",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Obsah panelu."
    }
   ],
   "LightboxProps": [
@@ -2045,25 +2077,25 @@
     "name": "open",
     "type": "boolean",
     "required": true,
-    "doc": ""
+    "doc": "Zda je prohlížeč otevřený."
    },
    {
     "name": "onClose",
     "type": "() => void",
     "required": true,
-    "doc": ""
+    "doc": "Zavolá se při zavření."
    },
    {
     "name": "items",
     "type": "LightboxItem[]",
     "required": true,
-    "doc": ""
+    "doc": "Obrázky `{ src, alt?, caption? }`."
    },
    {
     "name": "initialIndex",
     "type": "number",
     "required": false,
-    "doc": ""
+    "doc": "Který obrázek se zobrazí první."
    }
   ],
   "LightboxItem": [
@@ -2071,19 +2103,19 @@
     "name": "src",
     "type": "string",
     "required": true,
-    "doc": ""
+    "doc": "Adresa obrázku."
    },
    {
     "name": "alt",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Alternativní text."
    },
    {
     "name": "caption",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Popisek pod obrázkem."
    }
   ],
   "TooltipProps": [
@@ -2091,25 +2123,25 @@
     "name": "content",
     "type": "ReactNode",
     "required": true,
-    "doc": ""
+    "doc": "Text nebo prvek v bublině."
    },
    {
     "name": "children",
     "type": "ReactNode",
     "required": true,
-    "doc": ""
+    "doc": "Prvek, ke kterému bublina patří."
    },
    {
     "name": "side",
     "type": "\"left\" | \"top\" | \"bottom\" | \"right\"",
     "required": false,
-    "doc": ""
+    "doc": "Strana bubliny."
    },
    {
     "name": "align",
     "type": "\"center\" | \"start\" | \"end\"",
     "required": false,
-    "doc": ""
+    "doc": "Zarovnání bubliny."
    },
    {
     "name": "delay",
@@ -2121,13 +2153,13 @@
     "name": "disabled",
     "type": "boolean",
     "required": false,
-    "doc": ""
+    "doc": "Bublinu nezobrazuje."
    },
    {
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    }
   ],
   "PopoverProps": [
@@ -2141,43 +2173,43 @@
     "name": "children",
     "type": "ReactNode",
     "required": true,
-    "doc": ""
+    "doc": "Obsah panelu."
    },
    {
     "name": "open",
     "type": "boolean",
     "required": false,
-    "doc": ""
+    "doc": "Řízený stav otevření."
    },
    {
     "name": "defaultOpen",
     "type": "boolean",
     "required": false,
-    "doc": ""
+    "doc": "Počáteční stav (neřízené použití)."
    },
    {
     "name": "onOpenChange",
     "type": "(open: boolean) => void",
     "required": false,
-    "doc": ""
+    "doc": "Dostane nový stav."
    },
    {
     "name": "side",
     "type": "\"left\" | \"top\" | \"bottom\" | \"right\"",
     "required": false,
-    "doc": ""
+    "doc": "Strana panelu."
    },
    {
     "name": "align",
     "type": "\"center\" | \"start\" | \"end\"",
     "required": false,
-    "doc": ""
+    "doc": "Zarovnání panelu."
    },
    {
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    },
    {
     "name": "anchorClassName",
@@ -2191,43 +2223,43 @@
     "name": "trigger",
     "type": "ReactNode",
     "required": true,
-    "doc": ""
+    "doc": "Prvek, na který se najíždí."
    },
    {
     "name": "children",
     "type": "ReactNode",
     "required": true,
-    "doc": ""
+    "doc": "Obsah karty."
    },
    {
     "name": "side",
     "type": "\"left\" | \"top\" | \"bottom\" | \"right\"",
     "required": false,
-    "doc": ""
+    "doc": "Strana karty."
    },
    {
     "name": "align",
     "type": "\"center\" | \"start\" | \"end\"",
     "required": false,
-    "doc": ""
+    "doc": "Zarovnání karty."
    },
    {
     "name": "openDelay",
     "type": "number",
     "required": false,
-    "doc": ""
+    "doc": "Zpoždění otevření (ms)."
    },
    {
     "name": "closeDelay",
     "type": "number",
     "required": false,
-    "doc": ""
+    "doc": "Zpoždění zavření (ms)."
    },
    {
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    }
   ],
   "DropdownProps": [
@@ -2235,31 +2267,31 @@
     "name": "trigger",
     "type": "ReactNode",
     "required": true,
-    "doc": ""
+    "doc": "Prvek, který menu otevírá."
    },
    {
     "name": "items",
     "type": "MenuItem[]",
     "required": true,
-    "doc": ""
+    "doc": "Položky menu."
    },
    {
     "name": "side",
     "type": "\"left\" | \"top\" | \"bottom\" | \"right\"",
     "required": false,
-    "doc": ""
+    "doc": "Strana menu."
    },
    {
     "name": "align",
     "type": "\"center\" | \"start\" | \"end\"",
     "required": false,
-    "doc": ""
+    "doc": "Zarovnání menu."
    },
    {
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    }
   ],
   "ContextMenuProps": [
@@ -2267,25 +2299,25 @@
     "name": "items",
     "type": "MenuItem[]",
     "required": true,
-    "doc": ""
+    "doc": "Položky menu."
    },
    {
     "name": "children",
     "type": "ReactNode",
     "required": true,
-    "doc": ""
+    "doc": "Oblast, na které menu funguje."
    },
    {
     "name": "disabled",
     "type": "boolean",
     "required": false,
-    "doc": ""
+    "doc": "Menu nezobrazuje."
    },
    {
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    }
   ],
   "MenuItem": [
@@ -2293,13 +2325,13 @@
     "name": "label",
     "type": "ReactNode",
     "required": true,
-    "doc": ""
+    "doc": "Text položky."
    },
    {
     "name": "icon",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Ikona před textem."
    },
    {
     "name": "shortcut",
@@ -2311,19 +2343,19 @@
     "name": "onSelect",
     "type": "() => void",
     "required": false,
-    "doc": ""
+    "doc": "Zavolá se po výběru."
    },
    {
     "name": "variant",
     "type": "\"destructive\" | \"default\"",
     "required": false,
-    "doc": ""
+    "doc": "`destructive` obarví položku červeně."
    },
    {
     "name": "disabled",
     "type": "boolean",
     "required": false,
-    "doc": ""
+    "doc": "Zakáže položku."
    },
    {
     "name": "separator",
@@ -2337,7 +2369,7 @@
     "name": "items",
     "type": "MenuItem[]",
     "required": true,
-    "doc": ""
+    "doc": "Položky menu."
    },
    {
     "name": "onClose",
@@ -2355,7 +2387,7 @@
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    }
   ],
   "NavbarProps": [
@@ -2369,13 +2401,13 @@
     "name": "brandHref",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Kam vede logo (výchozí `/`)."
    },
    {
     "name": "items",
     "type": "NavItem[]",
     "required": true,
-    "doc": ""
+    "doc": "Odkazy v menu."
    },
    {
     "name": "cta",
@@ -2399,7 +2431,7 @@
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    }
   ],
   "NavItem": [
@@ -2407,13 +2439,13 @@
     "name": "label",
     "type": "ReactNode",
     "required": true,
-    "doc": ""
+    "doc": "Text odkazu."
    },
    {
     "name": "href",
     "type": "string",
     "required": true,
-    "doc": ""
+    "doc": "Adresa."
    },
    {
     "name": "active",
@@ -2427,19 +2459,19 @@
     "name": "groups",
     "type": "SidebarGroup[]",
     "required": true,
-    "doc": ""
+    "doc": "Skupiny položek s nadpisy."
    },
    {
     "name": "header",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Logo nahoře."
    },
    {
     "name": "footer",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Obsah dole."
    },
    {
     "name": "collapsed",
@@ -2457,13 +2489,13 @@
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    },
    {
     "name": "aria-label",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Název navigace pro čtečky obrazovky."
    }
   ],
   "SidebarItem": [
@@ -2471,31 +2503,31 @@
     "name": "label",
     "type": "ReactNode",
     "required": true,
-    "doc": ""
+    "doc": "Text položky."
    },
    {
     "name": "icon",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Ikona."
    },
    {
     "name": "href",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Adresa (položka bude odkaz)."
    },
    {
     "name": "onClick",
     "type": "() => void",
     "required": false,
-    "doc": ""
+    "doc": "Zavolá se po kliknutí."
    },
    {
     "name": "active",
     "type": "boolean",
     "required": false,
-    "doc": ""
+    "doc": "Aktuální položka."
    },
    {
     "name": "badge",
@@ -2507,7 +2539,7 @@
     "name": "disabled",
     "type": "boolean",
     "required": false,
-    "doc": ""
+    "doc": "Zakáže položku."
    }
   ],
   "SidebarGroup": [
@@ -2515,13 +2547,13 @@
     "name": "title",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Nadpis skupiny."
    },
    {
     "name": "items",
     "type": "SidebarItem[]",
     "required": true,
-    "doc": ""
+    "doc": "Položky skupiny."
    }
   ],
   "MenubarProps": [
@@ -2529,13 +2561,13 @@
     "name": "menus",
     "type": "MenubarMenu[]",
     "required": true,
-    "doc": ""
+    "doc": "Nabídky v liště."
    },
    {
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    }
   ],
   "MenubarMenu": [
@@ -2543,13 +2575,13 @@
     "name": "label",
     "type": "string",
     "required": true,
-    "doc": ""
+    "doc": "Název nabídky (Soubor, Úpravy…)."
    },
    {
     "name": "items",
     "type": "MenuItem[]",
     "required": true,
-    "doc": ""
+    "doc": "Položky nabídky."
    }
   ],
   "TabsProps": [
@@ -2557,37 +2589,37 @@
     "name": "tabs",
     "type": "TabItem[]",
     "required": true,
-    "doc": ""
+    "doc": "Záložky s obsahem."
    },
    {
     "name": "value",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Aktivní záložka (řízený stav)."
    },
    {
     "name": "defaultValue",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Počáteční záložka (neřízené použití)."
    },
    {
     "name": "onChange",
     "type": "(value: string) => void",
     "required": false,
-    "doc": ""
+    "doc": "Dostane `value` zvolené záložky."
    },
    {
     "name": "variant",
     "type": "\"underline\" | \"pills\"",
     "required": false,
-    "doc": ""
+    "doc": "Podtržené, nebo pills."
    },
    {
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    }
   ],
   "TabItem": [
@@ -2601,25 +2633,25 @@
     "name": "label",
     "type": "ReactNode",
     "required": true,
-    "doc": ""
+    "doc": "Text záložky."
    },
    {
     "name": "content",
     "type": "ReactNode",
     "required": true,
-    "doc": ""
+    "doc": "Obsah záložky."
    },
    {
     "name": "icon",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Ikona před textem."
    },
    {
     "name": "disabled",
     "type": "boolean",
     "required": false,
-    "doc": ""
+    "doc": "Zakáže záložku."
    }
   ],
   "BreadcrumbProps": [
@@ -2627,19 +2659,19 @@
     "name": "items",
     "type": "BreadcrumbItem[]",
     "required": true,
-    "doc": ""
+    "doc": "Cesta od začátku k aktuální stránce."
    },
    {
     "name": "separator",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Oddělovač (výchozí šipka)."
    },
    {
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    }
   ],
   "BreadcrumbItem": [
@@ -2647,19 +2679,19 @@
     "name": "label",
     "type": "ReactNode",
     "required": true,
-    "doc": ""
+    "doc": "Text položky."
    },
    {
     "name": "href",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Adresa (poslední položka ji mít nemá)."
    },
    {
     "name": "icon",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Ikona před textem."
    }
   ],
   "PaginationProps": [
@@ -2667,19 +2699,19 @@
     "name": "currentPage",
     "type": "number",
     "required": true,
-    "doc": ""
+    "doc": "Aktuální stránka (od 1)."
    },
    {
     "name": "totalPages",
     "type": "number",
     "required": true,
-    "doc": ""
+    "doc": "Celkový počet stránek."
    },
    {
     "name": "onPageChange",
     "type": "(page: number) => void",
     "required": true,
-    "doc": ""
+    "doc": "Dostane číslo zvolené stránky."
    },
    {
     "name": "siblingCount",
@@ -2691,7 +2723,7 @@
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    }
   ],
   "StepperProps": [
@@ -2699,7 +2731,7 @@
     "name": "steps",
     "type": "StepperStep[]",
     "required": true,
-    "doc": ""
+    "doc": "Kroky – text, nebo `{ label, description }`."
    },
    {
     "name": "currentStep",
@@ -2717,7 +2749,7 @@
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    }
   ],
   "AccordionProps": [
@@ -2725,7 +2757,7 @@
     "name": "items",
     "type": "AccordionItem[]",
     "required": true,
-    "doc": ""
+    "doc": "Sekce."
    },
    {
     "name": "multiple",
@@ -2737,7 +2769,7 @@
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    }
   ],
   "AccordionItem": [
@@ -2745,25 +2777,25 @@
     "name": "title",
     "type": "ReactNode",
     "required": true,
-    "doc": ""
+    "doc": "Nadpis sekce."
    },
    {
     "name": "content",
     "type": "ReactNode",
     "required": true,
-    "doc": ""
+    "doc": "Obsah sekce."
    },
    {
     "name": "defaultOpen",
     "type": "boolean",
     "required": false,
-    "doc": ""
+    "doc": "Sekce je na začátku otevřená."
    },
    {
     "name": "disabled",
     "type": "boolean",
     "required": false,
-    "doc": ""
+    "doc": "Zakáže sekci."
    }
   ],
   "CollapsibleProps": [
@@ -2771,37 +2803,37 @@
     "name": "trigger",
     "type": "ReactNode",
     "required": true,
-    "doc": ""
+    "doc": "Spouštěč – klik rozbalí obsah."
    },
    {
     "name": "children",
     "type": "ReactNode",
     "required": true,
-    "doc": ""
+    "doc": "Rozbalovaný obsah."
    },
    {
     "name": "open",
     "type": "boolean",
     "required": false,
-    "doc": ""
+    "doc": "Řízený stav."
    },
    {
     "name": "defaultOpen",
     "type": "boolean",
     "required": false,
-    "doc": ""
+    "doc": "Počáteční stav."
    },
    {
     "name": "onOpenChange",
     "type": "(open: boolean) => void",
     "required": false,
-    "doc": ""
+    "doc": "Dostane nový stav."
    },
    {
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    }
   ],
   "ScrollProgressProps": [
@@ -2809,7 +2841,7 @@
     "name": "position",
     "type": "\"top\" | \"bottom\"",
     "required": false,
-    "doc": ""
+    "doc": "Nahoře, nebo dole."
    },
    {
     "name": "height",
@@ -2821,7 +2853,7 @@
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    }
   ],
   "SearchBarProps": [
@@ -2829,13 +2861,13 @@
     "name": "value",
     "type": "string",
     "required": true,
-    "doc": ""
+    "doc": "Zadaný dotaz."
    },
    {
     "name": "onChange",
     "type": "(value: string) => void",
     "required": true,
-    "doc": ""
+    "doc": "Dostane dotaz po každé změně."
    },
    {
     "name": "clearLabel",
@@ -2847,7 +2879,7 @@
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    }
   ],
   "SearchAutocompleteProps": [
@@ -2855,19 +2887,19 @@
     "name": "items",
     "type": "AutocompleteItem[]",
     "required": true,
-    "doc": ""
+    "doc": "Prohledávané položky."
    },
    {
     "name": "onSelect",
     "type": "(id: string, item: AutocompleteItem) => void",
     "required": true,
-    "doc": ""
+    "doc": "Dostane `id` a celou vybranou položku."
    },
    {
     "name": "placeholder",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Text v prázdném poli."
    },
    {
     "name": "shortcut",
@@ -2879,7 +2911,7 @@
     "name": "emptyLabel",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Text, když nic nevyhovuje."
    },
    {
     "name": "limit",
@@ -2891,7 +2923,7 @@
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    }
   ],
   "AutocompleteItem": [
@@ -2899,19 +2931,19 @@
     "name": "id",
     "type": "string",
     "required": true,
-    "doc": ""
+    "doc": "Jedinečné `id`."
    },
    {
     "name": "label",
     "type": "string",
     "required": true,
-    "doc": ""
+    "doc": "Zobrazený text."
    },
    {
     "name": "category",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Skupina, do které se položka zařadí."
    },
    {
     "name": "keywords",
@@ -2925,7 +2957,7 @@
     "name": "texts",
     "type": "Partial<CookieBannerTexts>",
     "required": false,
-    "doc": ""
+    "doc": "Přepíše texty lišty."
    },
    {
     "name": "policyHref",
@@ -2949,13 +2981,13 @@
     "name": "onAccept",
     "type": "() => void",
     "required": false,
-    "doc": ""
+    "doc": "Zavolá se po „Povolit vše“."
    },
    {
     "name": "onReject",
     "type": "() => void",
     "required": false,
-    "doc": ""
+    "doc": "Zavolá se po „Jen nezbytné“."
    },
    {
     "name": "onChange",
@@ -2985,7 +3017,7 @@
     "name": "onClose",
     "type": "() => void",
     "required": false,
-    "doc": ""
+    "doc": "Zavolá se po zavření."
    },
    {
     "name": "fixed",
@@ -2997,7 +3029,7 @@
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    }
   ],
   "CookieBannerTexts": [
@@ -3005,31 +3037,31 @@
     "name": "title",
     "type": "ReactNode",
     "required": true,
-    "doc": ""
+    "doc": "Nadpis."
    },
    {
     "name": "body",
     "type": "ReactNode",
     "required": true,
-    "doc": ""
+    "doc": "Vysvětlení."
    },
    {
     "name": "more",
     "type": "ReactNode",
     "required": true,
-    "doc": ""
+    "doc": "Text odkazu na zásady."
    },
    {
     "name": "necessary",
     "type": "ReactNode",
     "required": true,
-    "doc": ""
+    "doc": "Tlačítko „Jen nezbytné“."
    },
    {
     "name": "all",
     "type": "ReactNode",
     "required": true,
-    "doc": ""
+    "doc": "Tlačítko „Povolit vše“."
    }
   ],
   "FilterBarProps": [
@@ -3043,7 +3075,7 @@
     "name": "labels",
     "type": "Partial<FilterBarLabels>",
     "required": false,
-    "doc": ""
+    "doc": "Přepíše texty lišty."
    },
    {
     "name": "sticky",
@@ -3061,7 +3093,7 @@
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    }
   ],
   "FilterBarLabels": [
@@ -3069,31 +3101,31 @@
     "name": "search",
     "type": "string",
     "required": true,
-    "doc": ""
+    "doc": "Placeholder hledání."
    },
    {
     "name": "filters",
     "type": "string",
     "required": true,
-    "doc": ""
+    "doc": "Text tlačítka Filtry (mobil)."
    },
    {
     "name": "sort",
     "type": "string",
     "required": true,
-    "doc": ""
+    "doc": "Popisek řazení."
    },
    {
     "name": "active",
     "type": "string",
     "required": true,
-    "doc": ""
+    "doc": "Popisek aktivních filtrů."
    },
    {
     "name": "clear",
     "type": "string",
     "required": true,
-    "doc": ""
+    "doc": "Text „Vymazat vše“."
    },
    {
     "name": "results",
@@ -3105,7 +3137,7 @@
     "name": "empty",
     "type": "ReactNode",
     "required": true,
-    "doc": ""
+    "doc": "Hláška, když nic nevyhovuje."
    }
   ],
   "FilterPillsProps": [
@@ -3113,31 +3145,31 @@
     "name": "options",
     "type": "FilterPillOption[]",
     "required": true,
-    "doc": ""
+    "doc": "Možnosti jako pilulky."
    },
    {
     "name": "value",
     "type": "string",
     "required": true,
-    "doc": ""
+    "doc": "Vybraná hodnota."
    },
    {
     "name": "onChange",
     "type": "(value: string) => void",
     "required": true,
-    "doc": ""
+    "doc": "Dostane hodnotu vybrané pilulky."
    },
    {
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    },
    {
     "name": "aria-label",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Název skupiny pro čtečky obrazovky."
    }
   ],
   "FilterPillOption": [
@@ -3145,19 +3177,19 @@
     "name": "value",
     "type": "string",
     "required": true,
-    "doc": ""
+    "doc": "Hodnota, kterou `onChange` vrátí."
    },
    {
     "name": "label",
     "type": "string",
     "required": true,
-    "doc": ""
+    "doc": "Text pilulky."
    },
    {
     "name": "count",
     "type": "number",
     "required": false,
-    "doc": ""
+    "doc": "Počet za textem."
    }
   ],
   "FilterDropdownProps": [
@@ -3165,67 +3197,67 @@
     "name": "label",
     "type": "string",
     "required": true,
-    "doc": ""
+    "doc": "Název filtru před hodnotou."
    },
    {
     "name": "icon",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Ikona před názvem."
    },
    {
     "name": "options",
     "type": "FilterOption[]",
     "required": true,
-    "doc": ""
+    "doc": "Možnosti."
    },
    {
     "name": "placeholder",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Text, když není nic vybráno."
    },
    {
     "name": "selectAllLabel",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Text „Vybrat vše“."
    },
    {
     "name": "clearLabel",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Text „Zrušit výběr“."
    },
    {
     "name": "selectedLabel",
     "type": "(count: number) => string",
     "required": false,
-    "doc": ""
+    "doc": "Funkce pro text „N vybráno“."
    },
    {
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    },
    {
     "name": "multiple",
     "type": "boolean",
     "required": false,
-    "doc": ""
+    "doc": "Výběr více hodnot (`value` je pak pole)."
    },
    {
     "name": "value",
     "type": "string | string[]",
     "required": true,
-    "doc": ""
+    "doc": "Vybraná hodnota / hodnoty."
    },
    {
     "name": "onChange",
     "type": "(value: string) => void | (value: string[]) => void",
     "required": true,
-    "doc": ""
+    "doc": "Dostane novou hodnotu / pole hodnot."
    }
   ],
   "FilterOption": [
@@ -3233,25 +3265,25 @@
     "name": "value",
     "type": "string",
     "required": true,
-    "doc": ""
+    "doc": "Hodnota, kterou `onChange` vrátí."
    },
    {
     "name": "label",
     "type": "string",
     "required": true,
-    "doc": ""
+    "doc": "Text možnosti."
    },
    {
     "name": "count",
     "type": "number",
     "required": false,
-    "doc": ""
+    "doc": "Počet za textem."
    },
    {
     "name": "icon",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Ikona před textem."
    },
    {
     "name": "dotClass",
@@ -3265,7 +3297,7 @@
     "name": "items",
     "type": "T[]",
     "required": true,
-    "doc": ""
+    "doc": "Všechna data."
    },
    {
     "name": "searchText",
@@ -3277,13 +3309,13 @@
     "name": "filters",
     "type": "FilterDef<T>[]",
     "required": false,
-    "doc": ""
+    "doc": "Definice filtrů (definuj mimo komponentu, nebo v `useMemo`)."
    },
    {
     "name": "sorts",
     "type": "SortDef<T>[]",
     "required": false,
-    "doc": ""
+    "doc": "Možnosti řazení."
    },
    {
     "name": "defaultSort",
@@ -3295,13 +3327,13 @@
     "name": "initialQuery",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Počáteční hledaný text."
    },
    {
     "name": "initialValues",
     "type": "Record<string, string[]>",
     "required": false,
-    "doc": ""
+    "doc": "Počáteční hodnoty filtrů `{ klíč: [hodnoty] }`."
    }
   ],
   "FilterDef": [
@@ -3321,7 +3353,7 @@
     "name": "icon",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Ikona před názvem filtru."
    },
    {
     "name": "multiple",
@@ -3359,19 +3391,19 @@
     "name": "value",
     "type": "string",
     "required": true,
-    "doc": ""
+    "doc": "Identifikátor řazení."
    },
    {
     "name": "label",
     "type": "string",
     "required": true,
-    "doc": ""
+    "doc": "Text v nabídce."
    },
    {
     "name": "compare",
     "type": "(a: T, b: T) => number",
     "required": true,
-    "doc": ""
+    "doc": "Porovnávací funkce `(a, b) => číslo`."
    }
   ],
   "FilterState": [
@@ -3379,43 +3411,43 @@
     "name": "query",
     "type": "string",
     "required": true,
-    "doc": ""
+    "doc": "Hledaný text."
    },
    {
     "name": "setQuery",
     "type": "(q: string) => void",
     "required": true,
-    "doc": ""
+    "doc": "Nastaví hledaný text."
    },
    {
     "name": "values",
     "type": "Record<string, string[]>",
     "required": true,
-    "doc": ""
+    "doc": "Vybrané hodnoty filtrů."
    },
    {
     "name": "setValue",
     "type": "(key: string, value: string[]) => void",
     "required": true,
-    "doc": ""
+    "doc": "Nastaví hodnoty jednoho filtru."
    },
    {
     "name": "sort",
     "type": "string",
     "required": true,
-    "doc": ""
+    "doc": "Aktivní řazení."
    },
    {
     "name": "setSort",
     "type": "(sort: string) => void",
     "required": true,
-    "doc": ""
+    "doc": "Nastaví řazení."
    },
    {
     "name": "reset",
     "type": "() => void",
     "required": true,
-    "doc": ""
+    "doc": "Vymaže hledání i filtry."
    },
    {
     "name": "filtered",
@@ -3427,7 +3459,7 @@
     "name": "total",
     "type": "number",
     "required": true,
-    "doc": ""
+    "doc": "Počet všech položek."
    },
    {
     "name": "activeCount",
@@ -3439,25 +3471,25 @@
     "name": "filters",
     "type": "(FilterDef<T> & { options: FilterOption[]; })[]",
     "required": true,
-    "doc": ""
+    "doc": "Filtry s dopočítanými možnostmi."
    },
    {
     "name": "sorts",
     "type": "SortDef<T>[]",
     "required": true,
-    "doc": ""
+    "doc": "Možnosti řazení."
    },
    {
     "name": "chips",
     "type": "FilterChipModel[]",
     "required": true,
-    "doc": ""
+    "doc": "Aktivní filtry jako chipy."
    },
    {
     "name": "hasSearch",
     "type": "boolean",
     "required": true,
-    "doc": ""
+    "doc": "Zda je zadán hledaný text."
    }
   ],
   "FilterChipModel": [
@@ -3465,19 +3497,19 @@
     "name": "id",
     "type": "string",
     "required": true,
-    "doc": ""
+    "doc": "Jedinečné `id`."
    },
    {
     "name": "label",
     "type": "string",
     "required": true,
-    "doc": ""
+    "doc": "Text chipu."
    },
    {
     "name": "onRemove",
     "type": "() => void",
     "required": true,
-    "doc": ""
+    "doc": "Zruší tento filtr."
    }
   ],
   "TableProps": [
@@ -3485,49 +3517,49 @@
     "name": "columns",
     "type": "TableColumn<T>[]",
     "required": true,
-    "doc": ""
+    "doc": "Sloupce."
    },
    {
     "name": "data",
     "type": "T[]",
     "required": true,
-    "doc": ""
+    "doc": "Řádky."
    },
    {
     "name": "searchable",
     "type": "boolean",
     "required": false,
-    "doc": ""
+    "doc": "Zobrazí pole pro hledání."
    },
    {
     "name": "searchPlaceholder",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Text v poli hledání."
    },
    {
     "name": "onRowClick",
     "type": "(row: T) => void",
     "required": false,
-    "doc": ""
+    "doc": "Dostane kliknutý řádek."
    },
    {
     "name": "rowKey",
     "type": "(row: T, index: number) => string | number",
     "required": false,
-    "doc": ""
+    "doc": "Funkce vracející jedinečný klíč řádku (výchozí index)."
    },
    {
     "name": "emptyLabel",
     "type": "ReactNode",
     "required": false,
-    "doc": ""
+    "doc": "Text, když nic nevyhovuje."
    },
    {
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    }
   ],
   "TableColumn": [
@@ -3535,19 +3567,19 @@
     "name": "key",
     "type": "keyof T & string",
     "required": true,
-    "doc": ""
+    "doc": "Vlastnost řádku, kterou sloupec zobrazuje."
    },
    {
     "name": "label",
     "type": "ReactNode",
     "required": true,
-    "doc": ""
+    "doc": "Hlavička sloupce."
    },
    {
     "name": "align",
     "type": "\"center\" | \"left\" | \"right\"",
     "required": false,
-    "doc": ""
+    "doc": "Zarovnání textu."
    },
    {
     "name": "truncate",
@@ -3565,7 +3597,7 @@
     "name": "sortable",
     "type": "boolean",
     "required": false,
-    "doc": ""
+    "doc": "Povolí řazení kliknutím na hlavičku."
    },
    {
     "name": "render",
@@ -3576,22 +3608,46 @@
   ],
   "CalendarProps": [
    {
+    "name": "mode",
+    "type": "\"single\" | \"range\"",
+    "required": false,
+    "doc": "`single` = jedno datum (výchozí), `range` = výběr od–do s vyznačeným pásem mezi dny."
+   },
+   {
     "name": "selected",
     "type": "null | Date",
     "required": false,
-    "doc": ""
+    "doc": "Vybrané datum (`mode=\"single\"`)."
    },
    {
     "name": "onSelect",
     "type": "(date: Date) => void",
     "required": false,
-    "doc": ""
+    "doc": "Dostane kliknutý den (`mode=\"single\"`)."
+   },
+   {
+    "name": "range",
+    "type": "DateRange",
+    "required": false,
+    "doc": "Vybraný rozsah (`mode=\"range\"`)."
+   },
+   {
+    "name": "onRangeChange",
+    "type": "(range: DateRange) => void",
+    "required": false,
+    "doc": "První klik nastaví začátek, druhý konec (opačné pořadí se samo prohodí)."
+   },
+   {
+    "name": "months",
+    "type": "2 | 1",
+    "required": false,
+    "doc": "Kolik měsíců vedle sebe (na úzkém displeji se druhý schová)."
    },
    {
     "name": "locale",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Locale pro názvy měsíců (výchozí `cs-CZ`)."
    },
    {
     "name": "weekdayNames",
@@ -3615,7 +3671,163 @@
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
+   }
+  ],
+  "DateRange": [
+   {
+    "name": "from",
+    "type": "null | Date",
+    "required": true,
+    "doc": "Začátek rozsahu (nebo `null`)."
+   },
+   {
+    "name": "to",
+    "type": "null | Date",
+    "required": true,
+    "doc": "Konec rozsahu (nebo `null`)."
+   }
+  ],
+  "DatePickerProps": [
+   {
+    "name": "disabled",
+    "type": "boolean",
+    "required": false,
+    "doc": "Zakáže výběr."
+   },
+   {
+    "name": "name",
+    "type": "string",
+    "required": false,
+    "doc": "Atribut `name` pole."
+   },
+   {
+    "name": "value",
+    "type": "null | string",
+    "required": false,
+    "doc": "ISO řetězec (např. `2026-09-30T14:30:00.000Z`). Bez hodnoty se použije aktuální čas."
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
+   },
+   {
+    "name": "id",
+    "type": "string",
+    "required": false,
+    "doc": "Atribut `id` pole."
+   },
+   {
+    "name": "onChange",
+    "type": "(iso: string) => void",
+    "required": true,
+    "doc": "Dostane ISO řetězec (`toISOString()`)."
+   },
+   {
+    "name": "placeholder",
+    "type": "string",
+    "required": false,
+    "doc": "Text v prázdném poli."
+   },
+   {
+    "name": "locale",
+    "type": "string",
+    "required": false,
+    "doc": "Locale pro zobrazení (výchozí `cs-CZ`)."
+   },
+   {
+    "name": "monthNames",
+    "type": "string[]",
+    "required": false,
+    "doc": "Názvy měsíců v kolečku měsíc/rok (výchozí česky)."
+   },
+   {
+    "name": "weekdayNames",
+    "type": "string[]",
+    "required": false,
+    "doc": "Zkratky dnů od pondělí."
+   },
+   {
+    "name": "yearRange",
+    "type": "number",
+    "required": false,
+    "doc": "Kolik let před a po aktuálním roce nabídnout (výchozí 5)."
+   }
+  ],
+  "DateRangePickerProps": [
+   {
+    "name": "value",
+    "type": "DateRange",
+    "required": false,
+    "doc": "Vybraný rozsah `{ from, to }`."
+   },
+   {
+    "name": "onChange",
+    "type": "(range: DateRange) => void",
+    "required": true,
+    "doc": "Dostane nový rozsah (po prvním kliku `to` je `null`)."
+   },
+   {
+    "name": "locale",
+    "type": "string",
+    "required": false,
+    "doc": "Locale pro formátování (výchozí `cs-CZ`)."
+   },
+   {
+    "name": "placeholder",
+    "type": "string",
+    "required": false,
+    "doc": "Text v prázdném poli."
+   },
+   {
+    "name": "separator",
+    "type": "string",
+    "required": false,
+    "doc": "Oddělovač mezi daty v poli (výchozí „ – “)."
+   },
+   {
+    "name": "clearLabel",
+    "type": "string",
+    "required": false,
+    "doc": "Text tlačítka pro smazání výběru."
+   },
+   {
+    "name": "applyLabel",
+    "type": "string",
+    "required": false,
+    "doc": "Text tlačítka pro potvrzení."
+   },
+   {
+    "name": "min",
+    "type": "Date",
+    "required": false,
+    "doc": "Dny před tímto datem nejdou vybrat."
+   },
+   {
+    "name": "max",
+    "type": "Date",
+    "required": false,
+    "doc": "Dny po tomto datu nejdou vybrat."
+   },
+   {
+    "name": "disabled",
+    "type": "boolean",
+    "required": false,
+    "doc": "Zakáže výběr."
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
+   },
+   {
+    "name": "id",
+    "type": "string",
+    "required": false,
+    "doc": "Atribut `id` prvku (pro propojení s `<label htmlFor>`)."
    }
   ],
   "CarouselProps": [
@@ -3623,7 +3835,7 @@
     "name": "slides",
     "type": "ReactNode[]",
     "required": true,
-    "doc": ""
+    "doc": "Pole snímků."
    },
    {
     "name": "loop",
@@ -3641,19 +3853,19 @@
     "name": "showArrows",
     "type": "boolean",
     "required": false,
-    "doc": ""
+    "doc": "Zobrazí šipky."
    },
    {
     "name": "showDots",
     "type": "boolean",
     "required": false,
-    "doc": ""
+    "doc": "Zobrazí tečky."
    },
    {
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    }
   ],
   "ResizableProps": [
@@ -3661,19 +3873,19 @@
     "name": "firstPanel",
     "type": "ReactNode",
     "required": true,
-    "doc": ""
+    "doc": "Obsah prvního panelu."
    },
    {
     "name": "secondPanel",
     "type": "ReactNode",
     "required": true,
-    "doc": ""
+    "doc": "Obsah druhého panelu."
    },
    {
     "name": "direction",
     "type": "\"horizontal\" | \"vertical\"",
     "required": false,
-    "doc": ""
+    "doc": "Vedle sebe, nebo pod sebou."
    },
    {
     "name": "defaultSize",
@@ -3685,27 +3897,27 @@
     "name": "minSize",
     "type": "number",
     "required": false,
-    "doc": ""
+    "doc": "Nejmenší velikost panelu v %."
    },
    {
     "name": "maxSize",
     "type": "number",
     "required": false,
-    "doc": ""
+    "doc": "Největší velikost panelu v %."
    },
    {
     "name": "className",
     "type": "string",
     "required": false,
-    "doc": ""
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
    }
   ],
   "ScrollAreaProps": [
    {
     "name": "maxHeight",
-    "type": "string | number | string & {}",
+    "type": "string | number",
     "required": false,
-    "doc": ""
+    "doc": "Nejvyšší výška, nad kterou se začne scrollovat."
    },
    {
     "name": "both",
@@ -3719,7 +3931,7 @@
     "name": "icon",
     "type": "ReactNode",
     "required": true,
-    "doc": ""
+    "doc": "Ikona tlačítka."
    },
    {
     "name": "label",
@@ -3731,13 +3943,13 @@
     "name": "variant",
     "type": "\"primary\" | \"secondary\"",
     "required": false,
-    "doc": ""
+    "doc": "Barva tlačítka."
    },
    {
     "name": "position",
     "type": "\"bottom-right\" | \"bottom-center\" | \"bottom-left\"",
     "required": false,
-    "doc": ""
+    "doc": "Roh obrazovky (jen s `fixed`)."
    },
    {
     "name": "fixed",
@@ -3749,7 +3961,7 @@
     "name": "aria-label",
     "type": "string",
     "required": false,
-    "doc": "Defines a string value that labels the current element."
+    "doc": "Přístupný název pro čtečky obrazovky (když není vidět text)."
    }
   ],
   "UseScrollRevealOptions": [
@@ -3777,19 +3989,19 @@
     "name": "open",
     "type": "boolean",
     "required": true,
-    "doc": ""
+    "doc": "Zda je panel zobrazený."
    },
    {
     "name": "side",
     "type": "\"left\" | \"top\" | \"bottom\" | \"right\"",
     "required": false,
-    "doc": ""
+    "doc": "Preferovaná strana (překlopí se, když se nevejde)."
    },
    {
     "name": "align",
     "type": "\"center\" | \"start\" | \"end\"",
     "required": false,
-    "doc": ""
+    "doc": "Zarovnání vůči kotvě."
    },
    {
     "name": "offset",
@@ -3813,25 +4025,2699 @@
     "name": "panelRef",
     "type": "RefObject<HTMLDivElement | null>",
     "required": false,
-    "doc": ""
+    "doc": "Ref na vykreslený panel (pro `useClickOutside`)."
    },
    {
     "name": "children",
     "type": "ReactNode",
     "required": true,
-    "doc": ""
+    "doc": "Obsah panelu."
    }
   ],
   "CbbProviderProps": [
    {
     "name": "linkComponent",
-    "type": "\"symbol\" | \"object\" | \"form\" | \"slot\" | \"style\" | \"title\" | \"link\" | \"a\" | \"abbr\" | \"address\" | \"area\" | \"article\" | \"aside\" | \"audio\" | \"b\" | \"base\" | \"bdi\" | \"bdo\" | \"big\" | \"blockquote\" | \"body\" | \"br\" | \"button\" | \"canvas\" | \"caption\" | \"center\" | \"cite\" | \"code\" | \"col\" | \"colgroup\" | \"data\" | \"datalist\" | \"dd\" | \"del\" | \"details\" | \"dfn\" | \"dialog\" | \"div\" | \"dl\" | \"dt\" | \"em\" | \"embed\" | \"fieldset\" | \"figcaption\" | \"figure\" | \"footer\" | \"h1\" | \"h2\" | \"h3\" | \"h4\" | \"h5\" | \"h6\" | \"head\" | \"header\" | \"hgroup\" | \"hr\" | \"html\" | \"i\" | \"iframe\" | \"img\" | \"input\" | \"ins\" | \"kbd\" | \"keygen\" | \"label\" | \"legend\" | \"li\" | \"main\" | \"map\" | \"mark\" | \"menu\" | \"menuitem\" | \"meta\" | \"meter\" | \"nav\" | \"noindex\" | \"noscript\" | \"ol\" | \"optgroup\" | \"option\" | \"output\" | \"p\" | \"param\" | \"picture\" | \"pre\" | \"progress\" | \"q\" | \"rp\" | \"rt\" | \"ruby\" | \"s\" | \"samp\" | \"search\" | \"script\" | \"section\" | \"select\" | \"small\" | \"source\" | \"span\" | \"strong\" | \"sub\" | \"summary\" | \"sup\" | \"table\" | \"template\" | \"tbody\" | \"td\" | \"textarea\" | \"tfoot\" | \"th\" | \"thead\" | \"time\" | \"tr\" | \"track\" | \"u\" | \"ul\" | \"var\" | \"video\" | \"wbr\" | \"webview\" | \"svg\" | \"animate\" | \"animateMotion\" | \"animateTransform\" | \"circle\" | \"clipPath\" | \"defs\" | \"desc\" | \"ellipse\" | \"feBlend\" | \"feColorMatrix\" | \"feComponentTransfer\" | \"feComposite\" | \"feConvolveMatrix\" | \"feDiffuseLighting\" | \"feDisplacementMap\" | \"feDistantLight\" | \"feDropShadow\" | \"feFlood\" | \"feFuncA\" | \"feFuncB\" | \"feFuncG\" | \"feFuncR\" | \"feGaussianBlur\" | \"feImage\" | \"feMerge\" | \"feMergeNode\" | \"feMorphology\" | \"feOffset\" | \"fePointLight\" | \"feSpecularLighting\" | \"feSpotLight\" | \"feTile\" | \"feTurbulence\" | \"filter\" | \"foreignObject\" | \"g\" | \"image\" | \"line\" | \"linearGradient\" | \"marker\" | \"mask\" | \"metadata\" | \"mpath\" | \"path\" | \"pattern\" | \"polygon\" | \"polyline\" | \"radialGradient\" | \"rect\" | \"set\" | \"stop\" | \"switch\" | \"text\" | \"textPath\" | \"tspan\" | \"use\" | \"view\" | ComponentClass<any, any> | FunctionComponent<any>",
+    "type": "ElementType",
     "required": false,
     "doc": "Komponenta pro interní odkazy – v Next.js předej `next/link`,\nv React Routeru `Link` (pozor, ten chce `to` místo `href`, tam použij wrapper).\nVýchozí je obyčejné `<a>`."
    },
    {
     "name": "children",
     "type": "ReactNode",
+    "required": true,
+    "doc": "Aplikace."
+   }
+  ],
+  "FlipCardProps": [
+   {
+    "name": "front",
+    "type": "ReactNode",
+    "required": true,
+    "doc": "Přední strana karty."
+   },
+   {
+    "name": "back",
+    "type": "ReactNode",
+    "required": true,
+    "doc": "Zadní strana karty."
+   },
+   {
+    "name": "trigger",
+    "type": "\"click\" | \"hover\"",
+    "required": false,
+    "doc": "`click` otáčí po kliknutí / Enter / mezerníku, `hover` po najetí myší nebo při focusu."
+   },
+   {
+    "name": "direction",
+    "type": "\"horizontal\" | \"vertical\"",
+    "required": false,
+    "doc": "Osa otočení: kolem svislé osy (`horizontal`), nebo vodorovné (`vertical`)."
+   },
+   {
+    "name": "flipped",
+    "type": "boolean",
+    "required": false,
+    "doc": "Řízený stav – `true` ukazuje zadní stranu."
+   },
+   {
+    "name": "onFlipChange",
+    "type": "(flipped: boolean) => void",
+    "required": false,
+    "doc": "Zavolá se po každém otočení kliknutím, dostane nový stav."
+   },
+   {
+    "name": "height",
+    "type": "string | number",
+    "required": false,
+    "doc": "Výška karty (číslo = px). Obě strany se musí na tuto výšku vejít."
+   }
+  ],
+  "TiltCardProps": [
+   {
+    "name": "mode",
+    "type": "\"card\" | \"layers\"",
+    "required": false,
+    "doc": "Co se hýbe: `card` = celá karta se 3D naklání (vrstvy vystupují dopředu),\n`layers` = karta zůstane rovná a hýbou se jen jednotlivé vrstvy (`TiltLayer`) jako paralaxa."
+   },
+   {
+    "name": "maxTilt",
+    "type": "number",
+    "required": false,
+    "doc": "Maximální náklon ve stupních (na každou stranu). Platí pro `mode=\"card\"`."
+   },
+   {
+    "name": "glare",
+    "type": "boolean",
+    "required": false,
+    "doc": "Odlesk, který sleduje kurzor."
+   },
+   {
+    "name": "scale",
+    "type": "number",
+    "required": false,
+    "doc": "Zvětšení karty při najetí (1 = beze změny). Platí pro `mode=\"card\"`."
+   },
+   {
+    "name": "disabled",
+    "type": "boolean",
+    "required": false,
+    "doc": "Vypne pohyb – karta zůstane rovná."
+   }
+  ],
+  "TiltLayerProps": [
+   {
+    "name": "depth",
+    "type": "number",
+    "required": false,
+    "doc": "Hloubka vrstvy v px. V režimu `card` o tolik vystoupí z karty, v režimu `layers`\nurčuje, jak moc se vrstva posouvá za kurzorem (větší = výraznější paralaxa). Záporná hodnota jde dozadu."
+   },
+   {
+    "name": "children",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Obsah komponenty."
+   }
+  ],
+  "BeforeAfterProps": [
+   {
+    "name": "before",
+    "type": "ReactNode",
+    "required": true,
+    "doc": "Obsah vlevo od lišty (stav „před“) – obrázek, graf, cokoli. Obrázky se roztáhnou na celou plochu."
+   },
+   {
+    "name": "after",
+    "type": "ReactNode",
+    "required": true,
+    "doc": "Obsah vpravo od lišty (stav „po“)."
+   },
+   {
+    "name": "initial",
+    "type": "number",
+    "required": false,
+    "doc": "Počáteční poloha lišty v % (0–100), neřízené použití."
+   },
+   {
+    "name": "value",
+    "type": "number",
+    "required": false,
+    "doc": "Řízená poloha lišty v %."
+   },
+   {
+    "name": "onChange",
+    "type": "(value: number) => void",
+    "required": false,
+    "doc": "Zavolá se při posunu lišty, dostane polohu v %."
+   },
+   {
+    "name": "beforeLabel",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Popisek levé strany."
+   },
+   {
+    "name": "afterLabel",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Popisek pravé strany."
+   },
+   {
+    "name": "hideLabels",
+    "type": "boolean",
+    "required": false,
+    "doc": "Skryje oba popisky."
+   },
+   {
+    "name": "height",
+    "type": "string | number",
+    "required": false,
+    "doc": "Výška (číslo = px). Šířku určuje rodič."
+   },
+   {
+    "name": "aria-label",
+    "type": "string",
+    "required": false,
+    "doc": "Přístupný název posuvníku pro čtečky obrazovky."
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
+   }
+  ],
+  "FolderProps": [
+   {
+    "name": "label",
+    "type": "ReactNode",
+    "required": true,
+    "doc": "Název složky na přední straně."
+   },
+   {
+    "name": "items",
+    "type": "FolderItem[]",
+    "required": true,
+    "doc": "Položky složky. Jako listy se zobrazí prvních `maxVisible`."
+   },
+   {
+    "name": "open",
+    "type": "boolean",
+    "required": false,
+    "doc": "Řízený stav otevření."
+   },
+   {
+    "name": "defaultOpen",
+    "type": "boolean",
+    "required": false,
+    "doc": "Počáteční stav (neřízené použití)."
+   },
+   {
+    "name": "onOpenChange",
+    "type": "(open: boolean) => void",
+    "required": false,
+    "doc": "Zavolá se při otevření / zavření."
+   },
+   {
+    "name": "variant",
+    "type": "\"stack\" | \"spread\"",
+    "required": false,
+    "doc": "Způsob otevření: `stack` = kompaktní, listy se vysunou nahoru jako malý vějíř,\n`spread` = větší složka, listy se roztáhnou vedle sebe jako velké karty."
+   },
+   {
+    "name": "color",
+    "type": "string",
+    "required": false,
+    "doc": "Barva složky (CSS barva), výchozí je akcentová žlutá."
+   },
+   {
+    "name": "maxVisible",
+    "type": "number",
+    "required": false,
+    "doc": "Kolik listů se ukáže po otevření (1–4)."
+   },
+   {
+    "name": "countLabel",
+    "type": "(count: number) => ReactNode",
+    "required": false,
+    "doc": "Text pod názvem složky; dostane počet položek. Výchozí „N položek“."
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
+   }
+  ],
+  "FolderItem": [
+   {
+    "name": "id",
+    "type": "string",
+    "required": true,
+    "doc": "Unikátní klíč položky."
+   },
+   {
+    "name": "label",
+    "type": "ReactNode",
+    "required": true,
+    "doc": "Hlavní text na listu."
+   },
+   {
+    "name": "meta",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Vedlejší text pod názvem (např. datum, velikost)."
+   },
+   {
+    "name": "onClick",
+    "type": "() => void",
+    "required": false,
+    "doc": "Zavolá se po kliknutí na list (jen když je složka otevřená)."
+   }
+  ],
+  "Wallet3DProps": [
+   {
+    "name": "cards",
+    "type": "WalletCard[]",
+    "required": true,
+    "doc": "Karty v peněžence; zobrazí se maximálně první tři (první je vzadu, poslední vepředu)."
+   },
+   {
+    "name": "balance",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Zůstatek v kapse – skrytý za hvězdičkami, ukáže se po najetí. Bez něj se kapsa nezobrazí s částkou."
+   },
+   {
+    "name": "balanceLabel",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Popisek pod zůstatkem."
+   },
+   {
+    "name": "hint",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Nápověda pod peněženkou (např. „Najeď myší pro zobrazení zůstatku“)."
+   },
+   {
+    "name": "open",
+    "type": "boolean",
+    "required": false,
+    "doc": "Řízený stav vysunutí karet. Bez něj se karty vysouvají po najetí, fokusu nebo klepnutí."
+   },
+   {
+    "name": "onOpenChange",
+    "type": "(open: boolean) => void",
+    "required": false,
+    "doc": "Zavolá se při změně stavu vysunutí (klepnutí / klávesy)."
+   },
+   {
+    "name": "aria-label",
+    "type": "string",
+    "required": false,
+    "doc": "Přístupný název peněženky pro čtečky obrazovky."
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
+   }
+  ],
+  "WalletCard": [
+   {
+    "name": "id",
+    "type": "string",
+    "required": true,
+    "doc": "Unikátní klíč karty."
+   },
+   {
+    "name": "brand",
+    "type": "ReactNode",
+    "required": true,
+    "doc": "Značka / název karty (text nebo logo)."
+   },
+   {
+    "name": "number",
+    "type": "string",
+    "required": true,
+    "doc": "Číslo karty. Normálně je vidět jen `**** 1234`, celé číslo se ukáže po najetí na kartu."
+   },
+   {
+    "name": "holder",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Jméno majitele / popis vlevo dole."
+   },
+   {
+    "name": "holderLabel",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Popisek nad jménem majitele (výchozí „Majitel“)."
+   },
+   {
+    "name": "color",
+    "type": "string",
+    "required": false,
+    "doc": "Pozadí karty (jakákoli CSS hodnota `background`, i gradient)."
+   },
+   {
+    "name": "textColor",
+    "type": "string",
+    "required": false,
+    "doc": "Barva textu na kartě – hodí se u světlých karet."
+   }
+  ],
+  "FloatingInputProps": [
+   {
+    "name": "label",
+    "type": "string",
+    "required": true,
+    "doc": "Popisek, který po fokusu nebo zápisu vyjede nad pole."
+   },
+   {
+    "name": "error",
+    "type": "string",
+    "required": false,
+    "doc": "Chybová hláška pod polem; zároveň pole označí jako neplatné."
+   },
+   {
+    "name": "hint",
+    "type": "string",
+    "required": false,
+    "doc": "Pomocný text pod polem (skryje se, když je zobrazena chyba)."
+   }
+  ],
+  "MarqueeProps": [
+   {
+    "name": "items",
+    "type": "MarqueeItem[]",
+    "required": false,
+    "doc": "Položky pásu jako data (ikona + text). Alternativa k `children`."
+   },
+   {
+    "name": "children",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Vlastní položky pásu (cokoli). Použije se, když není zadané `items`."
+   },
+   {
+    "name": "variant",
+    "type": "\"plain\" | \"pill\"",
+    "required": false,
+    "doc": "Vzhled položky: `plain` = jen ikona a text, `pill` = v zaoblené „pilulce“ s rámečkem."
+   },
+   {
+    "name": "iconOnly",
+    "type": "boolean",
+    "required": false,
+    "doc": "Zobrazí jen ikony bez textu (text zůstane jako přístupný popisek)."
+   },
+   {
+    "name": "speed",
+    "type": "number",
+    "required": false,
+    "doc": "Rychlost v pixelech za sekundu – stejná bez ohledu na šířku pásu."
+   },
+   {
+    "name": "rows",
+    "type": "number",
+    "required": false,
+    "doc": "Počet řádků (1–4). Položky se opakují a každý řádek začíná jinde."
+   },
+   {
+    "name": "direction",
+    "type": "\"left\" | \"right\"",
+    "required": false,
+    "doc": "Směr pohybu prvního řádku."
+   },
+   {
+    "name": "alternate",
+    "type": "boolean",
+    "required": false,
+    "doc": "Další řádky se střídavě pohybují opačným směrem."
+   },
+   {
+    "name": "pauseOnHover",
+    "type": "boolean",
+    "required": false,
+    "doc": "Zastaví pás, když na něj uživatel najede myší nebo ho zaostří."
+   },
+   {
+    "name": "gap",
+    "type": "number",
+    "required": false,
+    "doc": "Mezera mezi položkami (číslo = px)."
+   },
+   {
+    "name": "fade",
+    "type": "boolean",
+    "required": false,
+    "doc": "Vyblednutí okrajů pásu."
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
+   }
+  ],
+  "MarqueeItem": [
+   {
+    "name": "icon",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Ikona před textem (nebo samotná ikona, když je zapnuté `iconOnly`)."
+   },
+   {
+    "name": "label",
+    "type": "string",
+    "required": false,
+    "doc": "Text položky. U `iconOnly` slouží jako přístupný popisek."
+   }
+  ],
+  "TodoListProps": [
+   {
+    "name": "items",
+    "type": "TodoItem[]",
+    "required": false,
+    "doc": "Řízený seznam úkolů. Když ho předáš, musíš aktualizovat i `onChange`."
+   },
+   {
+    "name": "defaultItems",
+    "type": "TodoItem[]",
+    "required": false,
+    "doc": "Počáteční úkoly (neřízené použití)."
+   },
+   {
+    "name": "onChange",
+    "type": "(items: TodoItem[]) => void",
+    "required": false,
+    "doc": "Zavolá se po každé změně (přidání, odškrtnutí, smazání) s novým seznamem."
+   },
+   {
+    "name": "labels",
+    "type": "TodoListLabels",
+    "required": false,
+    "doc": "Překlad textů v komponentě – výchozí je čeština."
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
+   }
+  ],
+  "TodoItem": [
+   {
+    "name": "id",
+    "type": "string",
+    "required": true,
+    "doc": "Unikátní ID úkolu."
+   },
+   {
+    "name": "text",
+    "type": "string",
+    "required": true,
+    "doc": "Text úkolu."
+   },
+   {
+    "name": "done",
+    "type": "boolean",
+    "required": true,
+    "doc": "Zda je úkol hotový."
+   },
+   {
+    "name": "priority",
+    "type": "\"high\" | \"medium\" | \"low\"",
+    "required": true,
+    "doc": "Priorita úkolu."
+   }
+  ],
+  "TodoListLabels": [
+   {
+    "name": "placeholder",
+    "type": "string",
+    "required": false,
+    "doc": "Text zobrazený v prázdném poli."
+   },
+   {
+    "name": "add",
+    "type": "string",
+    "required": false,
+    "doc": "Text tlačítka přidání úkolu."
+   },
+   {
+    "name": "all",
+    "type": "string",
+    "required": false,
+    "doc": "Popisek filtru „vše“."
+   },
+   {
+    "name": "open",
+    "type": "string",
+    "required": false,
+    "doc": "Zda je prvek otevřený. Řízený stav – spolu s `onClose` / `onOpenChange`."
+   },
+   {
+    "name": "done",
+    "type": "string",
+    "required": false,
+    "doc": "Popisek filtru „hotové“."
+   },
+   {
+    "name": "left",
+    "type": "(n: number) => string",
+    "required": false,
+    "doc": "Slovo za počtem zbývajících úkolů."
+   },
+   {
+    "name": "empty",
+    "type": "string",
+    "required": false,
+    "doc": "Text, když není žádný úkol."
+   },
+   {
+    "name": "priority",
+    "type": "Record<TodoPriority, string>",
+    "required": false,
+    "doc": "Názvy priorit (`high`, `medium`, `low`)."
+   }
+  ],
+  "DataTableProps": [
+   {
+    "name": "rows",
+    "type": "T[]",
+    "required": true,
+    "doc": "Data tabulky. Každý řádek musí mít unikátní `id`."
+   },
+   {
+    "name": "columns",
+    "type": "DataColumn<T>[]",
+    "required": true,
+    "doc": "Definice sloupců."
+   },
+   {
+    "name": "pageSize",
+    "type": "number",
+    "required": false,
+    "doc": "Počet řádků na stránku."
+   },
+   {
+    "name": "selectable",
+    "type": "boolean",
+    "required": false,
+    "doc": "Zobrazí sloupec s checkboxy."
+   },
+   {
+    "name": "onSelectionChange",
+    "type": "(ids: string[]) => void",
+    "required": false,
+    "doc": "Zavolá se při změně výběru s ID vybraných řádků."
+   },
+   {
+    "name": "labels",
+    "type": "DataTableLabels",
+    "required": false,
+    "doc": "Překlad textů v komponentě – výchozí je čeština."
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
+   }
+  ],
+  "DataColumn": [
+   {
+    "name": "key",
+    "type": "keyof T & string",
+    "required": true,
+    "doc": "Klíč vlastnosti řádku, ze které sloupec čte hodnotu (použije se pro řazení a filtr)."
+   },
+   {
+    "name": "header",
+    "type": "string",
+    "required": true,
+    "doc": "Text hlavičky sloupce."
+   },
+   {
+    "name": "sortable",
+    "type": "boolean",
+    "required": false,
+    "doc": "Povolí řazení kliknutím na hlavičku (vzestupně → sestupně → bez řazení)."
+   },
+   {
+    "name": "filterable",
+    "type": "boolean",
+    "required": false,
+    "doc": "Nabídne výběr z unikátních hodnot sloupce jako filtr nad tabulkou."
+   },
+   {
+    "name": "render",
+    "type": "(row: T) => ReactNode",
+    "required": false,
+    "doc": "Vlastní vykreslení buňky (badge, odkaz, formátování)."
+   },
+   {
+    "name": "align",
+    "type": "\"left\" | \"right\"",
+    "required": false,
+    "doc": "Zarovnání obsahu sloupce."
+   }
+  ],
+  "DataTableLabels": [
+   {
+    "name": "selectPage",
+    "type": "string",
+    "required": false,
+    "doc": "Popisek zaškrtávátka „vybrat vše na stránce“."
+   },
+   {
+    "name": "selectRow",
+    "type": "(id: string) => string",
+    "required": false,
+    "doc": "Popisek zaškrtávátka řádku."
+   },
+   {
+    "name": "filter",
+    "type": "(header: string) => string",
+    "required": false,
+    "doc": "Placeholder vyhledávacího pole."
+   },
+   {
+    "name": "all",
+    "type": "string",
+    "required": false,
+    "doc": "Text „vše“ ve filtru sloupce."
+   },
+   {
+    "name": "records",
+    "type": "(n: number) => string",
+    "required": false,
+    "doc": "Slovo za počtem záznamů."
+   },
+   {
+    "name": "selected",
+    "type": "(n: number) => string",
+    "required": false,
+    "doc": "Slovo za počtem vybraných řádků."
+   },
+   {
+    "name": "page",
+    "type": "(cur: number, total: number) => string",
+    "required": false,
+    "doc": "Slovo „Stránka“ v ovládání stránkování."
+   },
+   {
+    "name": "prev",
+    "type": "string",
+    "required": false,
+    "doc": "Popisek tlačítka předchozí stránky."
+   },
+   {
+    "name": "next",
+    "type": "string",
+    "required": false,
+    "doc": "Popisek tlačítka další stránky."
+   },
+   {
+    "name": "empty",
+    "type": "string",
+    "required": false,
+    "doc": "Text, když tabulka nemá žádná data."
+   }
+  ],
+  "AudioVisualizerProps": [
+   {
+    "name": "title",
+    "type": "string",
+    "required": true,
+    "doc": "Název skladby."
+   },
+   {
+    "name": "artist",
+    "type": "string",
+    "required": false,
+    "doc": "Interpret (zobrazí se pod názvem)."
+   },
+   {
+    "name": "duration",
+    "type": "number",
+    "required": true,
+    "doc": "Délka skladby v sekundách."
+   },
+   {
+    "name": "bars",
+    "type": "number",
+    "required": false,
+    "doc": "Počet linek vizualizéru. Linky jsou jen dekorace, nereagují na skutečný zvuk."
+   },
+   {
+    "name": "position",
+    "type": "number",
+    "required": false,
+    "doc": "Řízená pozice v sekundách."
+   },
+   {
+    "name": "onPositionChange",
+    "type": "(seconds: number) => void",
+    "required": false,
+    "doc": "Zavolá se při změně pozice (přehrávání i posun posuvníkem)."
+   },
+   {
+    "name": "playing",
+    "type": "boolean",
+    "required": false,
+    "doc": "Řízený stav přehrávání."
+   },
+   {
+    "name": "onPlayingChange",
+    "type": "(playing: boolean) => void",
+    "required": false,
+    "doc": "Zavolá se po kliknutí na tlačítko přehrát / pauza."
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
+   }
+  ],
+  "ChartProps": [
+   {
+    "name": "data",
+    "type": "ChartDatum[]",
+    "required": true,
+    "doc": "Data grafu – jeden objekt na bod nebo sloupec."
+   },
+   {
+    "name": "height",
+    "type": "number",
+    "required": false,
+    "doc": "Výška grafu v px (šířka se přizpůsobí rodiči)."
+   },
+   {
+    "name": "format",
+    "type": "(v: number) => string",
+    "required": false,
+    "doc": "Formátování hodnot v tooltipu (např. `(v) => v + \" Kč\"`). Osa Y používá vždy zkrácený zápis (12 tis.)."
+   },
+   {
+    "name": "aria-label",
+    "type": "string",
+    "required": false,
+    "doc": "Přístupný popis grafu pro čtečky obrazovky (výchozí se složí z názvu a hodnot)."
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
+   }
+  ],
+  "ChartDatum": [
+   {
+    "name": "label",
+    "type": "string",
+    "required": true,
+    "doc": "Popisek na ose X (měsíc, kategorie…)."
+   },
+   {
+    "name": "value",
+    "type": "number",
+    "required": true,
+    "doc": "Hodnota bodu / sloupce."
+   }
+  ],
+  "LineChartProps": [
+   {
+    "name": "compare",
+    "type": "ChartDatum[]",
+    "required": false,
+    "doc": "Druhá řada pro srovnání (např. loňský rok) – vykreslí se čárkovaně, body odpovídají `data` podle pořadí."
+   },
+   {
+    "name": "seriesLabel",
+    "type": "string",
+    "required": false,
+    "doc": "Název hlavní řady do legendy (zobrazí se jen s `compare`)."
+   },
+   {
+    "name": "compareLabel",
+    "type": "string",
+    "required": false,
+    "doc": "Název srovnávací řady do legendy."
+   },
+   {
+    "name": "data",
+    "type": "ChartDatum[]",
+    "required": true,
+    "doc": "Data grafu – jeden objekt na bod nebo sloupec."
+   },
+   {
+    "name": "height",
+    "type": "number",
+    "required": false,
+    "doc": "Výška grafu v px (šířka se přizpůsobí rodiči)."
+   },
+   {
+    "name": "format",
+    "type": "(v: number) => string",
+    "required": false,
+    "doc": "Formátování hodnot v tooltipu (např. `(v) => v + \" Kč\"`). Osa Y používá vždy zkrácený zápis (12 tis.)."
+   },
+   {
+    "name": "aria-label",
+    "type": "string",
+    "required": false,
+    "doc": "Přístupný popis grafu pro čtečky obrazovky (výchozí se složí z názvu a hodnot)."
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
+   }
+  ],
+  "RadarChartProps": [
+   {
+    "name": "max",
+    "type": "number",
+    "required": false,
+    "doc": "Hodnota, která odpovídá okraji grafu (výchozí 100)."
+   },
+   {
+    "name": "size",
+    "type": "number",
+    "required": false,
+    "doc": "Velikost grafu v px (je čtvercový)."
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
+   },
+   {
+    "name": "aria-label",
+    "type": "string",
+    "required": false,
+    "doc": "Přístupný popis grafu pro čtečky obrazovky (výchozí se složí z názvu a hodnot)."
+   },
+   {
+    "name": "data",
+    "type": "ChartDatum[]",
+    "required": true,
+    "doc": "Data grafu – jeden objekt na bod nebo sloupec."
+   },
+   {
+    "name": "format",
+    "type": "(v: number) => string",
+    "required": false,
+    "doc": "Formátování hodnot v tooltipu (např. `(v) => v + \" Kč\"`). Osa Y používá vždy zkrácený zápis (12 tis.)."
+   }
+  ],
+  "PaymentSummaryProps": [
+   {
+    "name": "open",
+    "type": "boolean",
+    "required": true,
+    "doc": "Zda je dialog otevřený."
+   },
+   {
+    "name": "onClose",
+    "type": "() => void",
+    "required": true,
+    "doc": "Zavolá se při zavření (Esc, křížek, klik na pozadí)."
+   },
+   {
+    "name": "onConfirm",
+    "type": "() => void",
+    "required": false,
+    "doc": "Zavolá se po kliknutí na „Zaplatit“. Bez něj tlačítko dialog jen zavře."
+   },
+   {
+    "name": "title",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Nadpis dialogu."
+   },
+   {
+    "name": "orderId",
+    "type": "string",
+    "required": false,
+    "doc": "Číslo objednávky – zobrazí se nad nadpisem."
+   },
+   {
+    "name": "lines",
+    "type": "PaymentLine[]",
+    "required": true,
+    "doc": "Položky objednávky; ceny jsou včetně DPH."
+   },
+   {
+    "name": "discount",
+    "type": "number",
+    "required": false,
+    "doc": "Sleva v měně objednávky, odečte se od mezisoučtu."
+   },
+   {
+    "name": "vatRate",
+    "type": "number",
+    "required": false,
+    "doc": "Sazba DPH jako desetinné číslo (0.21 = 21 %). DPH se jen vypočítá z celkové ceny, nepřičítá se."
+   },
+   {
+    "name": "currency",
+    "type": "string",
+    "required": false,
+    "doc": "Kód měny (ISO 4217), např. `CZK` nebo `EUR`."
+   },
+   {
+    "name": "locale",
+    "type": "string",
+    "required": false,
+    "doc": "Jazyk formátování částek (výchozí `cs-CZ`)."
+   },
+   {
+    "name": "fractionDigits",
+    "type": "number",
+    "required": false,
+    "doc": "Počet desetinných míst u částek."
+   },
+   {
+    "name": "loading",
+    "type": "boolean",
+    "required": false,
+    "doc": "Zablokuje tlačítko platby a ukáže spinner (probíhá platba)."
+   },
+   {
+    "name": "labels",
+    "type": "PaymentSummaryLabels",
+    "required": false,
+    "doc": "Překlad textů v komponentě – výchozí je čeština."
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
+   }
+  ],
+  "PaymentLine": [
+   {
+    "name": "id",
+    "type": "string",
+    "required": true,
+    "doc": "Unikátní klíč řádku."
+   },
+   {
+    "name": "label",
+    "type": "ReactNode",
+    "required": true,
+    "doc": "Název položky."
+   },
+   {
+    "name": "detail",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Doplňující popis pod názvem (varianta, období…)."
+   },
+   {
+    "name": "price",
+    "type": "number",
+    "required": true,
+    "doc": "Cena za jednu kus včetně DPH."
+   },
+   {
+    "name": "qty",
+    "type": "number",
+    "required": false,
+    "doc": "Počet kusů (výchozí 1). Zobrazí se jako „2×“ a cena řádku se vynásobí."
+   }
+  ],
+  "PaymentSummaryLabels": [
+   {
+    "name": "order",
+    "type": "string",
+    "required": false,
+    "doc": "Nadpis souhrnu objednávky."
+   },
+   {
+    "name": "subtotal",
+    "type": "string",
+    "required": false,
+    "doc": "Popisek mezisoučtu."
+   },
+   {
+    "name": "discount",
+    "type": "string",
+    "required": false,
+    "doc": "Popisek slevy."
+   },
+   {
+    "name": "vat",
+    "type": "(ratePercent: number) => string",
+    "required": false,
+    "doc": "Popisek DPH."
+   },
+   {
+    "name": "total",
+    "type": "string",
+    "required": false,
+    "doc": "Popisek celkové částky."
+   },
+   {
+    "name": "pay",
+    "type": "(amount: string) => string",
+    "required": false,
+    "doc": "Text tlačítka platby."
+   }
+  ],
+  "PromoQRCardProps": [
+   {
+    "name": "eyebrow",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Malý nadpis nad názvem (druh vstupenky / kupónu)."
+   },
+   {
+    "name": "title",
+    "type": "ReactNode",
+    "required": true,
+    "doc": "Hlavní název."
+   },
+   {
+    "name": "subtitle",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Doplňující řádek (datum, místo, platnost)."
+   },
+   {
+    "name": "code",
+    "type": "string",
+    "required": true,
+    "doc": "Kód vstupenky / kupónu – zobrazí se pod názvem a z něj se vygeneruje dekorativní vzor."
+   },
+   {
+    "name": "children",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Vlastní obsah místo dekorativního vzoru – sem patří skutečný QR kód\n(obrázek nebo komponenta z knihovny na QR). Bez něj je vzor jen ozdoba, nejde naskenovat."
+   },
+   {
+    "name": "qrLabel",
+    "type": "string",
+    "required": false,
+    "doc": "Přístupný popis kódu (výchozí „QR kód …“)."
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
+   }
+  ],
+  "SpinnerProps": [
+   {
+    "name": "variant",
+    "type": "\"ring\" | \"dots\" | \"bars\" | \"pulse\" | \"custom\"",
+    "required": false,
+    "doc": "Podoba loaderu: `ring` = točící se kroužek, `dots` = tři poskakující tečky, `bars` = vlnící se sloupce,\n`pulse` = pulzující kruh, `custom` = tvoje vlastní značka z `children` (např. logo) s pohybem podle `motion`."
+   },
+   {
+    "name": "size",
+    "type": "number | \"sm\" | \"md\" | \"lg\"",
+    "required": false,
+    "doc": "Velikost: `sm` 16 px, `md` 24 px, `lg` 40 px, nebo vlastní číslo v px."
+   },
+   {
+    "name": "label",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Viditelný text vedle loaderu (např. „Načítám…“). Bez něj zůstane jen přístupný popisek."
+   },
+   {
+    "name": "aria-label",
+    "type": "string",
+    "required": false,
+    "doc": "Přístupný popisek pro čtečky obrazovky, když není vidět `label`."
+   },
+   {
+    "name": "duration",
+    "type": "number",
+    "required": false,
+    "doc": "Doba jednoho cyklu v sekundách – menší číslo = rychlejší."
+   },
+   {
+    "name": "color",
+    "type": "string",
+    "required": false,
+    "doc": "Barva loaderu (CSS barva). Výchozí je akcentová žlutá."
+   },
+   {
+    "name": "motion",
+    "type": "\"pulse\" | \"spin\" | \"float\"",
+    "required": false,
+    "doc": "Pohyb vlastní značky u `variant=\"custom\"`: otáčení, pulz, nebo vznášení."
+   },
+   {
+    "name": "center",
+    "type": "boolean",
+    "required": false,
+    "doc": "Zarovná loader na střed rodiče a text dá pod něj."
+   },
+   {
+    "name": "overlay",
+    "type": "boolean",
+    "required": false,
+    "doc": "Překryje celého rodiče (musí mít `position: relative`) poloprůhledným pozadím – pro načítání karty nebo tabulky."
+   },
+   {
+    "name": "children",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Vlastní značka pro `variant=\"custom\"` – SVG, obrázek, text."
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
+   }
+  ],
+  "NumberInputProps": [
+   {
+    "name": "value",
+    "type": "null | number",
+    "required": false,
+    "doc": "Řízená hodnota (`null` = prázdné pole)."
+   },
+   {
+    "name": "defaultValue",
+    "type": "null | number",
+    "required": false,
+    "doc": "Počáteční hodnota (neřízené použití)."
+   },
+   {
+    "name": "onChange",
+    "type": "(value: number | null) => void",
+    "required": false,
+    "doc": "Zavolá se po potvrzení hodnoty (tlačítka, šipky, opuštění pole, Enter) s hodnotou po omezení na min / max."
+   },
+   {
+    "name": "min",
+    "type": "number",
+    "required": false,
+    "doc": "Nejmenší povolená hodnota."
+   },
+   {
+    "name": "max",
+    "type": "number",
+    "required": false,
+    "doc": "Největší povolená hodnota."
+   },
+   {
+    "name": "step",
+    "type": "number",
+    "required": false,
+    "doc": "Krok tlačítek a šipek na klávesnici (Shift = 10×)."
+   },
+   {
+    "name": "precision",
+    "type": "number",
+    "required": false,
+    "doc": "Počet desetinných míst. Výchozí se odvodí z `step`."
+   },
+   {
+    "name": "locale",
+    "type": "string",
+    "required": false,
+    "doc": "Jazyk pro zápis čísla (desetinná čárka / tečka). Zadávat jde vždy čárkou i tečkou."
+   },
+   {
+    "name": "label",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Popisek / text."
+   },
+   {
+    "name": "hint",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Nápověda pod polem."
+   },
+   {
+    "name": "error",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Chybová hláška – zvýrazní pole červeně a připojí text pod něj."
+   },
+   {
+    "name": "placeholder",
+    "type": "string",
+    "required": false,
+    "doc": "Text zobrazený v prázdném poli."
+   },
+   {
+    "name": "disabled",
+    "type": "boolean",
+    "required": false,
+    "doc": "Zakáže prvek (nejde ho použít, je ztlumený)."
+   },
+   {
+    "name": "name",
+    "type": "string",
+    "required": false,
+    "doc": "Jméno pole pro odeslání formuláře (odešle se číslo s tečkou)."
+   },
+   {
+    "name": "id",
+    "type": "string",
+    "required": false,
+    "doc": "Atribut `id` prvku (pro propojení s `<label htmlFor>`)."
+   },
+   {
+    "name": "decrementLabel",
+    "type": "string",
+    "required": false,
+    "doc": "Text tlačítka pro snížení (čtečky obrazovky)."
+   },
+   {
+    "name": "incrementLabel",
+    "type": "string",
+    "required": false,
+    "doc": "Text tlačítka pro zvýšení (čtečky obrazovky)."
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
+   }
+  ],
+  "PasswordInputProps": [
+   {
+    "name": "label",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Popisek / text."
+   },
+   {
+    "name": "hint",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Nápověda pod polem."
+   },
+   {
+    "name": "error",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Chybová hláška – zvýrazní pole červeně a připojí text pod něj."
+   },
+   {
+    "name": "showLabel",
+    "type": "string",
+    "required": false,
+    "doc": "Přístupný název tlačítka, když je heslo skryté."
+   },
+   {
+    "name": "hideLabel",
+    "type": "string",
+    "required": false,
+    "doc": "Přístupný název tlačítka, když je heslo vidět."
+   },
+   {
+    "name": "wrapperClassName",
+    "type": "string",
+    "required": false,
+    "doc": "Třída pro obalující `.cbb-field`."
+   }
+  ],
+  "RatingProps": [
+   {
+    "name": "value",
+    "type": "number",
+    "required": false,
+    "doc": "Řízená hodnota (0 = nic nevybráno)."
+   },
+   {
+    "name": "defaultValue",
+    "type": "number",
+    "required": false,
+    "doc": "Počáteční hodnota (neřízené použití)."
+   },
+   {
+    "name": "onChange",
+    "type": "(value: number) => void",
+    "required": false,
+    "doc": "Zavolá se po výběru hodnoty."
+   },
+   {
+    "name": "max",
+    "type": "number",
+    "required": false,
+    "doc": "Počet hvězdiček."
+   },
+   {
+    "name": "precision",
+    "type": "1 | 0.5",
+    "required": false,
+    "doc": "`1` = celé hvězdičky, `0.5` = půlhvězdičky."
+   },
+   {
+    "name": "readOnly",
+    "type": "boolean",
+    "required": false,
+    "doc": "Jen zobrazení – hodnotu nejde měnit (průměr z recenzí)."
+   },
+   {
+    "name": "disabled",
+    "type": "boolean",
+    "required": false,
+    "doc": "Zakáže prvek (nejde ho použít, je ztlumený)."
+   },
+   {
+    "name": "allowClear",
+    "type": "boolean",
+    "required": false,
+    "doc": "Klik na už vybranou hodnotu ji zruší (0)."
+   },
+   {
+    "name": "size",
+    "type": "number",
+    "required": false,
+    "doc": "Velikost jedné hvězdičky v px."
+   },
+   {
+    "name": "aria-label",
+    "type": "string",
+    "required": false,
+    "doc": "Přístupný název hodnocení, např. „Hodnocení produktu“."
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
+   }
+  ],
+  "MultiSelectProps": [
+   {
+    "name": "options",
+    "type": "MultiSelectOption[]",
+    "required": true,
+    "doc": "Nabídka voleb."
+   },
+   {
+    "name": "value",
+    "type": "string[]",
+    "required": false,
+    "doc": "Řízené vybrané hodnoty."
+   },
+   {
+    "name": "defaultValue",
+    "type": "string[]",
+    "required": false,
+    "doc": "Počáteční výběr (neřízené použití)."
+   },
+   {
+    "name": "onChange",
+    "type": "(value: string[]) => void",
+    "required": false,
+    "doc": "Zavolá se při každé změně výběru."
+   },
+   {
+    "name": "placeholder",
+    "type": "string",
+    "required": false,
+    "doc": "Text zobrazený v prázdném poli."
+   },
+   {
+    "name": "searchable",
+    "type": "boolean",
+    "required": false,
+    "doc": "Pole pro hledání v nabídce. Vypni, když je voleb málo."
+   },
+   {
+    "name": "max",
+    "type": "number",
+    "required": false,
+    "doc": "Nejvíc voleb, které jde vybrat. Po dosažení se zbylé znepřístupní."
+   },
+   {
+    "name": "clearable",
+    "type": "boolean",
+    "required": false,
+    "doc": "Tlačítko pro zrušení celého výběru."
+   },
+   {
+    "name": "maxChips",
+    "type": "number",
+    "required": false,
+    "doc": "Kolik štítků ukázat, zbytek se sbalí do „+N“. Bez čísla se ukážou všechny."
+   },
+   {
+    "name": "emptyLabel",
+    "type": "string",
+    "required": false,
+    "doc": "Text, když hledání nic nenajde."
+   },
+   {
+    "name": "label",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Popisek / text."
+   },
+   {
+    "name": "hint",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Nápověda pod polem."
+   },
+   {
+    "name": "error",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Chybová hláška – zvýrazní pole červeně a připojí text pod něj."
+   },
+   {
+    "name": "disabled",
+    "type": "boolean",
+    "required": false,
+    "doc": "Zakáže prvek (nejde ho použít, je ztlumený)."
+   },
+   {
+    "name": "name",
+    "type": "string",
+    "required": false,
+    "doc": "Jméno pole – pro každou vybranou hodnotu se vloží skrytý input (odeslání formuláře)."
+   },
+   {
+    "name": "id",
+    "type": "string",
+    "required": false,
+    "doc": "Atribut `id` prvku (pro propojení s `<label htmlFor>`)."
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
+   }
+  ],
+  "MultiSelectOption": [
+   {
+    "name": "value",
+    "type": "string",
+    "required": true,
+    "doc": "Unikátní hodnota (to, co se ukládá)."
+   },
+   {
+    "name": "label",
+    "type": "string",
+    "required": true,
+    "doc": "Text v nabídce a na štítku."
+   },
+   {
+    "name": "disabled",
+    "type": "boolean",
+    "required": false,
+    "doc": "Znepřístupní volbu."
+   }
+  ],
+  "ThemeToggleProps": [
+   {
+    "name": "variant",
+    "type": "\"icon\" | \"segmented\"",
+    "required": false,
+    "doc": "`icon` = jedno tlačítko (přepíná světlý ↔ tmavý, s `includeSystem` i systémový), `segmented` = tři tlačítka vedle sebe."
+   },
+   {
+    "name": "includeSystem",
+    "type": "boolean",
+    "required": false,
+    "doc": "U `icon` přidá do cyklu i režim „podle systému“. U `segmented` se systém ukazuje vždy."
+   },
+   {
+    "name": "labels",
+    "type": "Partial<Record<ThemeMode, string>>",
+    "required": false,
+    "doc": "Popisky pro čtečky obrazovky a tooltipy."
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
+   },
+   {
+    "name": "storageKey",
+    "type": "string",
+    "required": false,
+    "doc": "Klíč v localStorage."
+   },
+   {
+    "name": "defaultMode",
+    "type": "\"light\" | \"dark\" | \"system\"",
+    "required": false,
+    "doc": "Režim, dokud uživatel nic nevybral. `system` = podle nastavení zařízení."
+   }
+  ],
+  "CommandPaletteProps": [
+   {
+    "name": "open",
+    "type": "boolean",
+    "required": true,
+    "doc": "Zda je paleta otevřená."
+   },
+   {
+    "name": "onOpenChange",
+    "type": "(open: boolean) => void",
+    "required": true,
+    "doc": "Zavolá se při otevření / zavření (zkratka, Esc, klik na pozadí, výběr příkazu)."
+   },
+   {
+    "name": "items",
+    "type": "CommandItem[]",
+    "required": true,
+    "doc": "Seznam příkazů."
+   },
+   {
+    "name": "placeholder",
+    "type": "string",
+    "required": false,
+    "doc": "Text zobrazený v prázdném poli."
+   },
+   {
+    "name": "emptyLabel",
+    "type": "string",
+    "required": false,
+    "doc": "Text, když hledání nic nenajde."
+   },
+   {
+    "name": "hotkey",
+    "type": "null | string",
+    "required": false,
+    "doc": "Klávesová zkratka pro otevření / zavření, např. `mod+k` (Ctrl / ⌘ + K). `null` ji vypne."
+   },
+   {
+    "name": "closeOnSelect",
+    "type": "boolean",
+    "required": false,
+    "doc": "Zavřít paletu po výběru příkazu."
+   },
+   {
+    "name": "maxResults",
+    "type": "number",
+    "required": false,
+    "doc": "Nejvíc zobrazených výsledků."
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
+   }
+  ],
+  "CommandItem": [
+   {
+    "name": "id",
+    "type": "string",
+    "required": true,
+    "doc": "Unikátní klíč příkazu."
+   },
+   {
+    "name": "label",
+    "type": "string",
+    "required": true,
+    "doc": "Hlavní text příkazu."
+   },
+   {
+    "name": "description",
+    "type": "string",
+    "required": false,
+    "doc": "Vedlejší popis pod názvem."
+   },
+   {
+    "name": "group",
+    "type": "string",
+    "required": false,
+    "doc": "Nadpis skupiny, do které příkaz patří (Navigace, Akce…)."
+   },
+   {
+    "name": "icon",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Ikona před textem."
+   },
+   {
+    "name": "shortcut",
+    "type": "string",
+    "required": false,
+    "doc": "Zobrazená zkratka vpravo (jen text, nic neváže), např. „G H“."
+   },
+   {
+    "name": "keywords",
+    "type": "string[]",
+    "required": false,
+    "doc": "Další slova, podle kterých jde příkaz najít (synonyma)."
+   },
+   {
+    "name": "disabled",
+    "type": "boolean",
+    "required": false,
+    "doc": "Zakáže prvek (nejde ho použít, je ztlumený)."
+   },
+   {
+    "name": "onSelect",
+    "type": "() => void",
+    "required": true,
+    "doc": "Zavolá se po výběru příkazu."
+   }
+  ],
+  "UseThemeOptions": [
+   {
+    "name": "storageKey",
+    "type": "string",
+    "required": false,
+    "doc": "Klíč v localStorage."
+   },
+   {
+    "name": "defaultMode",
+    "type": "\"light\" | \"dark\" | \"system\"",
+    "required": false,
+    "doc": "Režim, dokud uživatel nic nevybral. `system` = podle nastavení zařízení."
+   }
+  ],
+  "MarkdownEditorProps": [
+   {
+    "name": "value",
+    "type": "string",
+    "required": false,
+    "doc": "Řízená hodnota (Markdown text)."
+   },
+   {
+    "name": "defaultValue",
+    "type": "string",
+    "required": false,
+    "doc": "Počáteční hodnota (neřízené použití)."
+   },
+   {
+    "name": "onChange",
+    "type": "(value: string) => void",
+    "required": false,
+    "doc": "Zavolá se při změně, dostane novou hodnotu."
+   },
+   {
+    "name": "label",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Popisek / text."
+   },
+   {
+    "name": "hint",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Nápověda pod polem."
+   },
+   {
+    "name": "error",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Chybová hláška – zvýrazní pole červeně a připojí text pod něj."
+   },
+   {
+    "name": "placeholder",
+    "type": "string",
+    "required": false,
+    "doc": "Text zobrazený v prázdném poli."
+   },
+   {
+    "name": "rows",
+    "type": "number",
+    "required": false,
+    "doc": "Počet viditelných řádků."
+   },
+   {
+    "name": "tools",
+    "type": "MarkdownTool[]",
+    "required": false,
+    "doc": "Které nástroje se v liště zobrazí a v jakém pořadí. Výchozí jsou všechny."
+   },
+   {
+    "name": "size",
+    "type": "\"small\" | \"normal\" | \"lead\"",
+    "required": false,
+    "doc": "Velikost písma v editoru i náhledu."
+   },
+   {
+    "name": "defaultView",
+    "type": "\"write\" | \"preview\"",
+    "required": false,
+    "doc": "Se kterým panelem editor začíná."
+   },
+   {
+    "name": "labels",
+    "type": "Partial<Omit<MarkdownEditorLabels, \"placeholders\">> & { placeholders?: Partial<MarkdownEditorLabels[\"placeholders\"]>; }",
+    "required": false,
+    "doc": "Přepsání textů (čeština je výchozí). Stačí zadat jen to, co měníš."
+   },
+   {
+    "name": "disabled",
+    "type": "boolean",
+    "required": false,
+    "doc": "Zakáže prvek (nejde ho použít, je ztlumený)."
+   },
+   {
+    "name": "name",
+    "type": "string",
+    "required": false,
+    "doc": "Jméno pole pro odeslání formuláře."
+   },
+   {
+    "name": "id",
+    "type": "string",
+    "required": false,
+    "doc": "Atribut `id` prvku (pro propojení s `<label htmlFor>`)."
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
+   }
+  ],
+  "MarkdownEditorLabels": [
+   {
+    "name": "write",
+    "type": "string",
+    "required": true,
+    "doc": "Popisek karty s psaním."
+   },
+   {
+    "name": "preview",
+    "type": "string",
+    "required": true,
+    "doc": "Popisek karty s náhledem."
+   },
+   {
+    "name": "empty",
+    "type": "string",
+    "required": true,
+    "doc": "Text v náhledu, když je pole prázdné."
+   },
+   {
+    "name": "toolbar",
+    "type": "string",
+    "required": true,
+    "doc": "Popisek lišty nástrojů (čtečky obrazovky)."
+   },
+   {
+    "name": "h1",
+    "type": "string",
+    "required": true,
+    "doc": "Popisek tlačítka nadpisu."
+   },
+   {
+    "name": "h2",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "bold",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "italic",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "sup",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "sub",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "code",
+    "type": "string",
+    "required": true,
+    "doc": "Popisek tlačítka kódu."
+   },
+   {
+    "name": "link",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "image",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "ul",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "ol",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "quote",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "placeholders",
+    "type": "{ bold: string; italic: string; sup: string; sub: string; code: string; link: string; image: string; item: string; heading: string; quote: string; }",
+    "required": true,
+    "doc": "Výchozí text vložený místo prázdného výběru."
+   }
+  ],
+  "MarkdownViewProps": [
+   {
+    "name": "source",
+    "type": "string",
+    "required": true,
+    "doc": "Markdown text k vykreslení."
+   },
+   {
+    "name": "size",
+    "type": "\"small\" | \"normal\" | \"lead\"",
+    "required": false,
+    "doc": "Velikost písma: malý, normální nebo úvodní (velký) text."
+   },
+   {
+    "name": "emptyText",
+    "type": "string",
+    "required": false,
+    "doc": "Text, který se zobrazí, když je `source` prázdný."
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
+   }
+  ],
+  "TableEditorProps": [
+   {
+    "name": "value",
+    "type": "TableData",
+    "required": false,
+    "doc": "Řízená hodnota."
+   },
+   {
+    "name": "defaultValue",
+    "type": "TableData",
+    "required": false,
+    "doc": "Počáteční hodnota (neřízené použití)."
+   },
+   {
+    "name": "onChange",
+    "type": "(value: TableData) => void",
+    "required": false,
+    "doc": "Zavolá se při změně, dostane novou hodnotu."
+   },
+   {
+    "name": "label",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Popisek / text."
+   },
+   {
+    "name": "hint",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Nápověda pod polem."
+   },
+   {
+    "name": "error",
+    "type": "ReactNode",
+    "required": false,
+    "doc": "Chybová hláška – zvýrazní pole červeně a připojí text pod něj."
+   },
+   {
+    "name": "minColumns",
+    "type": "number",
+    "required": false,
+    "doc": "Nejmenší počet sloupců (u tohoto počtu se tlačítko odebrání skryje)."
+   },
+   {
+    "name": "maxColumns",
+    "type": "number",
+    "required": false,
+    "doc": "Největší počet sloupců."
+   },
+   {
+    "name": "maxRows",
+    "type": "number",
+    "required": false,
+    "doc": "Největší počet řádků."
+   },
+   {
+    "name": "labels",
+    "type": "Partial<TableEditorLabels>",
+    "required": false,
+    "doc": "Přepsání textů (čeština je výchozí)."
+   },
+   {
+    "name": "disabled",
+    "type": "boolean",
+    "required": false,
+    "doc": "Zakáže prvek (nejde ho použít, je ztlumený)."
+   },
+   {
+    "name": "id",
+    "type": "string",
+    "required": false,
+    "doc": "Atribut `id` prvku (pro propojení s `<label htmlFor>`)."
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
+   }
+  ],
+  "TableEditorLabels": [
+   {
+    "name": "addColumn",
+    "type": "string",
+    "required": true,
+    "doc": "Popisek tlačítka přidání sloupce."
+   },
+   {
+    "name": "addRow",
+    "type": "string",
+    "required": true,
+    "doc": "Popisek tlačítka přidání řádku."
+   },
+   {
+    "name": "removeColumn",
+    "type": "string",
+    "required": true,
+    "doc": "Popisek tlačítka odebrání sloupce."
+   },
+   {
+    "name": "removeRow",
+    "type": "string",
+    "required": true,
+    "doc": "Popisek tlačítka odebrání řádku."
+   },
+   {
+    "name": "column",
+    "type": "string",
+    "required": true,
+    "doc": "Použije se v názvu sloupce, který nemá název (čtečky obrazovky)."
+   },
+   {
+    "name": "row",
+    "type": "string",
+    "required": true,
+    "doc": "Slovo „Řádek“ pro čtečky obrazovky."
+   },
+   {
+    "name": "headerPlaceholder",
+    "type": "string",
+    "required": true,
+    "doc": "Placeholder buňky v záhlaví."
+   }
+  ],
+  "TableData": [
+   {
+    "name": "headers",
+    "type": "string[]",
+    "required": true,
+    "doc": "Texty záhlaví sloupců."
+   },
+   {
+    "name": "rows",
+    "type": "string[][]",
+    "required": true,
+    "doc": "Řádky tabulky (pole buněk)."
+   }
+  ],
+  "MusicPlayerProviderProps": [
+   {
+    "name": "children",
+    "type": "ReactNode",
+    "required": true,
+    "doc": "Obsah komponenty."
+   },
+   {
+    "name": "storageKey",
+    "type": "null | string",
+    "required": false,
+    "doc": "Klíč v `localStorage`, pod kterým se pamatuje hlasitost. `null` = nepamatovat."
+   },
+   {
+    "name": "initialVolume",
+    "type": "number",
+    "required": false,
+    "doc": "Výchozí hlasitost 0–1, když ještě nic uloženo není."
+   },
+   {
+    "name": "keyboardShortcuts",
+    "type": "boolean",
+    "required": false,
+    "doc": "Zapne klávesové zkratky: mezerník = přehrát / pozastavit, ← → = o 5 s, ↑ ↓ = hlasitost.\nNereagují, když je zaměřené textové pole, tlačítko, odkaz nebo posuvník."
+   },
+   {
+    "name": "mediaSession",
+    "type": "boolean",
+    "required": false,
+    "doc": "Zapíše skladbu do ovládání v systému (zamčená obrazovka, multimediální klávesy, Bluetooth). Výchozí zapnuto."
+   },
+   {
+    "name": "onTrackStart",
+    "type": "(track: Track) => void",
+    "required": false,
+    "doc": "Zavolá se, když se začne přehrávat skladba (hodí se pro počítadlo přehrání nebo historii poslechu)."
+   },
+   {
+    "name": "onTrackEnd",
+    "type": "(track: Track) => void",
+    "required": false,
+    "doc": "Zavolá se, když skladba doznívá sama až do konce."
+   },
+   {
+    "name": "onError",
+    "type": "(message: string, track: Track | null) => void",
+    "required": false,
+    "doc": "Zavolá se při chybě přehrávání."
+   },
+   {
+    "name": "labels",
+    "type": "Partial<MusicPlayerLabels>",
+    "required": false,
+    "doc": "Přepsání textů chyb (čeština je výchozí)."
+   }
+  ],
+  "MusicPlayerState": [
+   {
+    "name": "currentTrack",
+    "type": "null | Track",
+    "required": true,
+    "doc": "Skladba, která právě hraje nebo je připravená."
+   },
+   {
+    "name": "isPlaying",
+    "type": "boolean",
+    "required": true,
+    "doc": "Zda skladba právě hraje."
+   },
+   {
+    "name": "currentTime",
+    "type": "number",
+    "required": true,
+    "doc": "Uplynulý čas v sekundách."
+   },
+   {
+    "name": "duration",
+    "type": "number",
+    "required": true,
+    "doc": "Délka v sekundách (z metadat souboru, jinak z `Track.duration`)."
+   },
+   {
+    "name": "queue",
+    "type": "Track[]",
+    "required": true,
+    "doc": "Co bude hrát dál."
+   },
+   {
+    "name": "history",
+    "type": "Track[]",
+    "required": true,
+    "doc": "Co už hrálo (poslední je nejnovější)."
+   },
+   {
+    "name": "volume",
+    "type": "number",
+    "required": true,
+    "doc": "Hlasitost 0–1 (nezávisle na ztlumení)."
+   },
+   {
+    "name": "muted",
+    "type": "boolean",
+    "required": true,
+    "doc": "Zda je zvuk ztlumený."
+   },
+   {
+    "name": "shuffle",
+    "type": "boolean",
+    "required": true,
+    "doc": "Zda je zapnuté náhodné pořadí."
+   },
+   {
+    "name": "repeat",
+    "type": "\"all\" | \"off\" | \"one\"",
+    "required": true,
+    "doc": "Režim opakování: `off`, `all` (celý seznam), `one` (jedna skladba)."
+   },
+   {
+    "name": "error",
+    "type": "null | string",
+    "required": true,
+    "doc": "Text poslední chyby přehrávání, jinak `null`."
+   },
+   {
+    "name": "expanded",
+    "type": "boolean",
+    "required": true,
+    "doc": "Je otevřená fullscreen verze přehrávače."
+   },
+   {
+    "name": "play",
+    "type": "(track: Track, options?: PlayOptions) => void",
+    "required": true,
+    "doc": "Spustí skladbu. S `options.list` se zbytek seznamu stane frontou."
+   },
+   {
+    "name": "togglePlay",
+    "type": "() => void",
+    "required": true,
+    "doc": "Přepne přehrávání a pauzu."
+   },
+   {
+    "name": "pause",
+    "type": "() => void",
+    "required": true,
+    "doc": "Pozastaví přehrávání."
+   },
+   {
+    "name": "resume",
+    "type": "() => void",
+    "required": true,
+    "doc": "Obnoví přehrávání."
+   },
+   {
+    "name": "next",
+    "type": "() => void",
+    "required": true,
+    "doc": "Přeskočí na další skladbu ve frontě."
+   },
+   {
+    "name": "previous",
+    "type": "() => void",
+    "required": true,
+    "doc": "Předchozí skladba; po 3 sekundách přehrávání jen vrátí aktuální na začátek."
+   },
+   {
+    "name": "seek",
+    "type": "(seconds: number) => void",
+    "required": true,
+    "doc": "Přesune přehrávání na daný čas v sekundách."
+   },
+   {
+    "name": "setVolume",
+    "type": "(volume: number) => void",
+    "required": true,
+    "doc": "Nastaví hlasitost (0–1)."
+   },
+   {
+    "name": "toggleMute",
+    "type": "() => void",
+    "required": true,
+    "doc": "Ztlumí nebo vrátí zvuk."
+   },
+   {
+    "name": "addToQueue",
+    "type": "(track: Track, options?: { next?: boolean; }) => void",
+    "required": true,
+    "doc": "Přidá do fronty. S `{ next: true }` hned za aktuální skladbu."
+   },
+   {
+    "name": "removeFromQueue",
+    "type": "(index: number) => void",
+    "required": true,
+    "doc": "Odebere skladbu z fronty podle indexu."
+   },
+   {
+    "name": "playFromQueue",
+    "type": "(index: number) => void",
+    "required": true,
+    "doc": "Přehraje skladbu z fronty a přeskočené skladby před ní zapíše do historie."
+   },
+   {
+    "name": "moveInQueue",
+    "type": "(from: number, to: number) => void",
+    "required": true,
+    "doc": "Přesune skladbu ve frontě z jedné pozice na druhou."
+   },
+   {
+    "name": "clearQueue",
+    "type": "() => void",
+    "required": true,
+    "doc": "Vyprázdní frontu."
+   },
+   {
+    "name": "toggleShuffle",
+    "type": "() => void",
+    "required": true,
+    "doc": "Zapne nebo vypne náhodné pořadí."
+   },
+   {
+    "name": "setRepeat",
+    "type": "(mode: RepeatMode) => void",
+    "required": true,
+    "doc": "Nastaví režim opakování."
+   },
+   {
+    "name": "cycleRepeat",
+    "type": "() => void",
+    "required": true,
+    "doc": "Přepne opakování: vypnuto → vše → jedna → vypnuto."
+   },
+   {
+    "name": "setExpanded",
+    "type": "(expanded: boolean) => void",
+    "required": true,
+    "doc": "Otevře nebo zavře fullscreen přehrávač."
+   }
+  ],
+  "MusicPlayerLabels": [
+   {
+    "name": "loadError",
+    "type": "string",
+    "required": true,
+    "doc": "Chyba, když se soubor nepodaří načíst."
+   },
+   {
+    "name": "playBlocked",
+    "type": "string",
+    "required": true,
+    "doc": "Chyba, když prohlížeč přehrání zablokuje (např. bez kliknutí uživatele)."
+   },
+   {
+    "name": "noSource",
+    "type": "string",
+    "required": true,
+    "doc": "Chyba, když skladba nemá adresu zvukového souboru."
+   }
+  ],
+  "PlayOptions": [
+   {
+    "name": "list",
+    "type": "readonly Track[]",
+    "required": false,
+    "doc": "Celý seznam, ze kterého se hraje (např. playlist). Zbytek za skladbou se stane frontou."
+   },
+   {
+    "name": "keepQueue",
+    "type": "boolean",
+    "required": false,
+    "doc": "Ponechá ručně přidanou frontu, když nedáváš `list`."
+   },
+   {
+    "name": "autoplay",
+    "type": "boolean",
+    "required": false,
+    "doc": "Při `false` se skladba jen připraví (např. obnovení poslední skladby po načtení stránky) a nezačne hrát. Výchozí je `true`."
+   }
+  ],
+  "Track": [
+   {
+    "name": "id",
+    "type": "string | number",
+    "required": true,
+    "doc": "Jedinečné id (slouží k rozlišení skladeb při míchání a obnovení pořadí)."
+   },
+   {
+    "name": "title",
+    "type": "string",
+    "required": true,
+    "doc": "Nadpis."
+   },
+   {
+    "name": "artist",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "album",
+    "type": "string",
+    "required": false,
+    "doc": ""
+   },
+   {
+    "name": "src",
+    "type": "string",
+    "required": true,
+    "doc": "Adresa zvukového souboru."
+   },
+   {
+    "name": "cover",
+    "type": "string",
+    "required": false,
+    "doc": "Adresa obalu alba."
+   },
+   {
+    "name": "duration",
+    "type": "number",
+    "required": false,
+    "doc": "Délka v sekundách, pokud ji znáš dopředu (zobrazí se, než se načtou metadata)."
+   }
+  ],
+  "MusicPlayerProps": [
+   {
+    "name": "actions",
+    "type": "(track: Track) => ReactNode",
+    "required": false,
+    "doc": "Vlastní tlačítka u názvu skladby v obou verzích (oblíbené, přidat do playlistu…)."
+   },
+   {
+    "name": "position",
+    "type": "\"static\" | \"fixed\"",
+    "required": false,
+    "doc": "Umístění mini lišty (viz `MiniPlayer`)."
+   },
+   {
+    "name": "waveform",
+    "type": "boolean",
+    "required": false,
+    "doc": "Zvuková stopa ve fullscreenu (při `false` tenká čára)."
+   },
+   {
+    "name": "labels",
+    "type": "Partial<PlayerLabels>",
+    "required": false,
+    "doc": "Přepsání textů (čeština je výchozí)."
+   }
+  ],
+  "MiniPlayerProps": [
+   {
+    "name": "position",
+    "type": "\"static\" | \"fixed\"",
+    "required": false,
+    "doc": "`fixed` přilepí lištu k dolnímu okraji okna, `static` ji vloží na místo v textu (např. do karty nebo postranního panelu)."
+   },
+   {
+    "name": "actions",
+    "type": "(track: Track) => ReactNode",
+    "required": false,
+    "doc": "Místo vlastních tlačítek vpravo od názvu skladby (oblíbené, přidat do playlistu…). Dostane aktuální skladbu."
+   },
+   {
+    "name": "showVolume",
+    "type": "boolean",
+    "required": false,
+    "doc": "Zobrazit hlasitost (na úzkých obrazovkách se skrývá vždy)."
+   },
+   {
+    "name": "showModes",
+    "type": "boolean",
+    "required": false,
+    "doc": "Zobrazit tlačítka náhodného pořadí a opakování."
+   },
+   {
+    "name": "expandable",
+    "type": "boolean",
+    "required": false,
+    "doc": "Zobrazit tlačítko, které otevře fullscreen. Klik na obal a název ho otevře také."
+   },
+   {
+    "name": "hideWhenEmpty",
+    "type": "boolean",
+    "required": false,
+    "doc": "Když nic nehraje, nevykreslit nic. Jinak se ukáže prázdná lišta."
+   },
+   {
+    "name": "labels",
+    "type": "Partial<PlayerLabels>",
+    "required": false,
+    "doc": "Přepsání textů (čeština je výchozí)."
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
+   }
+  ],
+  "FullscreenPlayerProps": [
+   {
+    "name": "open",
+    "type": "boolean",
+    "required": false,
+    "doc": "Řízené otevření. Bez zadání se řídí stavem přehrávače (`expanded`), který mění `MiniPlayer` a `setExpanded`."
+   },
+   {
+    "name": "onClose",
+    "type": "() => void",
+    "required": false,
+    "doc": "Zavolá se při zavření (tlačítko, Esc). Bez zadání se zavře přes `setExpanded(false)`."
+   },
+   {
+    "name": "actions",
+    "type": "(track: Track) => ReactNode",
+    "required": false,
+    "doc": "Vlastní tlačítka vedle názvu skladby (oblíbené, přidat do playlistu…). Dostane aktuální skladbu."
+   },
+   {
+    "name": "waveform",
+    "type": "boolean",
+    "required": false,
+    "doc": "Posuvník času ve tvaru zvukové stopy. Při `false` je to tenká čára."
+   },
+   {
+    "name": "defaultTab",
+    "type": "\"player\" | \"queue\"",
+    "required": false,
+    "doc": "Se kterým panelem začíná úzká obrazovka (na široké jsou vidět oba vedle sebe)."
+   },
+   {
+    "name": "labels",
+    "type": "Partial<PlayerLabels>",
+    "required": false,
+    "doc": "Přepsání textů (čeština je výchozí)."
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
+   }
+  ],
+  "PlayerQueueProps": [
+   {
+    "name": "showCurrent",
+    "type": "boolean",
+    "required": false,
+    "doc": "Zobrazit nahoře řádek se skladbou, která právě hraje."
+   },
+   {
+    "name": "labels",
+    "type": "Partial<PlayerLabels>",
+    "required": false,
+    "doc": "Přepsání textů (čeština je výchozí)."
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
+   }
+  ],
+  "PlayerSeekProps": [
+   {
+    "name": "value",
+    "type": "number",
+    "required": true,
+    "doc": "Uplynulý čas v sekundách."
+   },
+   {
+    "name": "max",
+    "type": "number",
+    "required": true,
+    "doc": "Celková délka v sekundách."
+   },
+   {
+    "name": "onSeek",
+    "type": "(seconds: number) => void",
+    "required": true,
+    "doc": "Zavolá se s novým časem po puštění (při tažení) nebo hned při použití klávesnice."
+   },
+   {
+    "name": "variant",
+    "type": "\"line\" | \"waveform\"",
+    "required": false,
+    "doc": "Tenká čára, nebo sloupky ve tvaru zvukové stopy."
+   },
+   {
+    "name": "seed",
+    "type": "string | number",
+    "required": false,
+    "doc": "Z čeho se vygeneruje tvar sloupků (např. id skladby), aby měla každá skladba svůj."
+   },
+   {
+    "name": "labels",
+    "type": "Pick<PlayerLabels, \"seek\" | \"seekValue\">",
+    "required": true,
+    "doc": "Přístupné popisky posuvníku (`seek`, `seekValue`)."
+   },
+   {
+    "name": "className",
+    "type": "string",
+    "required": false,
+    "doc": "Vlastní CSS třída přidaná ke kořenovému prvku."
+   }
+  ],
+  "PlayerLabels": [
+   {
+    "name": "play",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "pause",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "next",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "previous",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "shuffle",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "repeatOff",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "repeatAll",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "repeatOne",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "mute",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "unmute",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "volume",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "seek",
+    "type": "string",
+    "required": true,
+    "doc": "Popisek posuvníku s časem skladby."
+   },
+   {
+    "name": "seekValue",
+    "type": "(elapsed: string, total: string) => string",
+    "required": true,
+    "doc": "Hodnota posuvníku času, např. „1:05 z 3:40“. Funkce dostane uplynulý a celkový čas už zformátované."
+   },
+   {
+    "name": "expand",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "collapse",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "nowPlaying",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "queue",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "nextInQueue",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "emptyQueue",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "clearQueue",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "removeFromQueue",
+    "type": "string",
+    "required": true,
+    "doc": ""
+   },
+   {
+    "name": "moveInQueue",
+    "type": "string",
+    "required": true,
+    "doc": "Popisek úchytu pro přesouvání (funguje i šipkami ↑ ↓)."
+   },
+   {
+    "name": "player",
+    "type": "string",
     "required": true,
     "doc": ""
    }
@@ -3901,7 +6787,8 @@
    "locale": "\"cs-CZ\"",
    "monthNames": "DEFAULT_MONTHS",
    "weekdayNames": "DEFAULT_WEEKDAYS",
-   "yearRange": "5"
+   "yearRange": "5",
+   "withTime": "true"
   },
   "ContactForm": {
    "successMessage": "\"Díky! Zpráva je na cestě.\"",
@@ -3926,7 +6813,8 @@
   },
   "SkeletonGrid": {
    "count": "3",
-   "variant": "\"project\""
+   "variant": "\"project\"",
+   "columns": "3"
   },
   "Progress": {
    "showValue": "true",
@@ -4065,8 +6953,18 @@
    "emptyLabel": "\"Žádná data\""
   },
   "Calendar": {
+   "mode": "\"single\"",
+   "months": "1",
    "locale": "\"cs-CZ\"",
    "weekdayNames": "WEEKDAYS"
+  },
+  "DateRangePicker": {
+   "value": "{ from: null, to: null }",
+   "locale": "\"cs-CZ\"",
+   "placeholder": "\"Vyber rozsah\"",
+   "separator": "\" – \"",
+   "clearLabel": "\"Zrušit\"",
+   "applyLabel": "\"Použít\""
   },
   "Carousel": {
    "loop": "true",
@@ -4099,6 +6997,176 @@
   },
   "CbbProvider": {
    "linkComponent": "\"a\""
+  },
+  "FlipCard": {
+   "trigger": "\"click\"",
+   "direction": "\"horizontal\"",
+   "height": "260"
+  },
+  "TiltCard": {
+   "mode": "\"card\"",
+   "maxTilt": "14",
+   "glare": "true",
+   "scale": "1.03"
+  },
+  "TiltLayer": {
+   "depth": "40"
+  },
+  "BeforeAfter": {
+   "initial": "50",
+   "beforeLabel": "\"PŘED\"",
+   "afterLabel": "\"PO\"",
+   "height": "280"
+  },
+  "Folder": {
+   "defaultOpen": "false",
+   "variant": "\"stack\"",
+   "maxVisible": "3",
+   "countLabel": "defaultCount"
+  },
+  "Wallet3D": {
+   "balanceLabel": "\"Celkový zůstatek\""
+  },
+  "Marquee": {
+   "variant": "\"plain\"",
+   "iconOnly": "false",
+   "speed": "60",
+   "rows": "1",
+   "direction": "\"left\"",
+   "alternate": "true",
+   "pauseOnHover": "true",
+   "gap": "32",
+   "fade": "true"
+  },
+  "TodoList": {
+   "defaultItems": "[]"
+  },
+  "DataTable": {
+   "pageSize": "5",
+   "selectable": "true"
+  },
+  "AudioVisualizer": {
+   "bars": "28"
+  },
+  "AreaChart": {
+   "height": "240",
+   "format": "compact"
+  },
+  "LineChart": {
+   "seriesLabel": "\"Tento rok\"",
+   "compareLabel": "\"Minulý rok\"",
+   "height": "240",
+   "format": "compact"
+  },
+  "BarChart": {
+   "height": "240",
+   "format": "compact"
+  },
+  "RadarChart": {
+   "max": "100",
+   "size": "280",
+   "format": "String"
+  },
+  "PaymentSummary": {
+   "title": "\"Rekapitulace platby\"",
+   "discount": "0",
+   "vatRate": "0.21",
+   "currency": "\"CZK\"",
+   "locale": "\"cs-CZ\"",
+   "fractionDigits": "0"
+  },
+  "PromoQRCard": {
+   "eyebrow": "\"VSTUPENKA\""
+  },
+  "Spinner": {
+   "variant": "\"ring\"",
+   "size": "\"md\"",
+   "motion": "\"spin\""
+  },
+  "NumberInput": {
+   "defaultValue": "null",
+   "step": "1",
+   "locale": "\"cs-CZ\"",
+   "decrementLabel": "\"Snížit\"",
+   "incrementLabel": "\"Zvýšit\""
+  },
+  "PasswordInput": {
+   "showLabel": "\"Zobrazit heslo\"",
+   "hideLabel": "\"Skrýt heslo\"",
+   "autoComplete": "\"current-password\""
+  },
+  "Rating": {
+   "defaultValue": "0",
+   "max": "5",
+   "precision": "1",
+   "allowClear": "true",
+   "size": "24"
+  },
+  "MultiSelect": {
+   "defaultValue": "[]",
+   "placeholder": "\"Vybrat…\"",
+   "searchable": "true",
+   "clearable": "true",
+   "emptyLabel": "\"Nic nenalezeno\""
+  },
+  "ThemeToggle": {
+   "variant": "\"icon\"",
+   "includeSystem": "false"
+  },
+  "CommandPalette": {
+   "placeholder": "\"Hledat příkaz…\"",
+   "emptyLabel": "\"Nic nenalezeno\"",
+   "hotkey": "\"mod+k\"",
+   "closeOnSelect": "true",
+   "maxResults": "50"
+  },
+  "useTheme": {
+   "storageKey": "\"cbb-theme\"",
+   "defaultMode": "\"system\""
+  },
+  "MarkdownEditor": {
+   "defaultValue": "\"\"",
+   "rows": "10",
+   "tools": "ALL_TOOLS",
+   "size": "\"normal\"",
+   "defaultView": "\"write\""
+  },
+  "MarkdownView": {
+   "size": "\"normal\""
+  },
+  "TableEditor": {
+   "defaultValue": "EMPTY",
+   "minColumns": "1",
+   "maxColumns": "12",
+   "maxRows": "100"
+  },
+  "MusicPlayerProvider": {
+   "storageKey": "\"cbb-player-volume\"",
+   "initialVolume": "1",
+   "keyboardShortcuts": "false",
+   "mediaSession": "true"
+  },
+  "MusicPlayer": {
+   "position": "\"fixed\"",
+   "waveform": "true"
+  },
+  "MiniPlayer": {
+   "position": "\"fixed\"",
+   "showVolume": "true",
+   "showModes": "true",
+   "expandable": "true",
+   "hideWhenEmpty": "true"
+  },
+  "FullscreenPlayer": {
+   "waveform": "true",
+   "defaultTab": "\"player\""
+  },
+  "PlayerQueue": {
+   "showCurrent": "true"
+  },
+  "PlayerSeek": {
+   "variant": "\"line\"",
+   "seed": "\"\""
   }
  }
 }

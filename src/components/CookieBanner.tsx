@@ -6,7 +6,9 @@ import { isExternalHref, useLinkComponent } from "../lib/link";
 
 export type CookieConsent = "necessary" | "all";
 
+/** Klíč v `localStorage`, pod kterým je uložen souhlas s cookies. */
 export const COOKIE_CONSENT_KEY = "cookie_consent";
+/** Název události na `window`, která se spustí při změně souhlasu. */
 export const COOKIE_CONSENT_EVENT = "cookie-consent-change";
 /** `window.dispatchEvent(new Event(COOKIE_OPEN_EVENT))` (např. z patičky) lištu znovu otevře. */
 export const COOKIE_OPEN_EVENT = "cookie-consent-open";
@@ -23,13 +25,19 @@ export function getCookieConsent(storageKey: string = COOKIE_CONSENT_KEY): Cooki
 }
 
 export interface CookieBannerTexts {
+  /** Nadpis. */
   title: ReactNode;
+  /** Vysvětlení. */
   body: ReactNode;
+  /** Text odkazu na zásady. */
   more: ReactNode;
+  /** Tlačítko „Jen nezbytné“. */
   necessary: ReactNode;
+  /** Tlačítko „Povolit vše“. */
   all: ReactNode;
 }
 
+/** Výchozí české texty `CookieBanner`. */
 export const DEFAULT_COOKIE_TEXTS: CookieBannerTexts = {
   title: "Tady se pečou cookies 🍪",
   body:
@@ -41,6 +49,7 @@ export const DEFAULT_COOKIE_TEXTS: CookieBannerTexts = {
 };
 
 export interface CookieBannerProps {
+  /** Přepíše texty lišty. */
   texts?: Partial<CookieBannerTexts>;
   /** Odkaz na zásady zpracování údajů. */
   policyHref?: string;
@@ -48,7 +57,9 @@ export interface CookieBannerProps {
   storageKey?: string;
   /** Umístění lišty. */
   position?: "bottom" | "bottom-right" | "bottom-left";
+  /** Zavolá se po „Povolit vše“. */
   onAccept?: () => void;
+  /** Zavolá se po „Jen nezbytné“. */
   onReject?: () => void;
   /** Zavolá se po jakékoliv volbě. */
   onChange?: (consent: CookieConsent) => void;
@@ -61,12 +72,15 @@ export interface CookieBannerProps {
    * a po volbě zavolá `onClose`. Souhlas se přesto uloží.
    */
   open?: boolean;
+  /** Zavolá se po zavření. */
   onClose?: () => void;
   /** `false` = v toku stránky místo `position: fixed` (do dokumentace). */
   fixed?: boolean;
+  /** Vlastní CSS třída přidaná ke kořenovému prvku. */
   className?: string;
 }
 
+/** Cookie lišta se souhlasem „nezbytné / vše“, uloženým v localStorage. Znovu ji otevřeš událostí COOKIE_OPEN_EVENT (např. z patičky). Tady je fixed vypnuté. */
 export function CookieBanner({
   texts,
   policyHref = "/GDPR",

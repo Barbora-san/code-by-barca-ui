@@ -3,12 +3,17 @@ import { cn } from "../lib/cn";
 import { CheckIcon, CopyIcon } from "./Icons";
 
 export interface CodeBlockProps {
+  /** Zobrazený kód. */
   code: string;
   /** Jen popisek v hlavičce – knihovna nezvýrazňuje syntaxi (žádná těžká závislost). */
   language?: string;
+  /** Zobrazí čísla řádků. */
   showLineNumbers?: boolean;
+  /** Text tlačítka „Kopírovat“. */
   copyLabel?: string;
+  /** Text po zkopírování. */
   copiedLabel?: string;
+  /** Vlastní CSS třída přidaná ke kořenovému prvku. */
   className?: string;
 }
 

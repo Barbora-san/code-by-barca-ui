@@ -4,15 +4,21 @@ import { cn } from "../lib/cn";
 export type AvatarStatus = "online" | "away" | "busy" | "offline";
 
 export interface AvatarProps {
+  /** Obrázek. Bez něj se zobrazí `initials`. */
   src?: string;
+  /** Alternativní text obrázku. */
   alt?: string;
   /** Zobrazí se, když chybí / nenačte se obrázek. Bez toho se použije první písmeno `alt`. */
   initials?: string;
+  /** Velikost: `sm`, `md`, `lg`. */
   size?: "sm" | "md" | "lg";
+  /** Stavová tečka: `online`, `away`, `busy`, `offline`. */
   status?: AvatarStatus;
+  /** Vlastní CSS třída přidaná ke kořenovému prvku. */
   className?: string;
 }
 
+/** Kulatý avatar s obrázkem, nebo s iniciálami, a volitelnou stavovou tečkou. */
 export function Avatar({ src, alt = "", initials, size = "md", status, className }: AvatarProps) {
   const [failed, setFailed] = useState(false);
   const text = (initials ?? alt.trim().slice(0, 2)).toUpperCase();
@@ -25,13 +31,17 @@ export function Avatar({ src, alt = "", initials, size = "md", status, className
 }
 
 export interface AvatarGroupProps {
+  /** Pole avatarů (props jako u `Avatar`). */
   avatars: Omit<AvatarProps, "size" | "className">[];
   /** Kolik avatarů zobrazit, zbytek se sloučí do „+N“. */
   max?: number;
+  /** Velikost všech avatarů. */
   size?: AvatarProps["size"];
+  /** Vlastní CSS třída přidaná ke kořenovému prvku. */
   className?: string;
 }
 
+/** Překrývající se řada avatarů se souhrnem „+N“. */
 export function AvatarGroup({ avatars, max = 4, size = "md", className }: AvatarGroupProps) {
   const shown = avatars.slice(0, max);
   const rest = avatars.length - shown.length;

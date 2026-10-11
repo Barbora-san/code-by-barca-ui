@@ -2,23 +2,30 @@ import { useEffect, useRef, type KeyboardEvent, type ReactNode } from "react";
 import { cn } from "../lib/cn";
 
 export interface MenuItem {
+  /** Text položky. */
   label: ReactNode;
+  /** Ikona před textem. */
   icon?: ReactNode;
   /** Klávesová zkratka jen jako text (např. `⌘N`). */
   shortcut?: string;
+  /** Zavolá se po výběru. */
   onSelect?: () => void;
+  /** `destructive` obarví položku červeně. */
   variant?: "default" | "destructive";
+  /** Zakáže položku. */
   disabled?: boolean;
   /** Místo položky vykreslí oddělovač. */
   separator?: boolean;
 }
 
 export interface MenuListProps {
+  /** Položky menu. */
   items: MenuItem[];
   /** Zavolá se po výběru položky nebo Escapu / Tabu. */
   onClose: () => void;
   /** Při Escape vrátit focus na trigger. */
   autoFocus?: boolean;
+  /** Vlastní CSS třída přidaná ke kořenovému prvku. */
   className?: string;
 }
 

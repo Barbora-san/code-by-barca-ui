@@ -3,14 +3,19 @@ import { cn } from "../lib/cn";
 import { CheckIcon } from "./Icons";
 
 export interface CheckboxProps extends Omit<InputHTMLAttributes<HTMLInputElement>, "onChange" | "type" | "size"> {
+  /** Zaškrtnuto (řízený stav). */
   checked?: boolean;
+  /** Dostane nový stav `true` / `false`. */
   onChange?: (checked: boolean) => void;
+  /** Text vedle pole. */
   label?: ReactNode;
+  /** Šedý doplňující text pod popiskem. */
   description?: ReactNode;
   /** Částečně zaškrtnuto (např. „vybrat vše“). */
   indeterminate?: boolean;
 }
 
+/** Zaškrtávací pole s popiskem, popisem a stavem „částečně“. */
 export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Checkbox(
   { checked, onChange, label, description, indeterminate, className, id, disabled, ...rest },
   ref

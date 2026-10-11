@@ -3,13 +3,19 @@ import { Floating, type Align, type Side } from "../lib/floating";
 import { cn } from "../lib/cn";
 
 export interface TooltipProps {
+  /** Text nebo prvek v bublině. */
   content: ReactNode;
+  /** Prvek, ke kterému bublina patří. */
   children: ReactNode;
+  /** Strana bubliny. */
   side?: Side;
+  /** Zarovnání bubliny. */
   align?: Align;
   /** Zpoždění zobrazení v ms. */
   delay?: number;
+  /** Bublinu nezobrazuje. */
   disabled?: boolean;
+  /** Vlastní CSS třída přidaná ke kořenovému prvku. */
   className?: string;
 }
 

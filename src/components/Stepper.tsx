@@ -5,14 +5,17 @@ import { cn } from "../lib/cn";
 export type StepperStep = string | { label: ReactNode; description?: ReactNode };
 
 export interface StepperProps {
+  /** Kroky – text, nebo `{ label, description }`. */
   steps: StepperStep[];
   /** Index aktuálního kroku (od 0). */
   currentStep: number;
   /** Když zadáš, dají se kliknutím vybrat už dokončené kroky. */
   onStepClick?: (index: number) => void;
+  /** Vlastní CSS třída přidaná ke kořenovému prvku. */
   className?: string;
 }
 
+/** Kroky průvodce. S onStepClick jde vracet se na dokončené kroky. */
 export function Stepper({ steps, currentStep, onStepClick, className }: StepperProps) {
   return (
     <ol className={cn("cbb-stepper", className)}>

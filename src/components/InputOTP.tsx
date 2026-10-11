@@ -2,8 +2,11 @@ import { useRef, type ClipboardEvent, type KeyboardEvent } from "react";
 import { cn } from "../lib/cn";
 
 export interface InputOTPProps {
+  /** Aktuálně zadaný kód. */
   value: string;
+  /** Dostane kód po každé změně. */
   onChange: (value: string) => void;
+  /** Počet znaků (výchozí 6). */
   length?: number;
   /** Pomlčka uprostřed (u 6 číslic 3 + 3). */
   separator?: boolean;
@@ -11,9 +14,13 @@ export interface InputOTPProps {
   pattern?: RegExp;
   /** Zavolá se, když je kód kompletní. */
   onComplete?: (value: string) => void;
+  /** Zakáže prvek (nejde ho použít, je ztlumený). */
   disabled?: boolean;
+  /** Zvýrazní pole červeně. */
   invalid?: boolean;
+  /** Vlastní CSS třída přidaná ke kořenovému prvku. */
   className?: string;
+  /** Přístupný název pro čtečky obrazovky (když není vidět text). */
   "aria-label"?: string;
 }
 

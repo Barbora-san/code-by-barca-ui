@@ -5,22 +5,30 @@ import { SearchIcon } from "./Icons";
 import { cn } from "../lib/cn";
 
 export interface AutocompleteItem {
+  /** Jedinečné `id`. */
   id: string;
+  /** Zobrazený text. */
   label: string;
+  /** Skupina, do které se položka zařadí. */
   category?: string;
   /** Další text, ve kterém se hledá (synonyma). */
   keywords?: string;
 }
 
 export interface SearchAutocompleteProps {
+  /** Prohledávané položky. */
   items: AutocompleteItem[];
+  /** Dostane `id` a celou vybranou položku. */
   onSelect: (id: string, item: AutocompleteItem) => void;
+  /** Text v prázdném poli. */
   placeholder?: string;
   /** Globální zkratka ⌘K / Ctrl+K zaostří pole (výchozí true). */
   shortcut?: boolean;
+  /** Text, když nic nevyhovuje. */
   emptyLabel?: string;
   /** Maximum zobrazených výsledků. */
   limit?: number;
+  /** Vlastní CSS třída přidaná ke kořenovému prvku. */
   className?: string;
 }
 

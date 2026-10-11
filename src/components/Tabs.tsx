@@ -5,21 +5,32 @@ import { cn } from "../lib/cn";
 export interface TabItem {
   /** Když chybí, použije se index. */
   value?: string;
+  /** Text záložky. */
   label: ReactNode;
+  /** Obsah záložky. */
   content: ReactNode;
+  /** Ikona před textem. */
   icon?: ReactNode;
+  /** Zakáže záložku. */
   disabled?: boolean;
 }
 
 export interface TabsProps {
+  /** Záložky s obsahem. */
   tabs: TabItem[];
+  /** Aktivní záložka (řízený stav). */
   value?: string;
+  /** Počáteční záložka (neřízené použití). */
   defaultValue?: string;
+  /** Dostane `value` zvolené záložky. */
   onChange?: (value: string) => void;
+  /** Podtržené, nebo pills. */
   variant?: "underline" | "pills";
+  /** Vlastní CSS třída přidaná ke kořenovému prvku. */
   className?: string;
 }
 
+/** Záložky s obsahem – podtržené nebo pills. Funguje se šipkami, může být řízené (value) i neřízené. */
 export function Tabs({ tabs, value, defaultValue, onChange, variant = "underline", className }: TabsProps) {
   const uid = useId();
   const keyOf = (t: TabItem, i: number) => t.value ?? String(i);

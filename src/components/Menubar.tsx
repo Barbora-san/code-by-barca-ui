@@ -4,12 +4,16 @@ import { MenuList, type MenuItem } from "./Menu";
 import { cn } from "../lib/cn";
 
 export interface MenubarMenu {
+  /** Název nabídky (Soubor, Úpravy…). */
   label: string;
+  /** Položky nabídky. */
   items: MenuItem[];
 }
 
 export interface MenubarProps {
+  /** Nabídky v liště. */
   menus: MenubarMenu[];
+  /** Vlastní CSS třída přidaná ke kořenovému prvku. */
   className?: string;
 }
 

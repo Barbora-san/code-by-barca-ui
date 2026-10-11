@@ -8,13 +8,17 @@ export interface SectionHeadingProps {
   title: ReactNode;
   /** Část nadpisu ve žluté barvě (vykreslí se za `title`). */
   accent?: ReactNode;
+  /** Popis pod nadpisem. */
   description?: ReactNode;
+  /** Zarovnání textu: na střed, nebo vlevo (s `action` vpravo). */
   align?: "center" | "left";
   /** Volitelný prvek vpravo (např. tlačítko „Zobrazit vše“). */
   action?: ReactNode;
+  /** Vlastní CSS třída přidaná ke kořenovému prvku. */
   className?: string;
 }
 
+/** Nadpis oddílu: mono eyebrow, nadpis se žlutým slovem a popis. Samotné oddíly stránky si skládáš po svém. */
 export function SectionHeading({
   eyebrow,
   title,

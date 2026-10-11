@@ -5,30 +5,43 @@ import { cn } from "../lib/cn";
 import { Tooltip } from "./Tooltip";
 
 export interface SidebarItem {
+  /** Text položky. */
   label: ReactNode;
+  /** Ikona. */
   icon?: ReactNode;
+  /** Adresa (položka bude odkaz). */
   href?: string;
+  /** Zavolá se po kliknutí. */
   onClick?: () => void;
+  /** Aktuální položka. */
   active?: boolean;
   /** Číslo / text vpravo (počet zpráv…). */
   badge?: ReactNode;
+  /** Zakáže položku. */
   disabled?: boolean;
 }
 
 export interface SidebarGroup {
+  /** Nadpis skupiny. */
   title?: ReactNode;
+  /** Položky skupiny. */
   items: SidebarItem[];
 }
 
 export interface SidebarProps {
+  /** Skupiny položek s nadpisy. */
   groups: SidebarGroup[];
+  /** Logo nahoře. */
   header?: ReactNode;
+  /** Obsah dole. */
   footer?: ReactNode;
   /** Zúžená verze jen s ikonami. */
   collapsed?: boolean;
   /** Když zadáš, zobrazí se tlačítko pro sbalení. */
   onCollapsedChange?: (collapsed: boolean) => void;
+  /** Vlastní CSS třída přidaná ke kořenovému prvku. */
   className?: string;
+  /** Název navigace pro čtečky obrazovky. */
   "aria-label"?: string;
 }
 

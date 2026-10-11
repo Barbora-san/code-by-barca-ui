@@ -3,10 +3,13 @@ import { cn } from "../lib/cn";
 import { SearchIcon, XIcon } from "./Icons";
 
 export interface SearchBarProps extends Omit<InputHTMLAttributes<HTMLInputElement>, "onChange" | "value" | "size"> {
+  /** Zadaný dotaz. */
   value: string;
+  /** Dostane dotaz po každé změně. */
   onChange: (value: string) => void;
   /** Popisek tlačítka pro smazání (a11y). */
   clearLabel?: string;
+  /** Vlastní CSS třída přidaná ke kořenovému prvku. */
   className?: string;
 }
 

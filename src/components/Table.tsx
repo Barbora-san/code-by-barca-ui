@@ -6,26 +6,38 @@ import { EmptyState } from "./EmptyState";
 import { cn } from "../lib/cn";
 
 export interface TableColumn<T> {
+  /** Vlastnost řádku, kterou sloupec zobrazuje. */
   key: keyof T & string;
+  /** Hlavička sloupce. */
   label: ReactNode;
+  /** Zarovnání textu. */
   align?: "left" | "center" | "right";
   /** Ořízne text na N znaků (celý je v `title`). */
   truncate?: number;
   /** Nad tabulkou se objeví select pro filtrování podle hodnot sloupce. */
   filterable?: boolean;
+  /** Povolí řazení kliknutím na hlavičku. */
   sortable?: boolean;
   /** Vlastní vykreslení buňky. */
   render?: (row: T) => ReactNode;
 }
 
 export interface TableProps<T> {
+  /** Sloupce. */
   columns: TableColumn<T>[];
+  /** Řádky. */
   data: T[];
+  /** Zobrazí pole pro hledání. */
   searchable?: boolean;
+  /** Text v poli hledání. */
   searchPlaceholder?: string;
+  /** Dostane kliknutý řádek. */
   onRowClick?: (row: T) => void;
+  /** Funkce vracející jedinečný klíč řádku (výchozí index). */
   rowKey?: (row: T, index: number) => string | number;
+  /** Text, když nic nevyhovuje. */
   emptyLabel?: ReactNode;
+  /** Vlastní CSS třída přidaná ke kořenovému prvku. */
   className?: string;
 }
 

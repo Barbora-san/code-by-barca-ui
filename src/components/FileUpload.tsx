@@ -7,12 +7,17 @@ export interface FileUploadProps {
   accept?: string;
   /** Číslo v bajtech, nebo text `"10MB"`, `"500KB"`. */
   maxSize?: number | string;
+  /** Povolí víc souborů najednou. */
   multiple?: boolean;
+  /** Popisek nad zónou. */
   label?: ReactNode;
+  /** Nápověda pod zónou. */
   hint?: ReactNode;
   /** Dostane jen platné soubory. */
   onUpload?: (files: File[]) => void;
+  /** Zakáže nahrávání. */
   disabled?: boolean;
+  /** Vlastní CSS třída přidaná ke kořenovému prvku. */
   className?: string;
 }
 

@@ -5,12 +5,19 @@ import { cn } from "../lib/cn";
 export interface PopoverProps {
   /** Prvek, na který se klikne (tlačítko…). */
   trigger: ReactNode;
+  /** Obsah panelu. */
   children: ReactNode;
+  /** Řízený stav otevření. */
   open?: boolean;
+  /** Počáteční stav (neřízené použití). */
   defaultOpen?: boolean;
+  /** Dostane nový stav. */
   onOpenChange?: (open: boolean) => void;
+  /** Strana panelu. */
   side?: Side;
+  /** Zarovnání panelu. */
   align?: Align;
+  /** Vlastní CSS třída přidaná ke kořenovému prvku. */
   className?: string;
   /** Třída obalu kolem triggeru. */
   anchorClassName?: string;

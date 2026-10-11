@@ -2,6 +2,7 @@
 // Tabulky parametrů v demu se tak nikdy nerozejdou se skutečným kódem.
 import ts from "typescript";
 import { writeFileSync } from "node:fs";
+import { BY_NAME, BY_TYPE } from "./prop-docs.mjs";
 
 const program = ts.createProgram(["src/index.ts"], {
   jsx: ts.JsxEmit.ReactJSX, strict: true, skipLibCheck: true,
@@ -38,7 +39,8 @@ function show(t, ctx) {
     if (uniq.some((x) => x.startsWith("ReactElement")) && uniq.includes("string") && uniq.includes("number")) return "ReactNode";
     if (uniq.includes("symbol") && uniq.includes("object")) return "ElementType";
     if (uniq.includes("true") && uniq.includes("false")) return ["boolean", ...uniq.filter((x) => x !== "true" && x !== "false")].join(" | ");
-    return uniq.join(" | ");
+    if (uniq.length > 14 && uniq.some((x) => x === '"div"' || x === '"span"' || x === '"section"')) return "ElementType";
+    return uniq.filter((x) => x !== "string & {}").join(" | ");
   }
   return clean(checker.typeToString(t, ctx, ts.TypeFormatFlags.NoTruncation | ts.TypeFormatFlags.UseAliasDefinedOutsideCurrentScope));
 }
@@ -68,7 +70,7 @@ for (const sym of checker.getExportsOfModule(mod)) {
       name: p.getName(),
       type: show(t, decl),
       required: !(p.flags & ts.SymbolFlags.Optional),
-      doc: ts.displayPartsToString(p.getDocumentationComment(checker)).trim(),
+      doc: ts.displayPartsToString(p.getDocumentationComment(checker)).trim() || BY_TYPE[name]?.[p.getName()] || BY_NAME[p.getName()] || "",
     });
   }
   out[name] = props;

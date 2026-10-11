@@ -2,11 +2,17 @@ import { useId, type CSSProperties, type InputHTMLAttributes, type ReactNode } f
 import { cn } from "../lib/cn";
 
 export interface SliderProps extends Omit<InputHTMLAttributes<HTMLInputElement>, "onChange" | "value" | "type"> {
+  /** Aktuální hodnota. */
   value: number;
+  /** Dostane novou hodnotu. */
   onChange: (value: number) => void;
+  /** Popisek nad posuvníkem. */
   label?: ReactNode;
+  /** Nejmenší hodnota (výchozí 0). */
   min?: number;
+  /** Největší hodnota (výchozí 100). */
   max?: number;
+  /** Krok (výchozí 1). */
   step?: number;
   /** Zobrazí aktuální hodnotu vpravo od popisku. */
   showValue?: boolean;
@@ -14,6 +20,7 @@ export interface SliderProps extends Omit<InputHTMLAttributes<HTMLInputElement>,
   formatValue?: (value: number) => ReactNode;
 }
 
+/** Posuvník s volitelným formátem hodnoty. */
 export function Slider({
   value,
   onChange,

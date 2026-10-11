@@ -4,23 +4,33 @@ import { Badge, Tag } from "./Badge";
 import { isExternalHref, useLinkComponent } from "../lib/link";
 
 export interface ProjectCardProps {
+  /** Název projektu. */
   title: ReactNode;
+  /** Krátký popis (max. 2 řádky). */
   description?: ReactNode;
   /** URL náhledového obrázku (16:9). */
   image?: string;
+  /** Alternativní text náhledu. */
   imageAlt?: string;
   /** Vlastní náhled místo obrázku (např. `<LazyImage />`). */
   media?: ReactNode;
+  /** Kategorie nad nadpisem. */
   category?: ReactNode;
   /** Rok / datum vpravo nahoře (mono písmo). */
   year?: ReactNode;
+  /** Tagy pod popisem. */
   tags?: string[];
+  /** Kolik tagů zobrazit, zbytek se schová do „+N“. */
   maxTags?: number;
+  /** Celá karta bude odkaz. */
   href?: string;
+  /** Celá karta bude tlačítko. */
   onClick?: () => void;
+  /** Vlastní CSS třída přidaná ke kořenovému prvku. */
   className?: string;
 }
 
+/** Karta projektu s náhledem 16:9, kategorií, rokem a tagy. S href je to odkaz, s onClick tlačítko. */
 export function ProjectCard({
   title,
   description,

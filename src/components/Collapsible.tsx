@@ -4,11 +4,17 @@ import { ChevronDownIcon } from "./Icons";
 import { cn } from "../lib/cn";
 
 export interface CollapsibleProps {
+  /** Spouštěč – klik rozbalí obsah. */
   trigger: ReactNode;
+  /** Rozbalovaný obsah. */
   children: ReactNode;
+  /** Řízený stav. */
   open?: boolean;
+  /** Počáteční stav. */
   defaultOpen?: boolean;
+  /** Dostane nový stav. */
   onOpenChange?: (open: boolean) => void;
+  /** Vlastní CSS třída přidaná ke kořenovému prvku. */
   className?: string;
 }
 

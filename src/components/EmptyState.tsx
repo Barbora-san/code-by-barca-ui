@@ -3,11 +3,15 @@ import { cn } from "../lib/cn";
 import { Button } from "./Button";
 
 export interface EmptyStateProps {
+  /** Velká ikona nahoře. */
   icon?: ReactNode;
+  /** Nadpis. */
   title: ReactNode;
+  /** Vysvětlení. */
   description?: ReactNode;
   /** Tlačítko `{ label, onClick }`, nebo vlastní prvek. */
   action?: { label: ReactNode; onClick?: () => void; href?: string } | ReactNode;
+  /** Vlastní CSS třída přidaná ke kořenovému prvku. */
   className?: string;
 }
 
@@ -15,6 +19,7 @@ function isActionObject(a: EmptyStateProps["action"]): a is { label: ReactNode; 
   return typeof a === "object" && a !== null && "label" in (a as object);
 }
 
+/** Prázdný stav – žádné výsledky, žádné projekty. */
 export function EmptyState({ icon, title, description, action, className }: EmptyStateProps) {
   return (
     <div className={cn("cbb-empty", className)}>

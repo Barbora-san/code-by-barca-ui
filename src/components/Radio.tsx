@@ -2,20 +2,32 @@ import { useId, type ReactNode } from "react";
 import { cn } from "../lib/cn";
 
 export interface RadioOption {
+  /** Hodnota, kterou `onChange` vrátí. */
   value: string;
+  /** Text možnosti. */
   label: ReactNode;
+  /** Doplňující text. */
   description?: ReactNode;
+  /** Zakáže jen tuto možnost. */
   disabled?: boolean;
 }
 
 export interface RadioProps {
+  /** Možnosti skupiny. */
   options: RadioOption[];
+  /** Vybraná hodnota. */
   value?: string;
+  /** Dostane hodnotu vybrané možnosti. */
   onChange?: (value: string) => void;
+  /** Společné `name` skupiny (výchozí se vygeneruje). */
   name?: string;
+  /** Možnosti pod sebou, nebo vedle sebe. */
   orientation?: "vertical" | "horizontal";
+  /** Zakáže celou skupinu. */
   disabled?: boolean;
+  /** Vlastní CSS třída přidaná ke kořenovému prvku. */
   className?: string;
+  /** Název skupiny pro čtečky obrazovky. */
   "aria-label"?: string;
 }
 

@@ -4,9 +4,11 @@ import { cn } from "../lib/cn";
 export type BadgeVariant = "default" | "secondary" | "outline" | "destructive" | "success" | "info" | "warning";
 
 export interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
+  /** Barva a styl odznaku. */
   variant?: BadgeVariant;
   /** Malá tečka před textem (např. stav „volný“). */
   dot?: boolean;
+  /** Ikona před textem. */
   icon?: ReactNode;
 }
 

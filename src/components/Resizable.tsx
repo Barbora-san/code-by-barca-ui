@@ -2,13 +2,19 @@ import { useRef, useState, type KeyboardEvent, type PointerEvent, type ReactNode
 import { cn } from "../lib/cn";
 
 export interface ResizableProps {
+  /** Obsah prvního panelu. */
   firstPanel: ReactNode;
+  /** Obsah druhého panelu. */
   secondPanel: ReactNode;
+  /** Vedle sebe, nebo pod sebou. */
   direction?: "horizontal" | "vertical";
   /** Počáteční velikost prvního panelu v %. */
   defaultSize?: number;
+  /** Nejmenší velikost panelu v %. */
   minSize?: number;
+  /** Největší velikost panelu v %. */
   maxSize?: number;
+  /** Vlastní CSS třída přidaná ke kořenovému prvku. */
   className?: string;
 }
 

@@ -3,14 +3,21 @@ import { cn } from "../lib/cn";
 import { Chip } from "./Chip";
 
 export interface TagInputProps {
+  /** Aktuální tagy. */
   tags: string[];
+  /** Dostane nové pole tagů. */
   onChange: (tags: string[]) => void;
+  /** Text v prázdném poli. */
   placeholder?: string;
+  /** Nejvýš kolik tagů jde přidat. */
   maxTags?: number;
+  /** Popisek nad polem. */
   label?: ReactNode;
   /** Povolit duplicity (výchozí ne, porovnává se bez ohledu na velikost písmen). */
   allowDuplicates?: boolean;
+  /** Zakáže prvek (nejde ho použít, je ztlumený). */
   disabled?: boolean;
+  /** Vlastní CSS třída přidaná ke kořenovému prvku. */
   className?: string;
 }
 

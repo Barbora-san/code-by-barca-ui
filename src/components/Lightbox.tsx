@@ -4,15 +4,22 @@ import { useLockBodyScroll } from "../hooks/useLockBodyScroll";
 import { ChevronLeftIcon, ChevronRightIcon, XIcon } from "./Icons";
 
 export interface LightboxItem {
+  /** Adresa obrázku. */
   src: string;
+  /** Alternativní text. */
   alt?: string;
+  /** Popisek pod obrázkem. */
   caption?: string;
 }
 
 export interface LightboxProps {
+  /** Zda je prohlížeč otevřený. */
   open: boolean;
+  /** Zavolá se při zavření. */
   onClose: () => void;
+  /** Obrázky `{ src, alt?, caption? }`. */
   items: LightboxItem[];
+  /** Který obrázek se zobrazí první. */
   initialIndex?: number;
 }
 

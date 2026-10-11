@@ -1,23 +1,31 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties, type RefObject } from "react";
 import { cn } from "../lib/cn";
+import { Floating } from "../lib/floating";
 
 export interface DateTimePickerProps {
   /** ISO řetězec (např. `2026-09-30T14:30:00.000Z`). Bez hodnoty se použije aktuální čas. */
   value?: string | null;
   /** Dostane ISO řetězec (`toISOString()`). */
   onChange: (iso: string) => void;
+  /** Zobrazit i výběr času (výchozí `true`). S `false` je to čistý výběr data – viz `DatePicker`. */
+  withTime?: boolean;
   /** Locale pro zobrazení (výchozí `cs-CZ`). */
   locale?: string;
   /** Názvy měsíců v kolečku měsíc/rok (výchozí česky). */
   monthNames?: string[];
   /** Zkratky dnů od pondělí. */
   weekdayNames?: string[];
+  /** Text v prázdném poli. */
   placeholder?: string;
   /** Kolik let před a po aktuálním roce nabídnout (výchozí 5). */
   yearRange?: number;
+  /** Zakáže výběr. */
   disabled?: boolean;
+  /** Vlastní CSS třída přidaná ke kořenovému prvku. */
   className?: string;
+  /** Atribut `id` pole. */
   id?: string;
+  /** Atribut `name` pole. */
   name?: string;
 }
 
@@ -70,6 +78,7 @@ export function DateTimePicker({
   placeholder,
   yearRange = 5,
   disabled,
+  withTime = true,
   className,
   id,
   name,
@@ -92,6 +101,7 @@ export function DateTimePicker({
   }, [yearRange]);
 
   const rootRef = useRef<HTMLDivElement>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
   const hourRef = useRef<HTMLDivElement>(null);
   const minuteRef = useRef<HTMLDivElement>(null);
   const monthRef = useRef<HTMLDivElement>(null);
@@ -112,7 +122,9 @@ export function DateTimePicker({
   useEffect(() => {
     if (!open) return;
     const onDown = (e: MouseEvent) => {
-      if (rootRef.current && !rootRef.current.contains(e.target as Node)) close();
+      const t = e.target as Node;
+      if (rootRef.current?.contains(t) || panelRef.current?.contains(t)) return;
+      close();
     };
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && close();
     document.addEventListener("mousedown", onDown);
@@ -253,8 +265,7 @@ export function DateTimePicker({
         day: "numeric",
         month: "long",
         year: "numeric",
-        hour: "2-digit",
-        minute: "2-digit",
+        ...(withTime ? { hour: "2-digit", minute: "2-digit" } : {}),
       })
     : "";
 
@@ -279,8 +290,8 @@ export function DateTimePicker({
         className="cbb-input cbb-dtp__input"
       />
 
-      {open && (
-        <div className="cbb-dtp__panel" role="dialog" aria-label="Výběr data a času">
+      <Floating anchorRef={rootRef} panelRef={panelRef} open={open} side="bottom" align="start" offset={8} className="cbb-floating--dtp">
+        <div className={cn("cbb-dtp__panel", !withTime && "cbb-dtp__panel--date")} role="dialog" aria-label={withTime ? "Výběr data a času" : "Výběr data"}>
           <div className="cbb-dtp__layout">
             <div className="cbb-dtp__cal">
               {renderNav(false)}
@@ -320,6 +331,7 @@ export function DateTimePicker({
               )}
             </div>
 
+            {withTime && (
             <div className="cbb-dtp__time">
               {renderNav(true)}
               <div className="cbb-dtp__wheels cbb-dtp__wheels--time">
@@ -338,9 +350,10 @@ export function DateTimePicker({
                 />
               </div>
             </div>
+            )}
           </div>
         </div>
-      )}
+      </Floating>
     </div>
   );
 }

@@ -7,24 +7,33 @@ import { Tag } from "./Badge";
 import { isExternalHref, useLinkComponent } from "../lib/link";
 
 export interface SkillCardProps {
+  /** Název dovednosti. */
   title: ReactNode;
+  /** Krátký popis (max. 3 řádky). */
   description?: ReactNode;
   /** Ikona uvnitř žlutého čtverce (např. `<CodeIcon />`). */
   icon?: ReactNode;
   /** Úroveň 1–4 (viz SkillLevelBar). */
   level?: number;
+  /** Vlastní popisky úrovní. */
   levels?: SkillLevelBarProps["levels"];
+  /** Nástroje zobrazené jako tagy. */
   tools?: string[];
   /** Kolik nástrojů zobrazit, zbytek se sloučí do „+N“. */
   maxTools?: number;
   /** Pořadí v mřížce pro postupné najíždění. */
   index?: number;
+  /** Text „Zobrazit detail“ dole na kartě. */
   detailLabel?: ReactNode;
+  /** Celá karta bude odkaz. */
   href?: string;
+  /** Celá karta bude tlačítko. */
   onClick?: () => void;
+  /** Vlastní CSS třída přidaná ke kořenovému prvku. */
   className?: string;
 }
 
+/** Karta dovednosti z homepage – ikona, úroveň, nástroje a postupné zobrazování podle index. */
 export function SkillCard({
   title,
   description,

@@ -2,16 +2,25 @@ import { useEffect, useId, useRef, type ReactNode } from "react";
 import { cn } from "../lib/cn";
 import { useEscape } from "../hooks/useEscape";
 import { useLockBodyScroll } from "../hooks/useLockBodyScroll";
+import { useFocusTrap } from "../hooks/useFocusTrap";
 import { XIcon } from "./Icons";
 
 export interface SheetProps {
+  /** Zda je panel otevřený. */
   open: boolean;
+  /** Zavolá se při zavření. */
   onClose: () => void;
+  /** Nadpis panelu. */
   title?: ReactNode;
+  /** Popis pod nadpisem. */
   description?: ReactNode;
+  /** Ze které strany panel vyjede. */
   side?: "left" | "right" | "top" | "bottom";
+  /** Patička (tlačítka). */
   footer?: ReactNode;
+  /** Vlastní CSS třída přidaná ke kořenovému prvku. */
   className?: string;
+  /** Obsah panelu. */
   children?: ReactNode;
 }
 
@@ -21,6 +30,7 @@ export function Sheet({ open, onClose, title, description, side = "right", foote
   const ref = useRef<HTMLDivElement>(null);
   useEscape(open, onClose);
   useLockBodyScroll(open);
+  useFocusTrap(ref, open);
 
   useEffect(() => {
     if (!open) return;

@@ -6,18 +6,25 @@ export type ButtonVariant = "primary" | "secondary" | "outline" | "soft" | "ghos
 export type ButtonSize = "sm" | "md" | "lg";
 
 export interface ButtonProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, "color"> {
+  /** Vzhled tlačítka: `primary` (žluté), `secondary`, `outline`, `soft`, `ghost`, `destructive`, `link`. */
   variant?: ButtonVariant;
+  /** Velikost: `sm`, `md`, `lg`. */
   size?: ButtonSize;
   /** Zobrazí spinner a tlačítko zablokuje. */
   loading?: boolean;
+  /** Ikona před textem. */
   leftIcon?: ReactNode;
+  /** Ikona za textem. */
   rightIcon?: ReactNode;
+  /** Roztáhne tlačítko na celou šířku rodiče. */
   fullWidth?: boolean;
   /** Svítící stín při hoveru (jako na hero CTA). */
   glow?: boolean;
   /** Pokud je zadán `href`, vykreslí se odkaz místo `<button>`. */
   href?: string;
+  /** Cíl odkazu (`_blank` otevře novou kartu). Má smysl jen s `href`. */
   target?: string;
+  /** Atribut `rel` odkazu. U `_blank` se `noopener noreferrer` doplní samo. */
   rel?: string;
 }
 

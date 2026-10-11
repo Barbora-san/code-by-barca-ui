@@ -3,12 +3,19 @@ import { Floating, type Align, type Side } from "../lib/floating";
 import { cn } from "../lib/cn";
 
 export interface HoverCardProps {
+  /** Prvek, na který se najíždí. */
   trigger: ReactNode;
+  /** Obsah karty. */
   children: ReactNode;
+  /** Strana karty. */
   side?: Side;
+  /** Zarovnání karty. */
   align?: Align;
+  /** Zpoždění otevření (ms). */
   openDelay?: number;
+  /** Zpoždění zavření (ms). */
   closeDelay?: number;
+  /** Vlastní CSS třída přidaná ke kořenovému prvku. */
   className?: string;
 }
 

@@ -4,9 +4,13 @@ import { MenuList, type MenuItem } from "./Menu";
 import { cn } from "../lib/cn";
 
 export interface ContextMenuProps {
+  /** Položky menu. */
   items: MenuItem[];
+  /** Oblast, na které menu funguje. */
   children: ReactNode;
+  /** Menu nezobrazuje. */
   disabled?: boolean;
+  /** Vlastní CSS třída přidaná ke kořenovému prvku. */
   className?: string;
 }
 

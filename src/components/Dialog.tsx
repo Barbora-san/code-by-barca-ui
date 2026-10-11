@@ -2,21 +2,31 @@ import { useEffect, useId, useRef, type ReactNode } from "react";
 import { cn } from "../lib/cn";
 import { useEscape } from "../hooks/useEscape";
 import { useLockBodyScroll } from "../hooks/useLockBodyScroll";
+import { useFocusTrap } from "../hooks/useFocusTrap";
 import { XIcon } from "./Icons";
 
 export interface DialogProps {
+  /** Zda je okno otevřené. */
   open: boolean;
+  /** Zavolá se při zavření (Esc, křížek, klik na pozadí). */
   onClose: () => void;
+  /** Nadpis okna. */
   title?: ReactNode;
+  /** Popis pod nadpisem. */
   description?: ReactNode;
   /** Zavřít kliknutím na pozadí (výchozí true). */
   closeOnBackdrop?: boolean;
+  /** Šířka okna. */
   size?: "sm" | "md" | "lg" | "xl";
+  /** Patička (tlačítka). */
   footer?: ReactNode;
+  /** Vlastní CSS třída přidaná ke kořenovému prvku. */
   className?: string;
+  /** Obsah okna. */
   children?: ReactNode;
 }
 
+/** Modální okno s nadpisem, popisem a patičkou. Zamyká scroll, zavírá Esc a klik na pozadí. Modal je alias. */
 export function Dialog({
   open,
   onClose,
@@ -32,6 +42,7 @@ export function Dialog({
   const panelRef = useRef<HTMLDivElement>(null);
   useEscape(open, onClose);
   useLockBodyScroll(open);
+  useFocusTrap(panelRef, open);
 
   useEffect(() => {
     if (!open) return;

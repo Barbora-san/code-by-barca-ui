@@ -1,16 +1,24 @@
 import { cn } from "../lib/cn";
 
 export interface FilterPillOption {
+  /** Hodnota, kterou `onChange` vrátí. */
   value: string;
+  /** Text pilulky. */
   label: string;
+  /** Počet za textem. */
   count?: number;
 }
 
 export interface FilterPillsProps {
+  /** Možnosti jako pilulky. */
   options: FilterPillOption[];
+  /** Vybraná hodnota. */
   value: string;
+  /** Dostane hodnotu vybrané pilulky. */
   onChange: (value: string) => void;
+  /** Vlastní CSS třída přidaná ke kořenovému prvku. */
   className?: string;
+  /** Název skupiny pro čtečky obrazovky. */
   "aria-label"?: string;
 }
 

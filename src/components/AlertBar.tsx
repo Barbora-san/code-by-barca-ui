@@ -8,17 +8,23 @@ export type AlertBarVariant = "brand" | "info" | "success" | "warning" | "error"
 const ICONS = { brand: SparklesIcon, info: InfoIcon, success: CheckCircleIcon, warning: AlertTriangleIcon, error: XCircleIcon } as const;
 
 export interface AlertBarProps {
+  /** Text oznámení. */
   children: ReactNode;
+  /** Barva lišty. */
   variant?: AlertBarVariant;
   /** `static` = v toku stránky, `top` / `bottom` = přilepená k okraji okna. */
   position?: "static" | "top" | "bottom";
+  /** Ikona před textem. */
   icon?: ReactNode | null;
   /** Odkaz / akce na konci lišty. */
   action?: { label: ReactNode; href?: string; onClick?: () => void };
+  /** Zobrazí křížek (výchozí zapnuto). */
   dismissible?: boolean;
   /** Když zadáš, zavření se zapamatuje v localStorage (lišta se už neukáže). */
   storageKey?: string;
+  /** Zavolá se po zavření. */
   onDismiss?: () => void;
+  /** Vlastní CSS třída přidaná ke kořenovému prvku. */
   className?: string;
 }
 

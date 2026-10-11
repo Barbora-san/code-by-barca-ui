@@ -10,12 +10,17 @@ import { cn } from "../lib/cn";
 import { ChevronDownIcon } from "./Icons";
 
 export interface FieldProps {
+  /** Popisek nad polem. */
   label?: ReactNode;
+  /** Nápověda pod polem. */
   hint?: ReactNode;
+  /** Chyba pod polem (nahradí nápovědu). */
   error?: ReactNode;
   /** Id ovládacího prvku (pro `label htmlFor`). Když ho nezadáš, vygeneruje se. */
   htmlFor?: string;
+  /** Vlastní CSS třída přidaná ke kořenovému prvku. */
   className?: string;
+  /** Ovládací prvek, který se obalí (`Input`, vlastní komponenta…). */
   children: ReactNode;
 }
 
@@ -102,6 +107,7 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(function 
 export interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement>, ControlExtras {
   /** Zkratka místo `<option>` potomků. */
   options?: { value: string; label: ReactNode; disabled?: boolean }[];
+  /** Text první, nevybratelné položky. */
   placeholder?: string;
 }
 

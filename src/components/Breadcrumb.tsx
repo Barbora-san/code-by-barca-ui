@@ -4,14 +4,20 @@ import { ChevronRightIcon } from "./Icons";
 import { cn } from "../lib/cn";
 
 export interface BreadcrumbItem {
+  /** Text položky. */
   label: ReactNode;
+  /** Adresa (poslední položka ji mít nemá). */
   href?: string;
+  /** Ikona před textem. */
   icon?: ReactNode;
 }
 
 export interface BreadcrumbProps {
+  /** Cesta od začátku k aktuální stránce. */
   items: BreadcrumbItem[];
+  /** Oddělovač (výchozí šipka). */
   separator?: ReactNode;
+  /** Vlastní CSS třída přidaná ke kořenovému prvku. */
   className?: string;
 }
 

@@ -2,10 +2,15 @@ import { useSyncExternalStore, type ReactNode } from "react";
 import { AlertDialog, type AlertDialogVariant } from "./AlertDialog";
 
 export interface MessageBoxOptions {
+  /** Nadpis. */
   title: ReactNode;
+  /** Text zprávy. */
   message?: ReactNode;
+  /** Barva a ikona. */
   variant?: AlertDialogVariant;
+  /** Text potvrzovacího tlačítka. */
   okLabel?: ReactNode;
+  /** Text tlačítka Zrušit (jen `confirm`). */
   cancelLabel?: ReactNode;
 }
 
@@ -56,6 +61,7 @@ export const messageBox = {
   confirm: (options: MessageBoxOptions) => push("confirm", { variant: "default", ...options }),
 };
 
+/** Místo, kde se vykreslují okna z `messageBox()`. Vlož ho jednou do kořene aplikace. */
 export function MessageBoxHost() {
   const list = useSyncExternalStore(subscribe, getSnapshot, getSnapshot);
   const current = list[0];

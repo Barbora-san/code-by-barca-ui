@@ -1,5 +1,6 @@
 import { cn } from "../lib/cn";
 
+/** Výchozí názvy úrovní dovedností. */
 export const DEFAULT_SKILL_LEVELS = ["Hobby", "Učím se", "Pracuji s tím", "Hlavní"] as const;
 
 export interface SkillLevelBarProps {
@@ -9,9 +10,11 @@ export interface SkillLevelBarProps {
   levels?: readonly string[];
   /** Skryje popisky pod lištou. */
   hideLabels?: boolean;
+  /** Vlastní CSS třída přidaná ke kořenovému prvku. */
   className?: string;
 }
 
+/** Segmentová lišta úrovně (Hobby → Hlavní). Počet segmentů i popisky jsou přepisovatelné. */
 export function SkillLevelBar({
   level,
   levels = DEFAULT_SKILL_LEVELS,

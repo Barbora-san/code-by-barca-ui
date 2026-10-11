@@ -47,6 +47,7 @@ export type { StatCardProps } from "./components/StatCard";
 export { Avatar, AvatarGroup } from "./components/Avatar";
 export type { AvatarProps, AvatarGroupProps, AvatarStatus } from "./components/Avatar";
 export { Skeleton, ProjectCardSkeleton, SkillCardSkeleton, SkeletonGrid } from "./components/Skeleton";
+export type { SkeletonGridProps } from "./components/Skeleton";
 export type { SkeletonProps } from "./components/Skeleton";
 export { Progress } from "./components/Progress";
 export type { ProgressProps } from "./components/Progress";
@@ -145,7 +146,11 @@ export type { UseFilterOptions, FilterDef, SortDef, FilterState, FilterChipModel
 export { Table } from "./components/Table";
 export type { TableProps, TableColumn } from "./components/Table";
 export { Calendar } from "./components/Calendar";
-export type { CalendarProps } from "./components/Calendar";
+export type { CalendarProps, DateRange } from "./components/Calendar";
+export { DatePicker } from "./components/DatePicker";
+export type { DatePickerProps } from "./components/DatePicker";
+export { DateRangePicker } from "./components/DateRangePicker";
+export type { DateRangePickerProps } from "./components/DateRangePicker";
 export { Carousel } from "./components/Carousel";
 export type { CarouselProps } from "./components/Carousel";
 export { Resizable } from "./components/Resizable";
@@ -166,3 +171,82 @@ export type { FloatingProps, Side, Align } from "./lib/floating";
 export { CbbProvider, useLinkComponent } from "./lib/link";
 export type { CbbProviderProps } from "./lib/link";
 export { cn } from "./lib/cn";
+
+// ───────────────────────────── Efekty a interaktivní prvky ─────────────────────────────
+export { FlipCard } from "./components/FlipCard";
+export type { FlipCardProps } from "./components/FlipCard";
+export { TiltCard, TiltLayer } from "./components/TiltCard";
+export type { TiltCardProps, TiltLayerProps } from "./components/TiltCard";
+export { BeforeAfter } from "./components/BeforeAfter";
+export type { BeforeAfterProps } from "./components/BeforeAfter";
+export { Folder } from "./components/Folder";
+export type { FolderProps, FolderItem } from "./components/Folder";
+export { Wallet3D } from "./components/Wallet3D";
+export type { Wallet3DProps, WalletCard } from "./components/Wallet3D";
+export { FloatingInput } from "./components/FloatingInput";
+export type { FloatingInputProps } from "./components/FloatingInput";
+export { Marquee } from "./components/Marquee";
+export type { MarqueeProps, MarqueeItem } from "./components/Marquee";
+export { TodoList } from "./components/TodoList";
+export type { TodoListProps, TodoItem, TodoPriority, TodoListLabels } from "./components/TodoList";
+export { DataTable } from "./components/DataTable";
+export type { DataTableProps, DataColumn, DataTableLabels } from "./components/DataTable";
+export { AudioVisualizer } from "./components/AudioVisualizer";
+export type { AudioVisualizerProps } from "./components/AudioVisualizer";
+
+// ───────────────────────────── Grafy a platby ─────────────────────────────
+export { AreaChart, LineChart, BarChart, RadarChart } from "./components/Charts";
+export type { ChartProps, ChartDatum, LineChartProps, RadarChartProps } from "./components/Charts";
+export { PaymentSummary } from "./components/PaymentSummary";
+export type { PaymentSummaryProps, PaymentLine, PaymentSummaryLabels } from "./components/PaymentSummary";
+export { PromoQRCard } from "./components/PromoQRCard";
+export type { PromoQRCardProps } from "./components/PromoQRCard";
+
+// ───────────────────────────── Základy – loader, vstupy, hooky ─────────────────────────────
+export { Spinner } from "./components/Spinner";
+export type { SpinnerProps } from "./components/Spinner";
+export { NumberInput } from "./components/NumberInput";
+export type { NumberInputProps } from "./components/NumberInput";
+export { PasswordInput } from "./components/PasswordInput";
+export type { PasswordInputProps } from "./components/PasswordInput";
+export { Rating } from "./components/Rating";
+export type { RatingProps } from "./components/Rating";
+export { MultiSelect } from "./components/MultiSelect";
+export type { MultiSelectProps, MultiSelectOption } from "./components/MultiSelect";
+export { useDebounce } from "./hooks/useDebounce";
+export { useMediaQuery } from "./hooks/useMediaQuery";
+export { useLocalStorage } from "./hooks/useLocalStorage";
+export { useCopyToClipboard } from "./hooks/useCopyToClipboard";
+export { useDisclosure } from "./hooks/useDisclosure";
+export { useFocusTrap } from "./hooks/useFocusTrap";
+export { ThemeToggle } from "./components/ThemeToggle";
+export type { ThemeToggleProps } from "./components/ThemeToggle";
+export { CommandPalette } from "./components/CommandPalette";
+export type { CommandPaletteProps, CommandItem } from "./components/CommandPalette";
+export { useTheme, getThemeInitScript } from "./hooks/useTheme";
+export type { ThemeMode, UseThemeOptions } from "./hooks/useTheme";
+export { useHotkey } from "./hooks/useHotkey";
+
+export { MarkdownEditor } from "./components/MarkdownEditor";
+export type { MarkdownEditorProps, MarkdownEditorLabels, MarkdownTool } from "./components/MarkdownEditor";
+export { MarkdownView } from "./components/MarkdownView";
+export type { MarkdownViewProps } from "./components/MarkdownView";
+export { markdownToHtml } from "./lib/markdown";
+export { TableEditor } from "./components/TableEditor";
+export type { TableEditorProps, TableEditorLabels, TableData } from "./components/TableEditor";
+
+export { MusicPlayerProvider, useMusicPlayer } from "./components/MusicPlayerProvider";
+export type { MusicPlayerProviderProps, MusicPlayerState, MusicPlayerLabels, PlayOptions, Track, RepeatMode } from "./components/MusicPlayerProvider";
+export { MusicPlayer } from "./components/MusicPlayer";
+export type { MusicPlayerProps } from "./components/MusicPlayer";
+export { MiniPlayer } from "./components/MiniPlayer";
+export type { MiniPlayerProps } from "./components/MiniPlayer";
+export { FullscreenPlayer } from "./components/FullscreenPlayer";
+export type { FullscreenPlayerProps } from "./components/FullscreenPlayer";
+export { PlayerQueue } from "./components/PlayerQueue";
+export type { PlayerQueueProps } from "./components/PlayerQueue";
+export { PlayerSeek } from "./components/PlayerSeek";
+export type { PlayerSeekProps } from "./components/PlayerSeek";
+export { CS_PLAYER_LABELS, formatTime } from "./lib/playerLabels";
+export type { PlayerLabels } from "./lib/playerLabels";
+
