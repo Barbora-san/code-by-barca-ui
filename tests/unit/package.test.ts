@@ -27,7 +27,7 @@ describe("package.json", () => {
   });
   it("react a react-dom jsou peer závislosti, ne běžné závislosti", () => {
     expect(pkg.peerDependencies.react).toBeTruthy();
-    expect(pkg.dependencies ?? {}).toEqual({});
+    expect(pkg.dependencies).toEqual({ "qrcode.react": "^4.2.0" });
   });
 });
 
