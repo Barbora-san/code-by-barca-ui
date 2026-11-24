@@ -36,6 +36,15 @@ describe("vykreslení na serveru (bez window / document)", () => {
     expect(render()).toContain(needle);
   });
 
+  it("QRCode validates input, exposes an accessible label and clamps output size", () => {
+    expect(renderToString(h(QRCode, { value: "" }))).toBe("");
+    const markup = renderToString(h(QRCode, { value: "https://code-by-barca.cz", size: 900, ariaLabel: "QR webu" }));
+    expect(markup).toContain('aria-label="QR webu"');
+    expect(markup).toContain('width="512"');
+    expect(markup).toContain('height="512"');
+    expect(markup).toContain("<svg");
+  });
+
   it("přehrávač bez skladby nic nevykreslí a fullscreen na serveru nesahá na document", () => {
     expect(renderToString(h(MusicPlayerProvider, null, h(MiniPlayer, null)))).toBe("");
     expect(renderToString(h(MusicPlayerProvider, null, h(FullscreenPlayer, { open: true })))).toBe("");
