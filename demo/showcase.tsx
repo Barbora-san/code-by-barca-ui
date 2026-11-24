@@ -7,7 +7,7 @@ import {
   Reveal, Pagination, Collapsible, SearchAutocomplete, FilterBar, useFilter, Resizable, ScrollArea, FAB, NotificationPopover,
   NotificationBadge, Menubar, Alert, SkillLevelBar, LazyImage, Sidebar, Input, messageBox, toast, MailIcon, MapPinIcon,
   GithubIcon, CodeIcon, PaletteIcon, SparklesIcon, FolderIcon, BellIcon, PlusIcon, SearchIcon, MoreIcon, HomeIcon, UserIcon,
-  SettingsIcon, type FilterDef, type SortDef, type DateRange,
+  SettingsIcon, QRCode, type FilterDef, type SortDef, type DateRange,
 } from "../src";
 import { img } from "./img";
 
@@ -95,6 +95,17 @@ export function Showcase() {
             <Tooltip content="Hledání v navigaci"><span><Kbd>Ctrl</Kbd> <Kbd>K</Kbd></span></Tooltip>
           </Row2>
         </section>
+
+        <Part n="00" title="QR kód">
+          <Row2>
+            <QRCode value="https://code-by-barca.cz" size={168} ariaLabel="QR kód webu Code by Barca" />
+            <div>
+              <strong>Code by Barca</strong>
+              <p className="demo-muted">Skutečný SVG QR kód, který lze naskenovat telefonem.</p>
+              <code className="demo-mono">https://code-by-barca.cz</code>
+            </div>
+          </Row2>
+        </Part>
 
         <div className="demo-grid4">
           <StatCard label="Projektů" value="12" icon={<FolderIcon size={18} />} />

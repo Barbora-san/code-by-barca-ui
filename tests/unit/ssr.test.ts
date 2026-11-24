@@ -3,7 +3,7 @@ import { renderToString } from "react-dom/server";
 import { describe, expect, it } from "vitest";
 import {
   Button, Spinner, ThemeToggle, MarkdownView, MarkdownEditor, TableEditor, NumberInput, PasswordInput,
-  Rating, MultiSelect, Badge, getThemeInitScript, MusicPlayerProvider, MiniPlayer, FullscreenPlayer, PlayerQueue,
+  Rating, MultiSelect, Badge, QRCode, getThemeInitScript, MusicPlayerProvider, MiniPlayer, FullscreenPlayer, PlayerQueue,
 } from "../../src";
 
 /**
@@ -19,6 +19,7 @@ describe("vykreslení na serveru (bez window / document)", () => {
   const cases: [string, () => string, string][] = [
     ["Button", () => renderToString(h(Button, null, "Ahoj")), "cbb-btn"],
     ["Badge", () => renderToString(h(Badge, null, "x")), "cbb-badge"],
+    ["QRCode", () => renderToString(h(QRCode, { value: "otpauth://totp/demo?secret=ABC", ariaLabel: "TOTP QR" })), "TOTP QR"],
     ["Spinner", () => renderToString(h(Spinner, { label: "Načítám" })), "cbb-spin__ring"],
     ["ThemeToggle", () => renderToString(h(ThemeToggle, null)), "cbb-theme"],
     ["MarkdownView", () => renderToString(h(MarkdownView, { source: "**a**" })), "<strong>a</strong>"],
@@ -33,6 +34,15 @@ describe("vykreslení na serveru (bez window / document)", () => {
   ];
   it.each(cases)("%s se vykreslí", (_name, render, needle) => {
     expect(render()).toContain(needle);
+  });
+
+  it("QRCode validates input, exposes an accessible label and clamps output size", () => {
+    expect(renderToString(h(QRCode, { value: "" }))).toBe("");
+    const markup = renderToString(h(QRCode, { value: "https://code-by-barca.cz", size: 900, ariaLabel: "QR webu" }));
+    expect(markup).toContain('aria-label="QR webu"');
+    expect(markup).toContain('width="512"');
+    expect(markup).toContain('height="512"');
+    expect(markup).toContain("<svg");
   });
 
   it("přehrávač bez skladby nic nevykreslí a fullscreen na serveru nesahá na document", () => {

@@ -45,7 +45,7 @@ Požadavky: React 18 nebo 19 (`react` a `react-dom` jako peer závislosti), Type
 | Hudba | `MusicPlayer`, `MiniPlayer`, `FullscreenPlayer`, `PlayerQueue`, `MusicPlayerProvider`, `useMusicPlayer` (fronta, shuffle, opakování, bez serveru) |
 | Hooky | `useDebounce`, `useMediaQuery`, `useLocalStorage`, `useCopyToClipboard`, `useDisclosure`, `useFocusTrap` |
 | Grafy | `AreaChart`, `LineChart`, `BarChart`, `RadarChart` |
-| Platby a vstupenky | `PaymentSummary`, `PromoQRCard` |
+| Platby a vstupenky | `PaymentSummary`, `PromoQRCard`, `QRCode` (skenovatelný SVG QR kód) |
 | Data a layout | `Table`, `Calendar`, `Carousel`, `Resizable`, `ScrollArea`, `FAB` |
 
 ## Filtr (`useFilter` + `FilterBar`)
@@ -100,6 +100,20 @@ player.play(track, { list: tracks });
 ```
 
 Přehrávač nic neukládá na server: oblíbené, počítadla přehrání a historii napojíš přes `actions`, `onTrackStart` a `onTrackEnd`. Klávesové zkratky jsou ve výchozím stavu vypnuté (`keyboardShortcuts`), aby nekolidovaly s tvojí aplikací.
+
+## QR kód
+
+Pro běžný obsah i krátkodobé provisioning URI:
+
+```tsx
+import { QRCode } from "code-by-barca-ui";
+
+<QRCode value={provisioningUri} size={220} ariaLabel="QR kód pro autentizační aplikaci" />
+```
+
+Komponenta vykresluje skutečný skenovatelný SVG QR kód. Podporuje úroveň korekce chyb,
+barvy, velikost a přístupný popis. Pokud QR obsahuje citlivý údaj (například TOTP secret),
+zobrazuj ho pouze během registrace a neposílej hodnotu do logů, analytiky ani trvalého úložiště.
 
 ## Next.js
 

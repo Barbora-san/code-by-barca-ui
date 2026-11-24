@@ -201,6 +201,8 @@ export { PaymentSummary } from "./components/PaymentSummary";
 export type { PaymentSummaryProps, PaymentLine, PaymentSummaryLabels } from "./components/PaymentSummary";
 export { PromoQRCard } from "./components/PromoQRCard";
 export type { PromoQRCardProps } from "./components/PromoQRCard";
+export { QRCode } from "./components/QRCode";
+export type { QRCodeProps, QRCodeErrorCorrectionLevel } from "./components/QRCode";
 
 // ───────────────────────────── Základy – loader, vstupy, hooky ─────────────────────────────
 export { Spinner } from "./components/Spinner";
