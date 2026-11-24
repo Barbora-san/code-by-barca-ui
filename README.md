@@ -45,7 +45,7 @@ Požadavky: React 18 nebo 19 (`react` a `react-dom` jako peer závislosti), Type
 | Hudba | `MusicPlayer`, `MiniPlayer`, `FullscreenPlayer`, `PlayerQueue`, `MusicPlayerProvider`, `useMusicPlayer` (fronta, shuffle, opakování, bez serveru) |
 | Hooky | `useDebounce`, `useMediaQuery`, `useLocalStorage`, `useCopyToClipboard`, `useDisclosure`, `useFocusTrap` |
 | Grafy | `AreaChart`, `LineChart`, `BarChart`, `RadarChart` |
-| Platby a vstupenky | `PaymentSummary`, `PromoQRCard` |
+| Platby a vstupenky | `PaymentSummary`, `PromoQRCard`, `QRCode` (skenovatelný SVG QR kód) |
 | Data a layout | `Table`, `Calendar`, `Carousel`, `Resizable`, `ScrollArea`, `FAB` |
 
 ## Filtr (`useFilter` + `FilterBar`)
