@@ -12,6 +12,7 @@ import { BASIC2_DOCS } from "./basics2";
 import { THEME_DOCS } from "./theme";
 import { EDITOR_DOCS } from "./editors";
 import { PLAYER_DOCS } from "./player";
+import { QRCODE_DOCS } from "./qrcode";
 import type { Category, Doc } from "./types";
 
 // Všechny bloky na jednom místě; nové (DATE_DOCS) přepíšou starší se stejným id.
@@ -24,12 +25,13 @@ for (const d of BASIC2_DOCS) ALL.set(d.id, d);
 for (const d of THEME_DOCS) ALL.set(d.id, d);
 for (const d of EDITOR_DOCS) ALL.set(d.id, d);
 for (const d of PLAYER_DOCS) ALL.set(d.id, d);
+for (const d of QRCODE_DOCS) ALL.set(d.id, d);
 
 /** Pořadí a rozřazení do kategorií – jediné místo, které se upravuje. */
 const LAYOUT: { id: string; title: string; ids: string[] }[] = [
   { id: "zaklady", title: "Základy", ids: ["button", "fab", "badge", "chip", "kbd", "divider", "spinner", "themetoggle", "typewriter", "reveal", "sectionheading", "icons"] },
   { id: "vstupy", title: "Vstupy", ids: ["input", "checkbox", "radio", "switch", "toggle", "slider", "taginput", "inputotp", "numberinput", "passwordinput", "multiselect", "rating", "markdowneditor", "tableeditor", "fileupload", "datepicker", "datetimepicker", "calendar", "daterangepicker", "searchbar", "searchautocomplete", "contactform"] },
-  { id: "zobrazeni", title: "Zobrazení", ids: ["card", "statcard", "avatar", "skeleton", "progress", "skillcard", "skilllevelbar", "projectcard", "promoqrcard", "timeline", "inforow", "codeblock", "markdownview", "lazyimage", "emptystate"] },
+  { id: "zobrazeni", title: "Zobrazení", ids: ["card", "statcard", "avatar", "skeleton", "progress", "skillcard", "skilllevelbar", "projectcard", "promoqrcard", "qrcode", "timeline", "inforow", "codeblock", "markdownview", "lazyimage", "emptystate"] },
   { id: "data", title: "Data a filtrování", ids: ["usefilter", "filterpills", "filterdropdown", "table", "datatable", "todolist", "carousel"] },
   { id: "grafy", title: "Grafy", ids: ["areachart", "linechart", "barchart", "radarchart"] },
   { id: "zpetna-vazba", title: "Zpětná vazba", ids: ["alert", "alertbar", "toast", "notificationbadge", "notificationpopover", "cookiebanner", "scrollprogress"] },
