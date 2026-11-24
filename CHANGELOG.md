@@ -1,5 +1,10 @@
 # Changelog
 
+## [Unreleased]
+
+### Přidáno
+- `QRCode`: obecný SVG renderer skenovatelných QR kódů s nastavením velikosti, korekce chyb, barev a přístupného popisu.
+
 Formát vychází z [Keep a Changelog](https://keepachangelog.com/cs/1.1.0/), verzování podle [SemVer](https://semver.org/lang/cs/).
 
 ## [1.0.0] – 2026-10-11
